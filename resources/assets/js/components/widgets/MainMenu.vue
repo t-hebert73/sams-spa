@@ -1,11 +1,11 @@
 <template>
     <div class="mt-3">
         <b-nav>
-            <b-nav-item active>Home</b-nav-item>
-            <b-nav-item>About</b-nav-item>
-            <b-nav-item>Services</b-nav-item>
-            <b-nav-item>Gallery</b-nav-item>
-            <b-nav-item>Contact</b-nav-item>
+            <b-nav-item :to="{ path: '/'}">Home</b-nav-item>
+            <b-nav-item :to="{ path: '/about'}">About</b-nav-item>
+            <b-nav-item :to="{ path: '/services'}">Services</b-nav-item>
+            <b-nav-item :to="{ path: '/gallery'}">Gallery</b-nav-item>
+            <b-nav-item :to="{ path: '/contact'}">Contact</b-nav-item>
         </b-nav>
     </div>
 </template>
@@ -15,7 +15,3 @@
         name: "main-menu"
     }
 </script>
-
-<style scoped>
-
-</style>

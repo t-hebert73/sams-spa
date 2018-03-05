@@ -1,17 +1,8 @@
 <template>
     <div class="container">
-        <div class="row">
-            <div class="col-md-8 col-md-offset-2">
-                <div class="main-area mt-3">
-                    <div class="panel panel-default">
-                        <div class="panel-heading">Home</div>
-
-                        <div class="panel-body">
-
-                        </div>
-                    </div>
-                </div>
-
+        <div class="row justify-content-center main-area">
+            <div class="col-8 mt-5 mb-5">
+                <img src="/images/homelogo.png">
             </div>
         </div>
     </div>

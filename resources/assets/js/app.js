@@ -24,6 +24,8 @@ Vue.use(VueRouter)
 Vue.use(BootstrapVue);
 Vue.component('main-app', require('./components/MainApp.vue'));
 Vue.component('home-page', require('./components/page-templates/HomePage.vue'))
+Vue.component('about-page', require('./components/page-templates/AboutPage.vue'))
+Vue.component('contact-page', require('./components/page-templates/ContactPage.vue'))
 
 Vue.component('main-header', require('./components/layouts/MainHeader.vue'))
 Vue.component('main-menu', require('./components/widgets/MainMenu.vue'))

@@ -1,9 +1,8 @@
 <template>
     <header>
+        <div class="header-bg"></div>
+
         <div class="container">
-
-            <div class="header-bg"></div>
-
             <div class="row justify-content-center">
                 <main-menu></main-menu>
             </div>

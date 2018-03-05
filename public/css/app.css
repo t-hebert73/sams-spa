@@ -19,3 +19,8 @@ header .nav .nav-link:hover {
   min-height: 756px;
 }
 
+.page-content.left-bar {
+  border-left: 3px solid black;
+  padding-left: 15px;
+}
+

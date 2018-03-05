@@ -7,7 +7,7 @@
 
         <meta name="csrf-token" content="{{ csrf_token() }}"/>
 
-        <title>Laravel</title>
+        <title>Alesco Salon</title>
 
         <link href="/css/app.css" rel="stylesheet"/>
 
