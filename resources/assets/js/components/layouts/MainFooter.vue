@@ -1,11 +1,13 @@
 <template>
-    <header>
+    <footer>
         <div class="container">
             <div class="row justify-content-center">
                 &copy;2018 Alesco Salon. All Rights Reserved
             </div>
         </div>
-    </header>
+
+        <div class="bottom-swirl"></div>
+    </footer>
 </template>
 
 <script>

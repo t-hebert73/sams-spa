@@ -1,5 +1,5 @@
 <template>
-    <div class="mt-3">
+    <div class="mt-5 mb-5">
         <b-nav>
             <b-nav-item :to="{ path: '/'}">Home</b-nav-item>
             <b-nav-item :to="{ path: '/about'}">About</b-nav-item>

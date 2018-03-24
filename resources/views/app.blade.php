@@ -11,6 +11,11 @@
 
         <link href="/css/app.css" rel="stylesheet"/>
 
+        <link href="https://fonts.googleapis.com/css?family=Montserrat:300,400" rel="stylesheet">
+
+        <link href="https://fonts.googleapis.com/css?family=Satisfy" rel="stylesheet">
+        <link href="https://fonts.googleapis.com/css?family=Cookie" rel="stylesheet">
+
     </head>
     <body>
         <div id="main_app">

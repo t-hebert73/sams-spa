@@ -2,7 +2,7 @@
     <div class="container">
         <div class="row justify-content-center main-area">
             <div class="col-8 mt-5 mb-5">
-                <img src="/images/homelogo.png">
+                <img class="alesco-logo" src="/images/alesco-logo.png">
             </div>
         </div>
     </div>
