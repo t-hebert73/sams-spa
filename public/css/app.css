@@ -252,6 +252,10 @@ html body #main_app .main-area {
   min-height: 688px;
 }
 
+html body #main_app .main-area.medium {
+  min-height: 420px;
+}
+
 html body #main_app .main-area .page-title {
   font-size: 3rem;
 }

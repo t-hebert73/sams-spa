@@ -16,12 +16,15 @@ window.Vue = require('vue');
 
 import VueRouter from 'vue-router'
 import BootstrapVue from 'bootstrap-vue'
+import {VueMasonryPlugin} from 'vue-masonry'
 
 import 'bootstrap/dist/css/bootstrap.css'
 import 'bootstrap-vue/dist/bootstrap-vue.css'
 
 Vue.use(VueRouter)
-Vue.use(BootstrapVue);
+Vue.use(BootstrapVue)
+Vue.use(VueMasonryPlugin)
+
 Vue.component('main-app', require('./components/MainApp.vue'));
 Vue.component('home-page', require('./components/page-templates/HomePage.vue'))
 Vue.component('about-page', require('./components/page-templates/AboutPage.vue'))

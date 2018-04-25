@@ -54,6 +54,10 @@ html {
       .main-area {
         min-height: 688px;
 
+        &.medium{
+          min-height: 420px;
+        }
+
         .page-title{
           font-size: 3rem;
         }

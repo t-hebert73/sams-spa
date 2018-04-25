@@ -18,4 +18,7 @@
 
 <style scoped>
 
+    footer{
+        margin-bottom: 25px;
+    }
 </style>
