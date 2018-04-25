@@ -38,6 +38,10 @@
                     this.pageTemplateComponent = 'about-page'
                 } else if (route == '/contact') {
                     this.pageTemplateComponent = 'contact-page'
+                } else if (route == '/services') {
+                    this.pageTemplateComponent = 'service-page'
+                } else if (route == '/gallery') {
+                    this.pageTemplateComponent = 'gallery-page'
                 }
             }
         }

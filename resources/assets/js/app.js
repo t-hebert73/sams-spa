@@ -25,6 +25,8 @@ Vue.use(BootstrapVue);
 Vue.component('main-app', require('./components/MainApp.vue'));
 Vue.component('home-page', require('./components/page-templates/HomePage.vue'))
 Vue.component('about-page', require('./components/page-templates/AboutPage.vue'))
+Vue.component('service-page', require('./components/page-templates/ServicePage.vue'))
+Vue.component('gallery-page', require('./components/page-templates/GalleryPage.vue'))
 Vue.component('contact-page', require('./components/page-templates/ContactPage.vue'))
 
 Vue.component('main-header', require('./components/layouts/MainHeader.vue'))
