@@ -23,6 +23,7 @@
         /**
          * Watch for route changes */
         beforeRouteUpdate(to, from, next) {
+          console.log('test')
             // route changes
             next()
             // check lang of new route & set locale

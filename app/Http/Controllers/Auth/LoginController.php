@@ -4,6 +4,7 @@ namespace App\Http\Controllers\Auth;
 
 use App\Http\Controllers\Controller;
 use Illuminate\Foundation\Auth\AuthenticatesUsers;
+use Illuminate\Http\Request;
 
 class LoginController extends Controller
 {
@@ -35,5 +36,36 @@ class LoginController extends Controller
     public function __construct()
     {
         $this->middleware('guest')->except('logout');
+    }
+
+    /**
+     * Gets the current csrf token and returns it.
+     *
+     * @return \Illuminate\Http\JsonResponse
+     */
+    public function getCsrfToken() {
+        return response()->json(['csrfToken' => csrf_token()], 200);
+    }
+
+    /**
+     * Send the response after the user was authenticated.
+     *
+     * @param  \Illuminate\Http\Request  $request
+     * @return \Illuminate\Http\Response
+     */
+    protected function sendLoginResponse(Request $request)
+    {
+        $request->session()->regenerate();
+        $this->clearLoginAttempts($request);
+
+        $user = $this->guard()->user();
+        $token = $user->createToken($user->name . 's Token');
+
+        $response = [
+            'user' => $user,
+            'tokenInfo' => $token
+        ];
+
+        return response()->json($response, 200);
     }
 }
