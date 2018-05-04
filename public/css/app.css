@@ -199,16 +199,6 @@
   filter: progid:DXImageTransform.Microsoft.Alpha(Opacity=100);
   opacity: 1;
 }
-body {
-  font-size: .875rem;
-}
-
-.feather {
-  width: 16px;
-  height: 16px;
-  vertical-align: text-bottom;
-}
-
 /*
  * Sidebar
  */
@@ -232,19 +222,11 @@ body {
   /* Height of navbar */
   height: calc(100vh - 48px);
   padding-top: .5rem;
-  overflow-x: hidden;
-  overflow-y: auto;
-  /* Scrollable contents if viewport is shorter than content. */
 }
 
 .sidebar .nav-link {
   font-weight: 500;
   color: #333;
-}
-
-.sidebar .nav-link .feather {
-  margin-right: 4px;
-  color: #999;
 }
 
 .sidebar .nav-link.active {
@@ -322,7 +304,7 @@ html body div,
 html body span,
 html body p,
 html body a {
-  font-size: 1.2rem;
+  font-size: 1rem;
   line-height: 2rem;
 }
 

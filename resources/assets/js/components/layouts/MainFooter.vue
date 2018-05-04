@@ -8,13 +8,9 @@
 
         <div class="bottom-swirl"></div>
 
-        <!-- temporary todo: remove -->
-        <b-modal id="sign_in" centered hide-footer>
-            <div slot="modal-title">Sign In</div>
-            <auth-combo></auth-combo>
-        </b-modal>
-
-        <a class="tmp-login hover-pointer" v-b-modal.sign_in title="Secret log in portal"><span>Sign in</span></a>
+        <router-link :to="{ name: 'pages.login'}" class="tmp-login hover-pointer">
+            <span>Sign in</span>
+        </router-link>
     </footer>
 </template>
 

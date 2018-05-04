@@ -1,7 +1,6 @@
 <template>
 
     <div v-if="this.authenticated()">
-        <admin-header></admin-header>
 
         <div class="container-fluid">
             <div class="row">

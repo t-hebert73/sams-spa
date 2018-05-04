@@ -3,16 +3,17 @@
         <div class="sidebar-sticky">
             <ul class="nav flex-column">
                 <li class="nav-item">
-                    <a class="nav-link active" href="#">
-                        <span data-feather="home"></span>
-                        Dashboard <span class="sr-only">(current)</span>
-                    </a>
+                    <router-link :to="{ name: 'admin.dashboard'}" class="nav-link"
+                                 v-b-tooltip.html.left title="View Stats">
+                        <i class="fa fa-pie-chart"></i>
+                        <span class="hidden-xs-down link-text">Dashboard</span>
+                    </router-link>
                 </li>
                 <li class="nav-item">
-                    <a class="nav-link" href="#">
-                        <span data-feather="file"></span>
-                        Pages
-                    </a>
+                    <router-link :to="{ name: 'pages.index'}" class="nav-link" v-b-tooltip.html.right title="View & Manage Pages">
+                        <i class="fa fa-file-text"></i>
+                        <span class="hidden-xs-down link-text">Pages</span>
+                    </router-link>
                 </li>
                 <li class="nav-item">
                     <a class="nav-link" href="#">

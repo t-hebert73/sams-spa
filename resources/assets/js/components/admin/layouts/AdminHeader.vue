@@ -4,7 +4,10 @@
             <a class="navbar-brand col-sm-3 col-md-2 mr-0" href="#">Alesco
             Salon</a>
 
-            <ul class="navbar-nav px-3">
+            <ul class="navbar-nav flex-row px-3">
+                <li class="nav-item mr-3">
+                    <router-link :to="viewSiteAndAdminRoute" class="nav-link" exact><span v-if="isAdminSection">View Website</span><span v-else>Admin Portal</span></router-link>
+                </li>
                 <li class="nav-item text-nowrap">
                     <a class="nav-link" @click.prevent="logout()">Sign
                     out</a>
@@ -18,6 +21,24 @@
   export default {
     name: 'admin-header',
 
+    props: {
+      isAdminSection: false
+    },
+
+    computed: {
+      viewSiteAndAdminRoute() {
+        if(this.isAdminSection) {
+          return {
+            path: '/'
+          }
+        } else {
+          return {
+            name: 'admin.dashboard'
+          }
+        }
+      }
+    },
+
     methods: {
       /**
        * Log out the user.
@@ -27,7 +48,7 @@
           this.$ls.remove('user')
           this.$ls.remove('accessToken')
           this.$router.push({
-            name: 'website.home',
+            path: '/',
             params: {
               flash: {
                 message: 'Successfully logged out.', type: 'info'

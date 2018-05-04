@@ -13,6 +13,12 @@ use Illuminate\Http\Request;
 |
 */
 
+Route::get('pages', 'Api\Admin\PageController@index');
+Route::post('pages', 'Api\Admin\PageController@store');
+Route::get('pages/{id}', 'Api\Admin\PageController@retrieve');
+Route::patch('pages/{id}', 'Api\Admin\PageController@update');
+Route::delete('pages/{id}', 'Api\Admin\PageController@destroy');
+
 Route::middleware('auth:api')->get('/user', function (Request $request) {
     return $request->user();
 });
