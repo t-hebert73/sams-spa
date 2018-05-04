@@ -159,3 +159,10 @@
     }
   }
 </script>
+
+<style lang="scss" scoped>
+    form{
+        position: relative;
+        z-index: 10;
+    }
+</style>

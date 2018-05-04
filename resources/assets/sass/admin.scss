@@ -23,6 +23,10 @@
 .sidebar .nav-link {
   font-weight: 500;
   color: #333;
+
+  &.router-link-exact-active{
+    color: $brand-primary;
+  }
 }
 
 .sidebar .nav-link.active {

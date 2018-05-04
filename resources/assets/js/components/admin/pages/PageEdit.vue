@@ -1,40 +1,40 @@
 <template>
     <admin-component :flash="$attrs.flash">
-        <div class="container-fluid min-body-height mt-3">
-            <div class="row">
-                <div class="col-md-12">
-                    <div class="card mb-3">
-                        <div class="card-body">
-                            <div class="card-title">
-                                <h1 class="float-left">Edit Page</h1>
-                                <router-link :to="{ name: 'pages.index'}" class="btn btn-primary float-right">Back</router-link>
+        <main role="main" class="col-md-9 ml-sm-auto col-lg-10 pt-3 px-4">
+            <div class="container-fluid min-body-height mt-3">
+                <div class="row">
+                    <div class="col-md-12">
+                        <div class="card mb-3">
+                            <div class="card-body">
+                                <div class="card-title">
+                                    <h1 class="float-left">Edit Page</h1>
+                                    <router-link :to="{ name: 'pages.index'}" class="btn btn-primary float-right">Back</router-link>
+                                </div>
+
                             </div>
 
-                            <div v-if="loading" class="loading-spinner c-loading min-body-height medium">
-                                <loading-component :text="loadingText" :spinner="loadingSpinner"></loading-component>
+                            <div class="card-body">
+                                <form v-if="!loading" v-on:submit.prevent="updatePage(page.id)" id="edit_page" name="edit-page" enctype="multipart/form-data">
+                                    <page-form :serverErrors="serverErrors" :page="page"></page-form>
+                                </form>
                             </div>
-
-                            <form v-if="!loading" v-on:submit.prevent="updatePage(page.id)" id="edit_page" name="edit-page" enctype="multipart/form-data">
-                                <page-form :serverErrors="serverErrors" :page="page"></page-form>
-                            </form>
                         </div>
                     </div>
                 </div>
             </div>
-        </div>
+        </main>
     </admin-component>
 </template>
 <script>
+  import PageForm from "./PageForm";
   export default {
-    $_veeValidate: {
+      components: {PageForm},
+      $_veeValidate: {
       validator: 'new' // give me a new validator each time.
     },
 
     data () {
       return {
-        userPermissions: {
-          modifyPages: this.$ls.get('permissions').modifyPages
-        },
         loading: true,
         loadingText: '',
         loadingSpinner: '',
@@ -46,18 +46,7 @@
     },
 
     mounted () {
-      if (!this.userPermissions.modifyPages) {
-        this.$router.push({
-          name: 'pages.index',
-          params: {
-            flash: {
-              message: 'You do not have permission to modify pages.', type: 'error'
-            }
-          }
-        })
-      } else {
         this.getPage(this.$route.params.id)
-      }
     },
 
     methods: {
@@ -89,12 +78,12 @@
               title: this.page.title,
               content: this.page.content,
               type: this.page.type,
-              pageKey: this.page.pageKey,
-              permaLink: this.page.permaLink,
-              metaTitle: this.page.metaTitle,
-              metaKeywords: this.page.metaKeywords,
-              metaDesc: this.page.metaDesc,
-              isEnabled: this.page.isEnabled,
+              page_key: this.page.page_key,
+              perma_link: this.page.perma_link,
+              meta_title: this.page.meta_title,
+              meta_keywords: this.page.meta_keywords,
+              meta_desc: this.page.meta_desc,
+              is_enabled: this.page.is_enabled,
               photos: this.page.photos,
               uploadedImages: this.page.uploadedImages,
               deletedImages: this.page.deletedImages

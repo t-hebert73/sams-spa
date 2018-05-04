@@ -9,6 +9,8 @@
         </transition>
 
         <main-footer  v-if="!isAdminSection"></main-footer>
+
+        <flash :timeout="4000" :display-icons="true"></flash>
     </div>
 
 </template>

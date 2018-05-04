@@ -229,6 +229,10 @@
   color: #333;
 }
 
+.sidebar .nav-link.router-link-exact-active {
+  color: #3097D1;
+}
+
 .sidebar .nav-link.active {
   color: #007bff;
 }

@@ -15,6 +15,7 @@ use Illuminate\Database\Eloquent\Model;
  * @property string title
  * @property string content
  * @property string type
+ * @property string page_key
  * @property string perma_link
  * @property string meta_title
  * @property string meta_keywords
@@ -24,11 +25,12 @@ use Illuminate\Database\Eloquent\Model;
  */
 class Page extends Model
 {
-    const guarded = [];
-    const fillable = [
+    //const guarded = [];
+    protected $fillable = [
         'title',
         'content',
         'type',
+        'page_key',
         'perma_link',
         'meta_title',
         'meta_keywords',
@@ -41,6 +43,8 @@ class Page extends Model
     protected $content;
 
     protected $type;
+
+    protected $page_key;
 
     protected $perma_link;
 

@@ -31,8 +31,6 @@ Vue.use(VueMasonryPlugin)
 Vue.use(VeeValidate)
 Vue.use(VueSweetalert2)
 
-window.swal = VueSweetalert2
-
 let lsOptions = {
   namespace: 'vuejs__'
 }
@@ -59,6 +57,8 @@ window.events = new Vue()
 window.flash = function (message, type) {
   window.events.$emit('flash', message, type)
 }
+
+Vue.component('flash', require('vue-flash'))
 
 // set all subsequent axios requests to have access token
 window.axios.interceptors.request.use(function (config) {
@@ -168,4 +168,4 @@ const app = new Vue({
   el: '#main_app',
   router
 
-})
+}).$mount()

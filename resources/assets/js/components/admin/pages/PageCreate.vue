@@ -11,7 +11,6 @@
                                     <router-link :to="{ name: 'pages.index'}" class="btn btn-primary float-right">Back</router-link>
                                 </div>
 
-
                             </div>
 
                             <div class="card-body">
@@ -42,7 +41,7 @@
         loadingSpinner: '',
         page: {
           type: 'Generic',
-          isEnabled: true,
+          is_enabled: 1,
           photos: {},
           uploadedImages: [],
           createMenuItem: true
@@ -73,11 +72,11 @@
               content: this.page.content,
               type: this.page.type,
               pageKey: this.page.pageKey,
-              permaLink: this.page.permaLink,
-              metaTitle: this.page.metaTitle,
-              metaKeywords: this.page.metaKeywords,
-              metaDesc: this.page.metaDesc,
-              isEnabled: this.page.isEnabled,
+              perma_link: this.page.perma_link,
+              meta_title: this.page.meta_title,
+              meta_keywords: this.page.meta_keywords,
+              meta_desc: this.page.meta_desc,
+              is_enabled: this.page.is_enabled,
               createMenuItem: this.page.createMenuItem,
               uploadedImages: this.page.uploadedImages,
 

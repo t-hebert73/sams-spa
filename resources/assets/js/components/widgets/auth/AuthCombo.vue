@@ -12,8 +12,8 @@
     components: {SignIn, SignUp},
     data () {
       return {
-        authComponent: 'sign-up',
-        modalTitle: 'Sign Up',
+        authComponent: 'sign-in',
+        modalTitle: 'Sign In',
         preFormText: ''
       }
     },

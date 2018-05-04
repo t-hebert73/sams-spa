@@ -27,15 +27,9 @@
                                 <label for="page_type">Type: </label>
 
                                 <b-form-select v-model="page.type" id="page_type">
-                                    <option value="About">About</option>
-                                    <option value="Blogs">Blogs</option>
-                                    <option value="Cities">Cities</option>
-                                    <option value="Contact">Contact</option>
-                                    <option value="Faqs">Faqs</option>
                                     <option value="Generic">Generic</option>
                                     <option value="Home">Home</option>
-                                    <option value="Listings">Listings</option>
-                                    <option value="Sitemap">Sitemap</option>
+                                    <option value="Services">Services</option>
                                 </b-form-select>
 
                                 <form-error v-if="serverErrors.page_type" :errors="serverErrors">{{ serverErrors.page_type[0] }}</form-error>
@@ -44,7 +38,7 @@
 
                             <b-form-group>
                                 <label for="page_key">Key: </label>
-                                <b-form-input id="page_key" v-model="page.pageKey"></b-form-input>
+                                <b-form-input id="page_key" v-model="page.page_key"></b-form-input>
 
                                 <b-popover :target="'page_key'"
                                            :placement="'left'"
@@ -59,7 +53,7 @@
 
                             <b-form-group>
                                 <label for="page_perma_link">Permalink: </label>
-                                <b-form-input id="page_perma_link" v-model="page.permaLink"></b-form-input>
+                                <b-form-input id="page_perma_link" v-model="page.perma_link"></b-form-input>
 
                                 <form-error v-if="serverErrors.page_perma_link" :errors="serverErrors">{{ serverErrors.page_perma_link[0] }}</form-error>
                                 <span class="form-text text-danger" v-show="errors.has('page_perma_link')">{{ errors.first('page_perma_link') }}</span>
@@ -68,9 +62,9 @@
                             <b-form-group>
                                 <label for="page_is_enabled">Status: </label>
 
-                                <b-form-select v-model="page.isEnabled" id="page_is_enabled">
-                                    <option value="1" v-bind:value="true">True</option>
-                                    <option value="0" v-bind:value="false">False</option>
+                                <b-form-select v-model="page.is_enabled" id="page_is_enabled">
+                                    <option v-bind:value="1">True</option>
+                                    <option v-bind:value="0">False</option>
                                 </b-form-select>
                             </b-form-group>
 
@@ -95,19 +89,19 @@
                         <b-form-group>
                             <label for="page_meta_title">Meta Title:</label>
 
-                            <b-input id="page_meta_title" v-model="page.metaTitle"></b-input>
+                            <b-input id="page_meta_title" v-model="page.meta_title"></b-input>
                         </b-form-group>
 
                         <b-form-group>
                             <label for="page_meta_keywords">Meta Keywords:</label>
 
-                            <b-input id="page_meta_keywords" v-model="page.metaKeywords"></b-input>
+                            <b-input id="page_meta_keywords" v-model="page.meta_keywords"></b-input>
                         </b-form-group>
 
                         <b-form-group>
                             <label for="page_meta_desc">Meta Description:</label>
 
-                            <b-input id="page_meta_desc" v-model="page.metaDesc"></b-input>
+                            <b-input id="page_meta_desc" v-model="page.meta_desc"></b-input>
                         </b-form-group>
 
                     </b-tab>
@@ -137,7 +131,7 @@
 
     props: {
       page: {
-        isEnabled: 0,
+        is_enabled: 0,
         createMenuItem: true,
       },
       createPage: false,

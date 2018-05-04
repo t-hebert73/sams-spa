@@ -37,7 +37,7 @@
                                             <th>Type</th>
                                             <th>Permalink</th>
                                             <th>Status</th>
-                                            <th width="160px;">Actions</th>
+                                            <th width="200px;">Actions</th>
                                         </tr>
                                         </thead>
                                         <tbody>
@@ -46,8 +46,8 @@
                                             <td class="page-num">{{ page.id }}</td>
                                             <td class="page-title">{{ page.title }}</td>
                                             <td class="page-type">{{ page.type }}</td>
-                                            <td class="page-permalink">{{ page.permaLink }}</td>
-                                            <td class="page-status">{{ page.isEnabled }}</td>
+                                            <td class="page-permalink">{{ page.perma_link }}</td>
+                                            <td class="page-status">{{ page.is_enabled }}</td>
                                             <td>
                                                 <a href="#" @click.prevent="modifyPage(page.id)"
                                                    v-bind:class="['btn btn-info', 'edit-page-'+page.id]">Edit</a>
@@ -79,7 +79,7 @@
           id: '',
           title: '',
           type: '',
-          isEnabled: false
+          is_enabled: false
         },
         loading: false
       }
@@ -100,14 +100,14 @@
        */
       showPage (event, id) {
         // only if you didn't click a link within
-        if (!$(event.target).is('a')) {
+/*        if (!$(event.target).is('a')) {
           this.$router.push({
             name: 'pages.show',
             params: {
               id: id
             }
           })
-        }
+        }*/
       },
 
       /**
@@ -155,14 +155,14 @@
           }
         }
 
-        window.swal({
+        this.$swal({
           title: 'Are you sure you want to delete ' + page.title + '?',
           text: 'Deleting a page is permanent',
-          icon: 'warning',
-          buttons: true,
-          dangerMode: true
-        }).then((willDelete) => {
-          if (willDelete) {
+          type: 'warning',
+          showCancelButton: true,
+        }).then((result) => {
+
+          if (result.value) {
             window.axios.delete(this.API_ROUTE + 'pages/' + id).then(response => {
               this.getPages()
               flash('Successfully deleted ' + response.data.page.title + '.', 'success')

@@ -21,6 +21,7 @@ class CreatePagesTable extends Migration
             $table->string('title');
             $table->text('content')->nullable();
             $table->string('type');
+            $table->string('page_key');
             $table->string('perma_link');
             $table->string('meta_title')->nullable();
             $table->string('meta_keywords')->nullable();

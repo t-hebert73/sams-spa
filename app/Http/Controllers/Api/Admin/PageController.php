@@ -15,9 +15,9 @@ use Illuminate\Support\Facades\Input;
 
 /**
  * Class PageController
- * @package ListingSiteEngine\Http\Controllers\Api\Admin
  *
- * @property EntityManager em
+ * @package App\Http\Controllers\Api\Admin
+ *
  * @property MenuItemRepository menuItems
  * @property PageRepository pages
  * @property EntityRepository pagePhotos
@@ -25,7 +25,6 @@ use Illuminate\Support\Facades\Input;
  */
 class PageController extends Controller
 {
-    protected $em;
     protected $menuItems;
     protected $pages;
     protected $pagePhotos;
@@ -57,9 +56,21 @@ class PageController extends Controller
      */
     private function setPermalink()
     {
-        $permalink = (!empty(request('permaLink'))) ? request('permaLink') : request('title');
+        $permalink = (!empty(request('perma_link'))) ? request('perma_link') : request('title');
 
         return $this->urlFormat($permalink);
+    }
+
+
+    /**
+     * Returns formatted page_key to be saved for page.
+     *
+     * @return string
+     */
+    private function setPageKey()
+    {
+        $page_key = (!empty(request('page_key'))) ? request('page_key') : request('title');
+        return $this->urlFormat($page_key);
     }
 
     /**
@@ -114,21 +125,26 @@ class PageController extends Controller
      */
     public function store()
     {
+
         $pageData = $this->validate(request(), [
             'title' => 'required',
-            'type' => 'required',
             'content' => '',
-            'isEnabled' => 'required|boolean'
+            'type' => 'required',
+            'meta_title' => '',
+            'meta_keywords' => '',
+            'meta_desc' => '',
+            'is_enabled' => 'required|boolean'
         ]);
 
         $page = new Page;
 
-        $page->title = Input::get('title');
-        $page->type = Input::get('type');
-        $page->content = Input::get('content');
-        $page->is_enabled = Input::get('isEnabled');
+        //print_r($pageData);
+        $page->fill($pageData);
 
         $page->perma_link = $this->setPermalink();
+        $page->page_key = $this->setPageKey();
+
+
 
         $success = $page->save();
 
@@ -139,10 +155,10 @@ class PageController extends Controller
             $menuItemData = [
                 'page' => $page,
                 'title' => $page->title,
-                'metaTitle' => '',
-                'metaKeywords' => '',
-                'metaDesc' => '',
-                'isEnabled' => true
+                'meta_title' => '',
+                'meta_keywords' => '',
+                'meta_desc' => '',
+                'is_enabled' => true
             ];
 
             $menuItem = MenuItem::fill($menuItemData);
@@ -170,13 +186,7 @@ class PageController extends Controller
      */
     public function retrieve($id)
     {
-        $page = $this->pages->find($id);
-
-        $pagePhotos = $this->pagePhotos->findBy([
-            'page' => $page
-        ]);
-
-        $page->photos = orderBySort($pagePhotos);
+        $page = Page::find($id);
 
         $response['page'] = $page;
 
@@ -197,19 +207,19 @@ class PageController extends Controller
             'title' => 'required',
             'content' => '',
             'type' => 'required',
-            'metaTitle' => '',
-            'metaKeywords' => '',
-            'metaDesc' => '',
-            'isEnabled' => 'required|boolean'
+            'meta_title' => '',
+            'meta_keywords' => '',
+            'meta_desc' => '',
+            'is_enabled' => 'required|boolean'
         ]);
 
-        $page = $this->pages->find($id);
-        $page->safeUpdate($pageData);
+        $page = Page::find($id);
+        $page->update($pageData);
 
-        $page->permaLink = $this->setPermalink();
-        $page->pageKey = $this->setPageKey();
+        $page->perma_link = $this->setPermalink();
+        $page->page_key = $this->setPageKey();
 
-        $this->saveImages($page);
+/*        $this->saveImages($page);
 
         $this->deleteImages($page);
 
@@ -226,10 +236,9 @@ class PageController extends Controller
 
                 $this->em->persist($pagePhoto);
             }
-        }
+        }*/
 
-        $this->em->persist($page);
-        $success = $this->em->flush();
+        $success = $page->save();
 
         $response['page'] = $page;
 
@@ -251,19 +260,18 @@ class PageController extends Controller
      */
     public function destroy($id)
     {
-        $page = $this->pages->find($id);
+        $page = Page::find($id);
 
         // remove it's associated menu item
-        $menuItem = $this->menuItems->findOneBy([
+/*        $menuItem = $this->menuItems->findOneBy([
             'page' => $page->id
         ]);
 
         if ($menuItem) {
             $this->em->remove($menuItem);
-        }
+        }*/
 
-        $this->em->remove($page);
-        $success = $this->em->flush();
+        $success = $page->delete();
 
         $response['page'] = $page;
 
