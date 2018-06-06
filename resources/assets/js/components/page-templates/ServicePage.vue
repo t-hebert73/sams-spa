@@ -4,6 +4,9 @@
         <div class="container-fluid main-area medium">
             <div class="row-fluid">
                 <div class="col-12">
+
+                    <div class="page-content left-bar mt-3" v-html="pageData.page.content"></div>
+
                     <div class="employees mt-5" v-if="employees.length">
 
                         <div class="employee" v-for="(employee, i) in employees">
@@ -51,6 +54,10 @@
 <script>
     export default {
         name: "service-page",
+
+        props: {
+            pageData: {}
+        },
 
         data() {
             return {

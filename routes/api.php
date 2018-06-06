@@ -19,6 +19,8 @@ Route::get('pages/{id}', 'Api\Admin\PageController@retrieve');
 Route::patch('pages/{id}', 'Api\Admin\PageController@update');
 Route::delete('pages/{id}', 'Api\Admin\PageController@destroy');
 
+Route::get('routing', 'Api\RoutingController@getPage');
+
 Route::middleware('auth:api')->get('/user', function (Request $request) {
     return $request->user();
 });

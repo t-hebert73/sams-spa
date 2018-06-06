@@ -28,6 +28,7 @@
 
                                 <b-form-select v-model="page.type" id="page_type">
                                     <option value="Generic">Generic</option>
+                                    <option value="Contact">Contact</option>
                                     <option value="Home">Home</option>
                                     <option value="Services">Services</option>
                                 </b-form-select>

@@ -22,7 +22,11 @@
 
 <script>
     export default {
-        name: "contact-page"
+        name: "contact-page",
+
+        props: {
+            pageData: {}
+        }
     }
 </script>
 

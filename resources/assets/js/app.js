@@ -107,6 +107,8 @@ Vue.component('admin-component',
 Vue.component('home-page', require('./components/page-templates/HomePage.vue'))
 Vue.component('about-page',
   require('./components/page-templates/AboutPage.vue'))
+Vue.component('generic-page',
+    require('./components/page-templates/GenericPage.vue'))
 Vue.component('service-page',
   require('./components/page-templates/ServicePage.vue'))
 Vue.component('gallery-page',
