@@ -26,7 +26,7 @@
 
         watch: {
             '$route': function (route) {
-                console.log('route change in page router')
+                //console.log('route change in page router')
             }
         },
 
@@ -101,6 +101,9 @@
                             break
                         case 'Sitemap':
                             this.pageTemplateComponent = 'sitemap-page'
+                            break
+                        case 'Gallery':
+                            this.pageTemplateComponent = 'gallery-page'
                             break
                         default:
                             this.pageTemplateComponent = 'generic-page'

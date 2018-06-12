@@ -130,13 +130,13 @@
 
             }).catch(error => {
 
-              //flash(error.response.data.message, 'error')
-              // if (error.response.status == 401) {
-              //   flash(error.response.data.message, 'error')
-              // }
-              // else {
-              //   flash(error.response.data.errors.email[0], 'error')
-              // }
+              flash(error.response.data.message, 'error')
+               if (error.response.status == 401) {
+                 flash(error.response.data.message, 'error')
+               }
+               else {
+                 flash(error.response.data.errors.email[0], 'error')
+               }
               self.alertLogin()
             })
 

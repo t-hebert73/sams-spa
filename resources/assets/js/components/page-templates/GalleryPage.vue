@@ -23,10 +23,46 @@
 
                             <b-carousel-slide>
                                 <a slot="img" :class="'lightbox-image'"
+                                   :href="'images/gallery/gallery1.jpg'"
+                                   :data-lightbox="'gallery-photos'">
+
+                                    <div class="slider-photo cover" style="background-image: url('images/gallery/gallery1.jpg');"></div>
+                                </a>
+                            </b-carousel-slide>
+
+                            <b-carousel-slide>
+                                <a slot="img" :class="'lightbox-image'"
+                                   :href="'images/gallery/gallery2.jpg'"
+                                   :data-lightbox="'gallery-photos'">
+
+                                    <div class="slider-photo cover" style="background-image: url('images/gallery/gallery2.jpg');"></div>
+                                </a>
+                            </b-carousel-slide>
+
+                            <b-carousel-slide>
+                                <a slot="img" :class="'lightbox-image'"
+                                   :href="'images/gallery/gallery3.jpg'"
+                                   :data-lightbox="'gallery-photos'">
+
+                                    <div class="slider-photo cover" style="background-image: url('images/gallery/gallery3.jpg');"></div>
+                                </a>
+                            </b-carousel-slide>
+
+                            <b-carousel-slide>
+                                <a slot="img" :class="'lightbox-image'"
                                    :href="'images/gallery/gallery4.jpg'"
                                    :data-lightbox="'gallery-photos'">
 
                                     <div class="slider-photo cover" style="background-image: url('images/gallery/gallery4.jpg');"></div>
+                                </a>
+                            </b-carousel-slide>
+
+                            <b-carousel-slide>
+                                <a slot="img" :class="'lightbox-image'"
+                                   :href="'images/gallery/gallery5.jpg'"
+                                   :data-lightbox="'gallery-photos'">
+
+                                    <div class="slider-photo cover" style="background-image: url('images/gallery/gallery5.jpg');"></div>
                                 </a>
                             </b-carousel-slide>
 
@@ -45,42 +81,6 @@
                                    :data-lightbox="'gallery-photos'">
 
                                     <div class="slider-photo cover" style="background-image: url('images/gallery/gallery7.jpg');"></div>
-                                </a>
-                            </b-carousel-slide>
-
-                            <b-carousel-slide>
-                                <a slot="img" :class="'lightbox-image'"
-                                   :href="'images/gallery/gallery8.jpg'"
-                                   :data-lightbox="'gallery-photos'">
-
-                                    <div class="slider-photo cover" style="background-image: url('images/gallery/gallery8.jpg');"></div>
-                                </a>
-                            </b-carousel-slide>
-
-                            <b-carousel-slide>
-                                <a slot="img" :class="'lightbox-image'"
-                                   :href="'images/gallery/gallery9.jpg'"
-                                   :data-lightbox="'gallery-photos'">
-
-                                    <div class="slider-photo cover" style="background-image: url('images/gallery/gallery9.jpg');"></div>
-                                </a>
-                            </b-carousel-slide>
-
-                            <b-carousel-slide>
-                                <a slot="img" :class="'lightbox-image'"
-                                   :href="'images/gallery/nailpolish.jpg'"
-                                   :data-lightbox="'gallery-photos'">
-
-                                    <div class="slider-photo cover" style="background-image: url('images/gallery/nailpolish.jpg');"></div>
-                                </a>
-                            </b-carousel-slide>
-
-                            <b-carousel-slide>
-                                <a slot="img" :class="'lightbox-image'"
-                                   :href="'images/gallery/nails.jpg'"
-                                   :data-lightbox="'gallery-photos'">
-
-                                    <div class="slider-photo cover" style="background-image: url('images/gallery/nails.jpg');"></div>
                                 </a>
                             </b-carousel-slide>
 
@@ -113,7 +113,7 @@
 
 <style lang="scss" scoped>
     .gallery-container{
-        margin-bottom: 50px;
+        margin-bottom: 250px;
         position: relative;
         z-index: 2;
 

@@ -31,6 +31,7 @@
                                     <option value="Contact">Contact</option>
                                     <option value="Home">Home</option>
                                     <option value="Services">Services</option>
+                                    <option value="Gallery">Gallery</option>
                                 </b-form-select>
 
                                 <form-error v-if="serverErrors.page_type" :errors="serverErrors">{{ serverErrors.page_type[0] }}</form-error>
