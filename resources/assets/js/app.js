@@ -18,7 +18,7 @@ import BootstrapVue from 'bootstrap-vue'
 import { VueMasonryPlugin } from 'vue-masonry'
 import VeeValidate from 'vee-validate'
 import VueLocalStorage from 'vue-ls'
-import VueSweetalert2 from 'vue-sweetalert2';
+import VueSweetalert2 from 'vue-sweetalert2'
 import VueEditor from 'vue2-editor'
 
 import 'bootstrap/dist/css/bootstrap.css'
@@ -100,7 +100,6 @@ Object.defineProperties(Vue.prototype, {
   }
 })
 
-
 Vue.component('main-app', require('./components/MainApp.vue'))
 Vue.component('admin-component',
   require('./components/admin/AdminComponent.vue'))
@@ -108,7 +107,7 @@ Vue.component('home-page', require('./components/page-templates/HomePage.vue'))
 Vue.component('about-page',
   require('./components/page-templates/AboutPage.vue'))
 Vue.component('generic-page',
-    require('./components/page-templates/GenericPage.vue'))
+  require('./components/page-templates/GenericPage.vue'))
 Vue.component('service-page',
   require('./components/page-templates/ServicePage.vue'))
 Vue.component('gallery-page',
@@ -153,6 +152,30 @@ const routes = [
     path: '/admin/pages/:id/edit',
     name: 'pages.edit',
     component: require('./components/admin/pages/PageEdit.vue'),
+    props: true
+  },
+  {
+    path: '/admin/employees',
+    name: 'employees.index',
+    component: require('./components/admin/employees/EmployeeList.vue'),
+    props: true
+  },
+  {
+    path: '/admin/employees/create',
+    name: 'employees.create',
+    component: require('./components/admin/employees/EmployeeCreate.vue'),
+    props: true
+  },
+  {
+    path: '/admin/employees/:id',
+    name: 'employees.show',
+    component: require('./components/admin/employees/EmployeeShow.vue'),
+    props: true
+  },
+  {
+    path: '/admin/employees/:id/edit',
+    name: 'employees.edit',
+    component: require('./components/admin/employees/EmployeeEdit.vue'),
     props: true
   },
   {

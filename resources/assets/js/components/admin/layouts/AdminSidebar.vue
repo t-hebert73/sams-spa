@@ -16,6 +16,12 @@
                     </router-link>
                 </li>
                 <li class="nav-item">
+                    <router-link :to="{ name: 'employees.index'}" class="nav-link" v-b-tooltip.html.right title="View & Manage Employees">
+                        <i class="fa fa-users"></i>
+                        <span class="hidden-xs-down link-text">Employees</span>
+                    </router-link>
+                </li>
+                <li class="nav-item">
                     <a class="nav-link" href="#">
                         <span data-feather="shopping-cart"></span>
                         Prices

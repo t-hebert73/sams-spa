@@ -21109,6 +21109,26 @@ var routes = [{
   component: __webpack_require__(346),
   props: true
 }, {
+  path: '/admin/employees',
+  name: 'employees.index',
+  component: __webpack_require__(359),
+  props: true
+}, {
+  path: '/admin/employees/create',
+  name: 'employees.create',
+  component: __webpack_require__(362),
+  props: true
+}, {
+  path: '/admin/employees/:id',
+  name: 'employees.show',
+  component: __webpack_require__(374),
+  props: true
+}, {
+  path: '/admin/employees/:id/edit',
+  name: 'employees.edit',
+  component: __webpack_require__(368),
+  props: true
+}, {
   path: '/*',
   component: __webpack_require__(349)
 }];
@@ -77457,7 +77477,7 @@ exports = module.exports = __webpack_require__(5)(false);
 
 
 // module
-exports.push([module.i, "\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n", ""]);
+exports.push([module.i, "\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n", ""]);
 
 // exports
 
@@ -77468,6 +77488,12 @@ exports.push([module.i, "\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\
 
 "use strict";
 Object.defineProperty(__webpack_exports__, "__esModule", { value: true });
+//
+//
+//
+//
+//
+//
 //
 //
 //
@@ -77573,6 +77599,38 @@ var render = function() {
                   _vm._v(" "),
                   _c("span", { staticClass: "hidden-xs-down link-text" }, [
                     _vm._v("Pages")
+                  ])
+                ]
+              )
+            ],
+            1
+          ),
+          _vm._v(" "),
+          _c(
+            "li",
+            { staticClass: "nav-item" },
+            [
+              _c(
+                "router-link",
+                {
+                  directives: [
+                    {
+                      name: "b-tooltip",
+                      rawName: "v-b-tooltip.html.right",
+                      modifiers: { html: true, right: true }
+                    }
+                  ],
+                  staticClass: "nav-link",
+                  attrs: {
+                    to: { name: "employees.index" },
+                    title: "View & Manage Employees"
+                  }
+                },
+                [
+                  _c("i", { staticClass: "fa fa-users" }),
+                  _vm._v(" "),
+                  _c("span", { staticClass: "hidden-xs-down link-text" }, [
+                    _vm._v("Employees")
                   ])
                 ]
               )
@@ -84193,6 +84251,1655 @@ if (false) {
 /***/ (function(module, exports) {
 
 // removed by extract-text-webpack-plugin
+
+/***/ }),
+/* 353 */,
+/* 354 */,
+/* 355 */,
+/* 356 */,
+/* 357 */,
+/* 358 */,
+/* 359 */
+/***/ (function(module, exports, __webpack_require__) {
+
+var disposed = false
+var normalizeComponent = __webpack_require__(3)
+/* script */
+var __vue_script__ = __webpack_require__(360)
+/* template */
+var __vue_template__ = __webpack_require__(361)
+/* template functional */
+var __vue_template_functional__ = false
+/* styles */
+var __vue_styles__ = null
+/* scopeId */
+var __vue_scopeId__ = null
+/* moduleIdentifier (server only) */
+var __vue_module_identifier__ = null
+var Component = normalizeComponent(
+  __vue_script__,
+  __vue_template__,
+  __vue_template_functional__,
+  __vue_styles__,
+  __vue_scopeId__,
+  __vue_module_identifier__
+)
+Component.options.__file = "resources/assets/js/components/admin/employees/EmployeeList.vue"
+
+/* hot reload */
+if (false) {(function () {
+  var hotAPI = require("vue-hot-reload-api")
+  hotAPI.install(require("vue"), false)
+  if (!hotAPI.compatible) return
+  module.hot.accept()
+  if (!module.hot.data) {
+    hotAPI.createRecord("data-v-5a51c62d", Component.options)
+  } else {
+    hotAPI.reload("data-v-5a51c62d", Component.options)
+  }
+  module.hot.dispose(function (data) {
+    disposed = true
+  })
+})()}
+
+module.exports = Component.exports
+
+
+/***/ }),
+/* 360 */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+Object.defineProperty(__webpack_exports__, "__esModule", { value: true });
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+
+/* harmony default export */ __webpack_exports__["default"] = ({
+  data: function data() {
+    return {
+      params: {
+        title: ''
+      },
+      employees: [],
+      employee: {
+        id: '',
+        name: ''
+      },
+      loading: false
+    };
+  },
+  mounted: function mounted() {
+
+    this.getEmployees();
+  },
+
+
+  methods: {
+
+    /**
+     * Show a specified employee.
+     *
+     * @param id
+     */
+    showEmployee: function showEmployee(event, id) {
+      // only if you didn't click a link within
+      /*        if (!$(event.target).is('a')) {
+                this.$router.push({
+                  name: 'employees.show',
+                  params: {
+                    id: id
+                  }
+                })
+              }*/
+    },
+
+
+    /**
+     * Get all employees.
+     */
+    getEmployees: function getEmployees(apiRoute) {
+      var _this = this;
+
+      this.clearEmployees();
+      apiRoute = apiRoute || this.API_ROUTE + 'employees';
+
+      window.axios.get(apiRoute).then(function (response) {
+        _this.employees = response.data.employees;
+        _this.loading = false;
+      }).catch(function (error) {
+        flash('Error loading employees. Reason: ' + error.response.data.message, 'error');
+      });
+    },
+
+
+    /**
+     * Clear all currently shown employees.
+     */
+    clearEmployees: function clearEmployees() {
+      this.employees = [];
+      this.loading = true;
+    },
+
+    /**
+     * Route to create employee
+     */
+    createEmployee: function createEmployee() {
+      this.$router.push({
+        name: 'employees.create'
+      });
+    },
+
+
+    /**
+     * Delete selected employee.
+     * @param id
+     */
+    deleteEmployee: function deleteEmployee(id) {
+      var _this2 = this;
+
+      var employee = {};
+
+      for (var i = 0; i < this.employees.length; i++) {
+        if (this.employees[i].id === id) {
+          employee = this.employees[i];
+        }
+      }
+
+      this.$swal({
+        title: 'Are you sure you want to delete ' + employee.title + '?',
+        text: 'Deleting a employee is permanent',
+        type: 'warning',
+        showCancelButton: true
+      }).then(function (result) {
+
+        if (result.value) {
+          window.axios.delete(_this2.API_ROUTE + 'employees/' + id).then(function (response) {
+            _this2.getEmployees();
+            flash('Successfully deleted ' + response.data.employee.title + '.', 'success');
+          });
+        }
+      }).catch(function (error) {
+        flash(error.response.data.message, 'error');
+      });
+    },
+
+
+    /**
+     * Route to edit employee
+     * @param id
+     */
+    modifyEmployee: function modifyEmployee(id) {
+      this.$router.push({
+        name: 'employees.edit',
+        params: {
+          id: id
+        }
+      });
+    }
+  }
+});
+
+/***/ }),
+/* 361 */
+/***/ (function(module, exports, __webpack_require__) {
+
+var render = function() {
+  var _vm = this
+  var _h = _vm.$createElement
+  var _c = _vm._self._c || _h
+  return _c("admin-component", { attrs: { flash: _vm.$attrs.flash } }, [
+    _c(
+      "main",
+      {
+        staticClass: "col-md-9 ml-sm-auto col-lg-10 pt-3 px-4",
+        attrs: { role: "main" }
+      },
+      [
+        _c("div", { staticClass: "container-fluid min-body-height mt-3" }, [
+          _c("div", { staticClass: "row" }, [
+            _c("div", { staticClass: "col-md-12" }, [
+              _c("div", { staticClass: "card mb-3" }, [
+                _c("div", { staticClass: "card-body" }, [
+                  _c("div", { staticClass: "card-title" }, [
+                    _c("h1", [_vm._v("Employee Management")]),
+                    _vm._v(" "),
+                    _c("div", { staticClass: "card-text" }, [
+                      _c("p", [
+                        _vm._v(
+                          "Below are all the employees in the system. Add more or modify/remove the existing\n                                        ones."
+                        )
+                      ]),
+                      _vm._v(" "),
+                      _c("p", [
+                        _vm._v(
+                          "After creating employees check out the menu editor to add the employee to a menu."
+                        )
+                      ]),
+                      _vm._v(" "),
+                      _c("div", { staticClass: "actions" }, [
+                        _c(
+                          "a",
+                          {
+                            staticClass: "btn btn-primary mr-2",
+                            attrs: { href: "#" },
+                            on: {
+                              click: function($event) {
+                                $event.preventDefault()
+                                _vm.createEmployee()
+                              }
+                            }
+                          },
+                          [
+                            _vm._v(
+                              "Create\n                                        Employee"
+                            )
+                          ]
+                        )
+                      ])
+                    ])
+                  ])
+                ])
+              ]),
+              _vm._v(" "),
+              _c("div", { staticClass: "row" }, [
+                _c("div", { staticClass: "col-md-12" }, [
+                  _c("div", { staticClass: "employees" }, [
+                    _c(
+                      "table",
+                      {
+                        staticClass:
+                          "table table-striped table-bordered table-branded mb-0"
+                      },
+                      [
+                        _c("thead", { staticClass: "thead" }, [
+                          _c("tr", [
+                            _c("th", [_vm._v("ID")]),
+                            _vm._v(" "),
+                            _c("th", [_vm._v("Name")]),
+                            _vm._v(" "),
+                            _c("th", { attrs: { width: "200px;" } }, [
+                              _vm._v("Actions")
+                            ])
+                          ])
+                        ]),
+                        _vm._v(" "),
+                        _c(
+                          "tbody",
+                          _vm._l(_vm.employees, function(employee, i) {
+                            return _c(
+                              "tr",
+                              {
+                                class: [
+                                  "employee hover-pointer",
+                                  "read-employee-" + employee.id
+                                ],
+                                on: {
+                                  click: function($event) {
+                                    _vm.showEmployee($event, employee.id)
+                                  }
+                                }
+                              },
+                              [
+                                _c("td", { staticClass: "employee-num" }, [
+                                  _vm._v(_vm._s(employee.id))
+                                ]),
+                                _vm._v(" "),
+                                _c("td", { staticClass: "employee-name" }, [
+                                  _vm._v(_vm._s(employee.name))
+                                ]),
+                                _vm._v(" "),
+                                _c("td", [
+                                  _c(
+                                    "a",
+                                    {
+                                      class: [
+                                        "btn btn-info",
+                                        "edit-employee-" + employee.id
+                                      ],
+                                      attrs: { href: "#" },
+                                      on: {
+                                        click: function($event) {
+                                          $event.preventDefault()
+                                          _vm.modifyEmployee(employee.id)
+                                        }
+                                      }
+                                    },
+                                    [_vm._v("Edit")]
+                                  ),
+                                  _vm._v(" "),
+                                  _c(
+                                    "a",
+                                    {
+                                      class: [
+                                        "btn btn-danger",
+                                        "delete-employee-" + employee.id
+                                      ],
+                                      attrs: { href: "#" },
+                                      on: {
+                                        click: function($event) {
+                                          $event.preventDefault()
+                                          _vm.deleteEmployee(employee.id)
+                                        }
+                                      }
+                                    },
+                                    [_vm._v("Delete")]
+                                  )
+                                ])
+                              ]
+                            )
+                          })
+                        )
+                      ]
+                    )
+                  ])
+                ])
+              ])
+            ])
+          ])
+        ])
+      ]
+    )
+  ])
+}
+var staticRenderFns = []
+render._withStripped = true
+module.exports = { render: render, staticRenderFns: staticRenderFns }
+if (false) {
+  module.hot.accept()
+  if (module.hot.data) {
+    require("vue-hot-reload-api")      .rerender("data-v-5a51c62d", module.exports)
+  }
+}
+
+/***/ }),
+/* 362 */
+/***/ (function(module, exports, __webpack_require__) {
+
+var disposed = false
+var normalizeComponent = __webpack_require__(3)
+/* script */
+var __vue_script__ = __webpack_require__(363)
+/* template */
+var __vue_template__ = __webpack_require__(367)
+/* template functional */
+var __vue_template_functional__ = false
+/* styles */
+var __vue_styles__ = null
+/* scopeId */
+var __vue_scopeId__ = null
+/* moduleIdentifier (server only) */
+var __vue_module_identifier__ = null
+var Component = normalizeComponent(
+  __vue_script__,
+  __vue_template__,
+  __vue_template_functional__,
+  __vue_styles__,
+  __vue_scopeId__,
+  __vue_module_identifier__
+)
+Component.options.__file = "resources/assets/js/components/admin/employees/EmployeeCreate.vue"
+
+/* hot reload */
+if (false) {(function () {
+  var hotAPI = require("vue-hot-reload-api")
+  hotAPI.install(require("vue"), false)
+  if (!hotAPI.compatible) return
+  module.hot.accept()
+  if (!module.hot.data) {
+    hotAPI.createRecord("data-v-f06e946a", Component.options)
+  } else {
+    hotAPI.reload("data-v-f06e946a", Component.options)
+  }
+  module.hot.dispose(function (data) {
+    disposed = true
+  })
+})()}
+
+module.exports = Component.exports
+
+
+/***/ }),
+/* 363 */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+Object.defineProperty(__webpack_exports__, "__esModule", { value: true });
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__EmployeeForm__ = __webpack_require__(371);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__EmployeeForm___default = __webpack_require__.n(__WEBPACK_IMPORTED_MODULE_0__EmployeeForm__);
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+
+
+/* harmony default export */ __webpack_exports__["default"] = ({
+  components: { EmployeeForm: __WEBPACK_IMPORTED_MODULE_0__EmployeeForm___default.a },
+  $_veeValidate: {
+    validator: 'new' // give me a new validator each time.
+  },
+
+  data: function data() {
+    return {
+      loading: false,
+      loadingText: '',
+      loadingSpinner: '',
+      employee: {
+        name: ''
+      },
+      createMenuItem: true,
+      serverErrors: {}
+    };
+  },
+  mounted: function mounted() {},
+
+
+  methods: {
+    /**
+     * Create new employee.
+     */
+    createEmployee: function createEmployee() {
+      var _this = this;
+
+      this.loadingText = 'Working..';
+      this.loadingSpinner = 'loading-socket';
+      this.loading = true;
+
+      this.$validator.validateAll().then(function (result) {
+
+        if (result) {
+          window.axios.post(_this.API_ROUTE + 'employees', _this.employee).then(function (response) {
+            flash('Successfully created ' + response.data.employee.name + '!', 'success');
+            _this.$router.push({
+              name: 'employees.index',
+              params: {
+                flash: {
+                  message: 'Successfully created ' + response.data.employee.name + '!', type: 'success'
+                }
+              }
+            });
+          }).catch(function (error) {
+            if (error.response.data.errors) {
+              _this.serverErrors = error.response.data.errors;
+            }
+            flash(error.response.data.message, 'error');
+          });
+
+          return;
+        }
+        _this.loading = false;
+      });
+    }
+  }
+});
+
+/***/ }),
+/* 364 */,
+/* 365 */,
+/* 366 */,
+/* 367 */
+/***/ (function(module, exports, __webpack_require__) {
+
+var render = function() {
+  var _vm = this
+  var _h = _vm.$createElement
+  var _c = _vm._self._c || _h
+  return _c("admin-component", { attrs: { flash: _vm.$attrs.flash } }, [
+    _c(
+      "main",
+      {
+        staticClass: "col-md-9 ml-sm-auto col-lg-10 pt-3 px-4",
+        attrs: { role: "main" }
+      },
+      [
+        _c("div", { staticClass: "container-fluid min-body-height mt-3" }, [
+          _c("div", { staticClass: "row" }, [
+            _c("div", { staticClass: "col-md-12" }, [
+              _c("div", { staticClass: "card mb-3" }, [
+                _c("div", { staticClass: "card-body" }, [
+                  _c(
+                    "div",
+                    { staticClass: "card-title" },
+                    [
+                      _c("h1", { staticClass: "float-left" }, [
+                        _vm._v("Create A Employee")
+                      ]),
+                      _vm._v(" "),
+                      _c(
+                        "router-link",
+                        {
+                          staticClass: "btn btn-primary float-right",
+                          attrs: { to: { name: "employees.index" } }
+                        },
+                        [_vm._v("Back")]
+                      )
+                    ],
+                    1
+                  )
+                ]),
+                _vm._v(" "),
+                _c("div", { staticClass: "card-body" }, [
+                  !_vm.loading
+                    ? _c(
+                        "form",
+                        {
+                          attrs: { enctype: "multipart/form-data" },
+                          on: {
+                            submit: function($event) {
+                              $event.preventDefault()
+                              _vm.createEmployee()
+                            }
+                          }
+                        },
+                        [
+                          _c("employee-form", {
+                            attrs: {
+                              serverErrors: _vm.serverErrors,
+                              employee: _vm.employee,
+                              createEmployee: _vm.createMenuItem
+                            }
+                          })
+                        ],
+                        1
+                      )
+                    : _vm._e()
+                ])
+              ])
+            ])
+          ])
+        ])
+      ]
+    )
+  ])
+}
+var staticRenderFns = []
+render._withStripped = true
+module.exports = { render: render, staticRenderFns: staticRenderFns }
+if (false) {
+  module.hot.accept()
+  if (module.hot.data) {
+    require("vue-hot-reload-api")      .rerender("data-v-f06e946a", module.exports)
+  }
+}
+
+/***/ }),
+/* 368 */
+/***/ (function(module, exports, __webpack_require__) {
+
+var disposed = false
+var normalizeComponent = __webpack_require__(3)
+/* script */
+var __vue_script__ = __webpack_require__(369)
+/* template */
+var __vue_template__ = __webpack_require__(370)
+/* template functional */
+var __vue_template_functional__ = false
+/* styles */
+var __vue_styles__ = null
+/* scopeId */
+var __vue_scopeId__ = null
+/* moduleIdentifier (server only) */
+var __vue_module_identifier__ = null
+var Component = normalizeComponent(
+  __vue_script__,
+  __vue_template__,
+  __vue_template_functional__,
+  __vue_styles__,
+  __vue_scopeId__,
+  __vue_module_identifier__
+)
+Component.options.__file = "resources/assets/js/components/admin/employees/EmployeeEdit.vue"
+
+/* hot reload */
+if (false) {(function () {
+  var hotAPI = require("vue-hot-reload-api")
+  hotAPI.install(require("vue"), false)
+  if (!hotAPI.compatible) return
+  module.hot.accept()
+  if (!module.hot.data) {
+    hotAPI.createRecord("data-v-6999ed99", Component.options)
+  } else {
+    hotAPI.reload("data-v-6999ed99", Component.options)
+  }
+  module.hot.dispose(function (data) {
+    disposed = true
+  })
+})()}
+
+module.exports = Component.exports
+
+
+/***/ }),
+/* 369 */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+Object.defineProperty(__webpack_exports__, "__esModule", { value: true });
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__EmployeeForm__ = __webpack_require__(371);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__EmployeeForm___default = __webpack_require__.n(__WEBPACK_IMPORTED_MODULE_0__EmployeeForm__);
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+
+
+/* harmony default export */ __webpack_exports__["default"] = ({
+  components: { EmployeeForm: __WEBPACK_IMPORTED_MODULE_0__EmployeeForm___default.a },
+  $_veeValidate: {
+    validator: 'new' // give me a new validator each time.
+  },
+
+  data: function data() {
+    return {
+      loading: true,
+      loadingText: '',
+      loadingSpinner: '',
+      employee: {},
+      serverErrors: []
+    };
+  },
+  mounted: function mounted() {
+    this.getEmployee(this.$route.params.id);
+  },
+
+
+  methods: {
+    /**
+     * Get current employee being edited.
+     * @param id
+     */
+    getEmployee: function getEmployee(id) {
+      var _this = this;
+
+      window.axios.get(this.API_ROUTE + 'employees/' + id).then(function (response) {
+        _this.employee = response.data.employee;
+        _this.loading = false;
+      });
+    },
+
+
+    /**
+     * Update the current employee.
+     * @param id
+     */
+    updateEmployee: function updateEmployee(id) {
+      var _this2 = this;
+
+      this.loadingSpinner = 'loading-socket';
+      this.loadingText = 'Working..';
+      this.loading = true;
+
+      this.$validator.validateAll().then(function (result) {
+        if (result) {
+          window.axios.patch(_this2.API_ROUTE + 'employees/' + id, _this2.employee).then(function (response) {
+            _this2.$router.push({
+              name: 'employees.index',
+              params: {
+                flash: {
+                  message: 'Successfully updated ' + response.data.employee.title + '!', type: 'success'
+                }
+              }
+            });
+          }).catch(function (error) {
+            if (error.response.data.errors) {
+              _this2.serverErrors = error.response.data.errors;
+            }
+            flash(error.response.data.message, 'error');
+          });
+
+          return;
+        }
+        _this2.loading = false;
+      });
+    }
+  }
+});
+
+/***/ }),
+/* 370 */
+/***/ (function(module, exports, __webpack_require__) {
+
+var render = function() {
+  var _vm = this
+  var _h = _vm.$createElement
+  var _c = _vm._self._c || _h
+  return _c("admin-component", { attrs: { flash: _vm.$attrs.flash } }, [
+    _c(
+      "main",
+      {
+        staticClass: "col-md-9 ml-sm-auto col-lg-10 pt-3 px-4",
+        attrs: { role: "main" }
+      },
+      [
+        _c("div", { staticClass: "container-fluid min-body-height mt-3" }, [
+          _c("div", { staticClass: "row" }, [
+            _c("div", { staticClass: "col-md-12" }, [
+              _c("div", { staticClass: "card mb-3" }, [
+                _c("div", { staticClass: "card-body" }, [
+                  _c(
+                    "div",
+                    { staticClass: "card-title" },
+                    [
+                      _c("h1", { staticClass: "float-left" }, [
+                        _vm._v("Edit Employee")
+                      ]),
+                      _vm._v(" "),
+                      _c(
+                        "router-link",
+                        {
+                          staticClass: "btn btn-primary float-right",
+                          attrs: { to: { name: "employees.index" } }
+                        },
+                        [_vm._v("Back")]
+                      )
+                    ],
+                    1
+                  )
+                ]),
+                _vm._v(" "),
+                _c("div", { staticClass: "card-body" }, [
+                  !_vm.loading
+                    ? _c(
+                        "form",
+                        {
+                          attrs: {
+                            id: "edit_employee",
+                            name: "edit-employee",
+                            enctype: "multipart/form-data"
+                          },
+                          on: {
+                            submit: function($event) {
+                              $event.preventDefault()
+                              _vm.updateEmployee(_vm.employee.id)
+                            }
+                          }
+                        },
+                        [
+                          _c("employee-form", {
+                            attrs: {
+                              serverErrors: _vm.serverErrors,
+                              employee: _vm.employee
+                            }
+                          })
+                        ],
+                        1
+                      )
+                    : _vm._e()
+                ])
+              ])
+            ])
+          ])
+        ])
+      ]
+    )
+  ])
+}
+var staticRenderFns = []
+render._withStripped = true
+module.exports = { render: render, staticRenderFns: staticRenderFns }
+if (false) {
+  module.hot.accept()
+  if (module.hot.data) {
+    require("vue-hot-reload-api")      .rerender("data-v-6999ed99", module.exports)
+  }
+}
+
+/***/ }),
+/* 371 */
+/***/ (function(module, exports, __webpack_require__) {
+
+var disposed = false
+var normalizeComponent = __webpack_require__(3)
+/* script */
+var __vue_script__ = __webpack_require__(372)
+/* template */
+var __vue_template__ = __webpack_require__(373)
+/* template functional */
+var __vue_template_functional__ = false
+/* styles */
+var __vue_styles__ = null
+/* scopeId */
+var __vue_scopeId__ = null
+/* moduleIdentifier (server only) */
+var __vue_module_identifier__ = null
+var Component = normalizeComponent(
+  __vue_script__,
+  __vue_template__,
+  __vue_template_functional__,
+  __vue_styles__,
+  __vue_scopeId__,
+  __vue_module_identifier__
+)
+Component.options.__file = "resources/assets/js/components/admin/employees/EmployeeForm.vue"
+
+/* hot reload */
+if (false) {(function () {
+  var hotAPI = require("vue-hot-reload-api")
+  hotAPI.install(require("vue"), false)
+  if (!hotAPI.compatible) return
+  module.hot.accept()
+  if (!module.hot.data) {
+    hotAPI.createRecord("data-v-26589f53", Component.options)
+  } else {
+    hotAPI.reload("data-v-26589f53", Component.options)
+  }
+  module.hot.dispose(function (data) {
+    disposed = true
+  })
+})()}
+
+module.exports = Component.exports
+
+
+/***/ }),
+/* 372 */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+Object.defineProperty(__webpack_exports__, "__esModule", { value: true });
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+
+/* harmony default export */ __webpack_exports__["default"] = ({
+  inject: {
+    $validator: '$validator'
+  },
+
+  props: {
+    employee: {
+      is_enabled: 0,
+      createMenuItem: true
+    },
+    createEmployee: false,
+    serverErrors: {}
+  },
+
+  data: function data() {
+    return {
+      removing: false,
+      removingText: '',
+      removingSpinner: ''
+    };
+  },
+  mounted: function mounted() {
+    if (this.createEmployee) {
+      //this.employee.createMenuItem = true
+    }
+  },
+
+
+  methods: {
+    showCreateMenuItem: function showCreateMenuItem() {
+      return this.createEmployee;
+    },
+
+
+    /**
+     * Returns a formatted string to be used for HTML element IDs.
+     *
+     * @param $element
+     *
+     * @returns {string}
+     */
+    formatElementId: function formatElementId($element) {
+      return $element.toLowerCase().replace(' ', '_');
+    }
+  }
+});
+
+/***/ }),
+/* 373 */
+/***/ (function(module, exports, __webpack_require__) {
+
+var render = function() {
+  var _vm = this
+  var _h = _vm.$createElement
+  var _c = _vm._self._c || _h
+  return _c("div", { staticClass: "row c-employee-form" }, [
+    _c("div", { staticClass: "col-xs-12 col-sm-12 col-md-12" }, [
+      _c(
+        "fieldset",
+        [
+          _c("legend", [_vm._v("Employee Information")]),
+          _vm._v(" "),
+          _c(
+            "b-form-group",
+            [
+              _c("label", { attrs: { for: "employee_name" } }, [
+                _vm._v("Name: ")
+              ]),
+              _vm._v(" "),
+              _c("b-form-input", {
+                directives: [
+                  {
+                    name: "validate",
+                    rawName: "v-validate",
+                    value: { required: true },
+                    expression: "{ required: true }"
+                  }
+                ],
+                attrs: { id: "employee_name" },
+                model: {
+                  value: _vm.employee.name,
+                  callback: function($$v) {
+                    _vm.$set(_vm.employee, "name", $$v)
+                  },
+                  expression: "employee.name"
+                }
+              }),
+              _vm._v(" "),
+              _vm.serverErrors.employee_name
+                ? _c("form-error", { attrs: { errors: _vm.serverErrors } }, [
+                    _vm._v(_vm._s(_vm.serverErrors.employee_name[0]))
+                  ])
+                : _vm._e(),
+              _vm._v(" "),
+              _c(
+                "span",
+                {
+                  directives: [
+                    {
+                      name: "show",
+                      rawName: "v-show",
+                      value: _vm.errors.has("employee_name"),
+                      expression: "errors.has('employee_name')"
+                    }
+                  ],
+                  staticClass: "form-text text-danger"
+                },
+                [_vm._v(_vm._s(_vm.errors.first("employee_name")))]
+              )
+            ],
+            1
+          )
+        ],
+        1
+      )
+    ]),
+    _vm._v(" "),
+    _c(
+      "div",
+      { staticClass: "col-xs-12 col-sm-12 col-md-12 text-center mt-3" },
+      [
+        _c("b-button", { attrs: { type: "submit", variant: "primary" } }, [
+          _vm._v("Submit")
+        ])
+      ],
+      1
+    )
+  ])
+}
+var staticRenderFns = []
+render._withStripped = true
+module.exports = { render: render, staticRenderFns: staticRenderFns }
+if (false) {
+  module.hot.accept()
+  if (module.hot.data) {
+    require("vue-hot-reload-api")      .rerender("data-v-26589f53", module.exports)
+  }
+}
+
+/***/ }),
+/* 374 */
+/***/ (function(module, exports, __webpack_require__) {
+
+var disposed = false
+var normalizeComponent = __webpack_require__(3)
+/* script */
+var __vue_script__ = __webpack_require__(375)
+/* template */
+var __vue_template__ = __webpack_require__(376)
+/* template functional */
+var __vue_template_functional__ = false
+/* styles */
+var __vue_styles__ = null
+/* scopeId */
+var __vue_scopeId__ = null
+/* moduleIdentifier (server only) */
+var __vue_module_identifier__ = null
+var Component = normalizeComponent(
+  __vue_script__,
+  __vue_template__,
+  __vue_template_functional__,
+  __vue_styles__,
+  __vue_scopeId__,
+  __vue_module_identifier__
+)
+Component.options.__file = "resources/assets/js/components/admin/employees/EmployeeShow.vue"
+
+/* hot reload */
+if (false) {(function () {
+  var hotAPI = require("vue-hot-reload-api")
+  hotAPI.install(require("vue"), false)
+  if (!hotAPI.compatible) return
+  module.hot.accept()
+  if (!module.hot.data) {
+    hotAPI.createRecord("data-v-142aade8", Component.options)
+  } else {
+    hotAPI.reload("data-v-142aade8", Component.options)
+  }
+  module.hot.dispose(function (data) {
+    disposed = true
+  })
+})()}
+
+module.exports = Component.exports
+
+
+/***/ }),
+/* 375 */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+Object.defineProperty(__webpack_exports__, "__esModule", { value: true });
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+
+/* harmony default export */ __webpack_exports__["default"] = ({
+  $_veeValidate: {
+    validator: 'new' // give me a new validator each time.
+  },
+
+  data: function data() {
+    return {
+      loading: true,
+      userPermissions: {
+        viewEmployees: this.$ls.get('permissions').viewEmployees
+      },
+      employee: {}
+    };
+  },
+  mounted: function mounted() {
+    if (!this.userPermissions.viewEmployees) {
+      this.$router.push({
+        name: 'admin.dashboard',
+        params: {
+          flash: {
+            message: 'You do not have permission to view employees.', type: 'error'
+          }
+        }
+      });
+    } else {
+      this.getEmployee(this.$route.params.id);
+    }
+  },
+
+
+  methods: {
+    /**
+     * Get the specified employee.
+     *
+     * @param id
+     */
+    getEmployee: function getEmployee(id) {
+      var _this = this;
+
+      window.axios.get(this.API_ROUTE + 'employees/' + id).then(function (response) {
+        _this.employee = response.data.employee;
+        _this.loading = false;
+      }).catch(function (error) {
+        flash(error.response.data.message, 'error');
+      });
+    }
+  }
+});
+
+/***/ }),
+/* 376 */
+/***/ (function(module, exports, __webpack_require__) {
+
+var render = function() {
+  var _vm = this
+  var _h = _vm.$createElement
+  var _c = _vm._self._c || _h
+  return _c(
+    "div",
+    { staticClass: "component-container c-employee-show" },
+    [
+      _c("admin-component", { attrs: { flash: _vm.$attrs.flash } }, [
+        _c("div", { staticClass: "container-fluid min-body-height mt-3" }, [
+          _c("div", { staticClass: "row" }, [
+            _c("div", { staticClass: "col-md-12" }, [
+              _c("div", { staticClass: "card mb-3" }, [
+                _vm.loading
+                  ? _c(
+                      "div",
+                      {
+                        staticClass:
+                          "loading-spinner c-loading min-body-height medium"
+                      },
+                      [_c("loading-component")],
+                      1
+                    )
+                  : _vm._e(),
+                _vm._v(" "),
+                !_vm.loading
+                  ? _c("div", { staticClass: "card-body" }, [
+                      _c(
+                        "div",
+                        { staticClass: "card-title" },
+                        [
+                          _c("h1", { staticClass: "float-left" }, [
+                            _vm._v(_vm._s(_vm.employee.title) + " Employee")
+                          ]),
+                          _vm._v(" "),
+                          _c(
+                            "router-link",
+                            {
+                              staticClass: "btn btn-primary float-right ml-3",
+                              attrs: { to: { name: "employees.index" } }
+                            },
+                            [
+                              _vm._v(
+                                "\n                                    Back\n                                "
+                              )
+                            ]
+                          ),
+                          _vm._v(" "),
+                          _c(
+                            "router-link",
+                            {
+                              staticClass: "btn btn-success float-right",
+                              attrs: {
+                                to: {
+                                  name: "employees.edit",
+                                  params: { id: _vm.employee.id }
+                                }
+                              }
+                            },
+                            [_vm._v("Edit\n                                ")]
+                          ),
+                          _vm._v(" "),
+                          _c("div", { staticClass: "clearfix" })
+                        ],
+                        1
+                      ),
+                      _vm._v(" "),
+                      _c("div", { staticClass: "row" }, [
+                        _c(
+                          "div",
+                          { staticClass: "col-12" },
+                          [
+                            _c(
+                              "b-card-group",
+                              { attrs: { deck: "" } },
+                              [
+                                _c(
+                                  "b-card",
+                                  { attrs: { "no-body": "", align: "center" } },
+                                  [
+                                    _c(
+                                      "b-card-header",
+                                      { staticClass: "brand-primary" },
+                                      [_c("h4", [_vm._v("Employee ID")])]
+                                    ),
+                                    _vm._v(" "),
+                                    _c("b-card-body", [
+                                      _c(
+                                        "p",
+                                        {
+                                          staticClass:
+                                            "card-text data-value big"
+                                        },
+                                        [
+                                          _vm._v(
+                                            "\n                                                    " +
+                                              _vm._s(_vm.employee.id) +
+                                              "\n                                                "
+                                          )
+                                        ]
+                                      )
+                                    ])
+                                  ],
+                                  1
+                                ),
+                                _vm._v(" "),
+                                _c(
+                                  "b-card",
+                                  { attrs: { "no-body": "", align: "center" } },
+                                  [
+                                    _c(
+                                      "b-card-header",
+                                      { staticClass: "brand-primary" },
+                                      [_c("h4", [_vm._v("Type")])]
+                                    ),
+                                    _vm._v(" "),
+                                    _c("b-card-body", [
+                                      _c(
+                                        "p",
+                                        { staticClass: "card-text data-value" },
+                                        [
+                                          _vm._v(
+                                            "\n                                                    " +
+                                              _vm._s(_vm.employee.type) +
+                                              "\n                                                "
+                                          )
+                                        ]
+                                      )
+                                    ])
+                                  ],
+                                  1
+                                ),
+                                _vm._v(" "),
+                                _c(
+                                  "b-card",
+                                  { attrs: { "no-body": "", align: "center" } },
+                                  [
+                                    _c(
+                                      "b-card-header",
+                                      { staticClass: "brand-secondary" },
+                                      [_c("h4", [_vm._v("Key")])]
+                                    ),
+                                    _vm._v(" "),
+                                    _c("b-card-body", [
+                                      _c(
+                                        "p",
+                                        { staticClass: "card-text data-value" },
+                                        [
+                                          _vm._v(
+                                            "\n                                                    " +
+                                              _vm._s(_vm.employee.key) +
+                                              "\n                                                "
+                                          )
+                                        ]
+                                      )
+                                    ])
+                                  ],
+                                  1
+                                ),
+                                _vm._v(" "),
+                                _c(
+                                  "b-card",
+                                  { attrs: { "no-body": "", align: "center" } },
+                                  [
+                                    _c(
+                                      "b-card-header",
+                                      { staticClass: "brand-primary" },
+                                      [_c("h4", [_vm._v("Is Enabled")])]
+                                    ),
+                                    _vm._v(" "),
+                                    _c("b-card-body", [
+                                      _c(
+                                        "p",
+                                        { staticClass: "card-text data-value" },
+                                        [
+                                          _vm._v(
+                                            "\n                                                    " +
+                                              _vm._s(_vm.employee.isEnabled) +
+                                              "\n                                                "
+                                          )
+                                        ]
+                                      )
+                                    ])
+                                  ],
+                                  1
+                                ),
+                                _vm._v(" "),
+                                _c(
+                                  "b-card",
+                                  { attrs: { "no-body": "", align: "center" } },
+                                  [
+                                    _c(
+                                      "b-card-header",
+                                      { staticClass: "brand-secondary" },
+                                      [_c("h4", [_vm._v("Created")])]
+                                    ),
+                                    _vm._v(" "),
+                                    _c("b-card-body", [
+                                      _c(
+                                        "div",
+                                        { staticClass: "card-text data-value" },
+                                        [
+                                          _c("div", [
+                                            _vm._v(
+                                              _vm._s(
+                                                _vm
+                                                  .moment(
+                                                    _vm.employee.created.date
+                                                  )
+                                                  .format("MMM Do YYYY")
+                                              )
+                                            )
+                                          ]),
+                                          _vm._v(" "),
+                                          _c("div", [
+                                            _vm._v(
+                                              "By: " +
+                                                _vm._s(
+                                                  _vm.employee.createdUser.name
+                                                )
+                                            )
+                                          ])
+                                        ]
+                                      )
+                                    ])
+                                  ],
+                                  1
+                                )
+                              ],
+                              1
+                            ),
+                            _vm._v(" "),
+                            _c(
+                              "b-card",
+                              {
+                                staticClass: "mt-4",
+                                attrs: { "no-body": "", align: "center" }
+                              },
+                              [
+                                _c(
+                                  "b-card-header",
+                                  { staticClass: "brand-primary" },
+                                  [_c("h4", [_vm._v("Title")])]
+                                ),
+                                _vm._v(" "),
+                                _c("b-card-body", [
+                                  _c(
+                                    "p",
+                                    { staticClass: "card-text data-value" },
+                                    [
+                                      _vm._v(
+                                        "\n                                                " +
+                                          _vm._s(_vm.employee.title) +
+                                          "\n                                            "
+                                      )
+                                    ]
+                                  )
+                                ])
+                              ],
+                              1
+                            ),
+                            _vm._v(" "),
+                            _c(
+                              "b-card",
+                              {
+                                staticClass: "mt-4",
+                                attrs: { "no-body": "", align: "center" }
+                              },
+                              [
+                                _c(
+                                  "b-card-header",
+                                  { staticClass: "brand-secondary" },
+                                  [_c("h4", [_vm._v("Content")])]
+                                ),
+                                _vm._v(" "),
+                                _c("b-card-body", [
+                                  _c("p", {
+                                    staticClass: "card-text data-value",
+                                    domProps: {
+                                      innerHTML: _vm._s(_vm.employee.content)
+                                    }
+                                  })
+                                ])
+                              ],
+                              1
+                            )
+                          ],
+                          1
+                        )
+                      ])
+                    ])
+                  : _vm._e()
+              ])
+            ])
+          ])
+        ])
+      ])
+    ],
+    1
+  )
+}
+var staticRenderFns = []
+render._withStripped = true
+module.exports = { render: render, staticRenderFns: staticRenderFns }
+if (false) {
+  module.hot.accept()
+  if (module.hot.data) {
+    require("vue-hot-reload-api")      .rerender("data-v-142aade8", module.exports)
+  }
+}
 
 /***/ })
 /******/ ]);

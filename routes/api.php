@@ -13,6 +13,12 @@ use Illuminate\Http\Request;
 |
 */
 
+Route::get('employees', 'Api\Admin\EmployeeController@index');
+Route::post('employees', 'Api\Admin\EmployeeController@store');
+Route::get('employees/{id}', 'Api\Admin\EmployeeController@retrieve');
+Route::patch('employees/{id}', 'Api\Admin\EmployeeController@update');
+Route::delete('employees/{id}', 'Api\Admin\EmployeeController@destroy');
+
 Route::get('pages', 'Api\Admin\PageController@index');
 Route::post('pages', 'Api\Admin\PageController@store');
 Route::get('pages/{id}', 'Api\Admin\PageController@retrieve');
