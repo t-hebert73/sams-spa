@@ -9,7 +9,7 @@
                     <router-link :to="viewSiteAndAdminRoute" class="nav-link" exact><span v-if="isAdminSection">View Website</span><span v-else>Admin Portal</span></router-link>
                 </li>
                 <li class="nav-item text-nowrap">
-                    <a class="nav-link" @click.prevent="logout()">Sign
+                    <a class="nav-link hover-pointer" @click.prevent="logout()">Sign
                     out</a>
                 </li>
             </ul>

@@ -77276,7 +77276,7 @@ var render = function() {
             _c(
               "a",
               {
-                staticClass: "nav-link",
+                staticClass: "nav-link hover-pointer",
                 on: {
                   click: function($event) {
                     $event.preventDefault()
