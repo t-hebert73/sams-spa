@@ -8,8 +8,9 @@
 
 namespace App\Models;
 
+use Illuminate\Database\Eloquent\Model;
 
-class ServiceCategory
+class ServiceCategory extends Model
 {
     //const guarded = [];
     protected $fillable = [

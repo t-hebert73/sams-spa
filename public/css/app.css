@@ -247,6 +247,12 @@
   text-transform: uppercase;
 }
 
+.sidebar .fa {
+  min-width: 20px;
+  text-align: center;
+  padding-right: 5px;
+}
+
 /*
  * Navbar
  */
@@ -315,6 +321,10 @@ html body a {
 html body #main_app {
   position: relative;
   overflow: hidden;
+}
+
+html body #main_app .hover-pointer:hover {
+  cursor: pointer;
 }
 
 html body #main_app header .header-bg {

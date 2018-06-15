@@ -47,6 +47,8 @@ class EmployeeController extends Controller
     {
         $employee = Employee::find($id);
 
+        $employee->serviceCategories;
+
         $response['employee'] = $employee;
 
         $status = 200;

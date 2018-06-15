@@ -21,7 +21,7 @@ class Employee extends Model
     protected $name;
 
     public function serviceCategories() {
-        return $this->belongsToMany('App\ServiceCategory');
+        return $this->belongsToMany('App\Models\ServiceCategory');
     }
 
     public function __construct() {

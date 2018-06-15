@@ -4,7 +4,6 @@
 @import "variables";
 
 @import "admin";
-
 @import "~lightbox2/src/css/lightbox.css";
 
 html {
@@ -12,11 +11,11 @@ html {
     font-size: $font-size-base;
     font-family: $font-family-base;
 
-    h1,h2,h3,h4,h5,h6 {
+    h1, h2, h3, h4, h5, h6 {
       font-family: $font-family-header;
     }
 
-    div, span, p, a{
+    div, span, p, a {
       font-size: 1rem;
       line-height: 2rem;
     }
@@ -24,6 +23,12 @@ html {
     #main_app {
       position: relative;
       overflow: hidden;
+
+      .hover-pointer {
+        &:hover {
+          cursor: pointer;
+        }
+      }
 
       header {
 
@@ -56,11 +61,11 @@ html {
       .main-area {
         min-height: 688px;
 
-        &.medium{
+        &.medium {
           min-height: 420px;
         }
 
-        .page-title{
+        .page-title {
           font-size: 3rem;
         }
 

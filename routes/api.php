@@ -25,6 +25,14 @@ Route::get('pages/{id}', 'Api\Admin\PageController@retrieve');
 Route::patch('pages/{id}', 'Api\Admin\PageController@update');
 Route::delete('pages/{id}', 'Api\Admin\PageController@destroy');
 
+Route::get('service-categories', 'Api\Admin\ServiceCategoryController@index');
+Route::post('service-categories', 'Api\Admin\ServiceCategoryController@store');
+Route::get('service-categories/{id}', 'Api\Admin\ServiceCategoryController@retrieve');
+Route::patch('service-categories/{id}', 'Api\Admin\ServiceCategoryController@update');
+Route::delete('service-categories/{id}', 'Api\Admin\ServiceCategoryController@destroy');
+
+Route::post('services', 'Api\Admin\ServiceController@saveInfo');
+
 Route::get('routing', 'Api\RoutingController@getPage');
 
 Route::middleware('auth:api')->get('/user', function (Request $request) {

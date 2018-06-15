@@ -21,12 +21,21 @@
                         <span class="hidden-xs-down link-text">Employees</span>
                     </router-link>
                 </li>
+
                 <li class="nav-item">
-                    <a class="nav-link" href="#">
-                        <span data-feather="shopping-cart"></span>
-                        Prices
-                    </a>
+                    <router-link :to="{ name: 'service-categories.index'}" class="nav-link" v-b-tooltip.html.right title="View & Manage Service Categories">
+                        <i class="fa fa-server"></i>
+                        <span class="hidden-xs-down link-text">Service Categories</span>
+                    </router-link>
                 </li>
+
+                <li class="nav-item">
+                    <router-link :to="{ name: 'services.index'}" class="nav-link" v-b-tooltip.html.right title="View & Manage Services">
+                        <i class="fa fa-usd"></i>
+                        <span class="hidden-xs-down link-text">Services</span>
+                    </router-link>
+                </li>
+
             </ul>
 
         </div>

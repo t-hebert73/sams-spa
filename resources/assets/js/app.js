@@ -179,6 +179,42 @@ const routes = [
     props: true
   },
   {
+    path: '/admin/services',
+    name: 'services.index',
+    component: require('./components/admin/services/ServiceIndex.vue'),
+    props: true
+  },
+  {
+    path: '/admin/services/:id',
+    name: 'services.employee.show',
+    component: require('./components/admin/services/ServiceEmployeeShow.vue'),
+    props: true
+  },
+  {
+    path: '/admin/service-categories',
+    name: 'service-categories.index',
+    component: require('./components/admin/service-categories/ServiceCategoryList.vue'),
+    props: true
+  },
+  {
+    path: '/admin/service-categories/create',
+    name: 'service-categories.create',
+    component: require('./components/admin/service-categories/ServiceCategoryCreate.vue'),
+    props: true
+  },
+  {
+    path: '/admin/service-categories/:id',
+    name: 'service-categories.show',
+    component: require('./components/admin/service-categories/ServiceCategoryShow.vue'),
+    props: true
+  },
+  {
+    path: '/admin/service-categories/:id/edit',
+    name: 'service-categories.edit',
+    component: require('./components/admin/service-categories/ServiceCategoryEdit.vue'),
+    props: true
+  },
+  {
     path: '/*',
     component: require('./components/PageRouter.vue')
   }
