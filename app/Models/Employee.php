@@ -20,10 +20,18 @@ class Employee extends Model
 
     protected $name;
 
+    /**
+     * @return \Illuminate\Database\Eloquent\Relations\BelongsToMany
+     */
     public function serviceCategories() {
         return $this->belongsToMany('App\Models\ServiceCategory');
     }
 
-    public function __construct() {
+    /**
+     * @return \Illuminate\Database\Eloquent\Relations\HasMany
+     */
+    public function services() {
+        return $this->hasMany('App\Models\Service');
     }
+
 }

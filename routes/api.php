@@ -31,6 +31,10 @@ Route::get('service-categories/{id}', 'Api\Admin\ServiceCategoryController@retri
 Route::patch('service-categories/{id}', 'Api\Admin\ServiceCategoryController@update');
 Route::delete('service-categories/{id}', 'Api\Admin\ServiceCategoryController@destroy');
 
+// bad. id for first is employee id. id for second is service id. wtf??? its late.
+Route::get('employee-services/{id}', 'Api\Admin\ServiceController@getEmployeeServices');
+Route::delete('employee-services/{id}', 'Api\Admin\ServiceController@destroyEmployeeService');
+
 Route::post('services', 'Api\Admin\ServiceController@saveInfo');
 
 Route::get('routing', 'Api\RoutingController@getPage');
