@@ -5,6 +5,8 @@
                 <div class="mt-5">
                     <h1 class="page-title">Contact</h1>
 
+                    <div class="page-content left-bar mt-3 mb-5" v-html="pageData.page.content"></div>
+
                     <div class="page-content left-bar mt-3">
                         <div>Alesco Salon & Aesthetics</div>
                         <div>133 Front Street N</div>
@@ -21,20 +23,20 @@
 </template>
 
 <script>
-    export default {
-        name: "contact-page",
+  export default {
+    name: 'contact-page',
 
-        props: {
-            pageData: {}
-        }
+    props: {
+      pageData: {}
     }
+  }
 </script>
 
 <style lang="scss" scoped>
 
     @import "../../../sass/responsive.scss";
 
-    .main-area{
+    .main-area {
 
         @media #{$ltDesktop} {
             margin-bottom: 200px;

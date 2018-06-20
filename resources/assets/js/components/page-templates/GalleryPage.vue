@@ -6,11 +6,7 @@
                 <div class="mt-5">
                     <h1 class="page-title">Gallery</h1>
 
-                    <div class="page-content left-bar mt-3 mb-5">
-                        <p>At Alesco, our mission to provide exceptional gallerys to our guests while maintaining our beliefs for wellness, beauty and
-                            the environment. We are committed to the mission and beliefs of Aveda and are proud to honour and uphold their
-                            guidelines.</p>
-                    </div>
+                    <div class="page-content left-bar mt-3 mb-5" v-html="pageData.page.content"></div>
 
                     <div class="gallery-container">
                         <b-carousel id="gallery"
@@ -26,7 +22,8 @@
                                    :href="'images/gallery/gallery1.jpg'"
                                    :data-lightbox="'gallery-photos'">
 
-                                    <div class="slider-photo cover" style="background-image: url('images/gallery/gallery1.jpg');"></div>
+                                    <div class="slider-photo cover"
+                                         style="background-image: url('images/gallery/gallery1.jpg');"></div>
                                 </a>
                             </b-carousel-slide>
 
@@ -35,7 +32,8 @@
                                    :href="'images/gallery/gallery2.jpg'"
                                    :data-lightbox="'gallery-photos'">
 
-                                    <div class="slider-photo cover" style="background-image: url('images/gallery/gallery2.jpg');"></div>
+                                    <div class="slider-photo cover"
+                                         style="background-image: url('images/gallery/gallery2.jpg');"></div>
                                 </a>
                             </b-carousel-slide>
 
@@ -44,7 +42,8 @@
                                    :href="'images/gallery/gallery3.jpg'"
                                    :data-lightbox="'gallery-photos'">
 
-                                    <div class="slider-photo cover" style="background-image: url('images/gallery/gallery3.jpg');"></div>
+                                    <div class="slider-photo cover"
+                                         style="background-image: url('images/gallery/gallery3.jpg');"></div>
                                 </a>
                             </b-carousel-slide>
 
@@ -53,7 +52,8 @@
                                    :href="'images/gallery/gallery4.jpg'"
                                    :data-lightbox="'gallery-photos'">
 
-                                    <div class="slider-photo cover" style="background-image: url('images/gallery/gallery4.jpg');"></div>
+                                    <div class="slider-photo cover"
+                                         style="background-image: url('images/gallery/gallery4.jpg');"></div>
                                 </a>
                             </b-carousel-slide>
 
@@ -62,7 +62,8 @@
                                    :href="'images/gallery/gallery5.jpg'"
                                    :data-lightbox="'gallery-photos'">
 
-                                    <div class="slider-photo cover" style="background-image: url('images/gallery/gallery5.jpg');"></div>
+                                    <div class="slider-photo cover"
+                                         style="background-image: url('images/gallery/gallery5.jpg');"></div>
                                 </a>
                             </b-carousel-slide>
 
@@ -71,7 +72,8 @@
                                    :href="'images/gallery/gallery6.jpg'"
                                    :data-lightbox="'gallery-photos'">
 
-                                    <div class="slider-photo cover" style="background-image: url('images/gallery/gallery6.jpg');"></div>
+                                    <div class="slider-photo cover"
+                                         style="background-image: url('images/gallery/gallery6.jpg');"></div>
                                 </a>
                             </b-carousel-slide>
 
@@ -80,7 +82,8 @@
                                    :href="'images/gallery/gallery7.jpg'"
                                    :data-lightbox="'gallery-photos'">
 
-                                    <div class="slider-photo cover" style="background-image: url('images/gallery/gallery7.jpg');"></div>
+                                    <div class="slider-photo cover"
+                                         style="background-image: url('images/gallery/gallery7.jpg');"></div>
                                 </a>
                             </b-carousel-slide>
 
@@ -94,28 +97,32 @@
 </template>
 
 <script>
-    export default {
-        name: "gallery-page",
+  export default {
+    name: 'gallery-page',
 
-        mounted() {
+    props: {
+      pageData: {}
+    },
 
-            let lightbox = require('lightbox2')
+    mounted () {
 
-            lightbox.option({
-                fadeDuration: 200,
-                imageFadeDuration: 200,
-                resizeDuration: 300,
-                fitImagesInViewport: true
-            })
-        }
+      let lightbox = require('lightbox2')
+
+      lightbox.option({
+        fadeDuration: 200,
+        imageFadeDuration: 200,
+        resizeDuration: 300,
+        fitImagesInViewport: true
+      })
     }
+  }
 </script>
 
 <style lang="scss" scoped>
 
     @import "../../../sass/responsive.scss";
 
-    .gallery-container{
+    .gallery-container {
         margin-bottom: 330px;
         position: relative;
         z-index: 2;
@@ -128,7 +135,7 @@
             margin-bottom: 120px;
         }
 
-        .cover{
+        .cover {
             height: 650px;
             background-size: cover;
             background-repeat: no-repeat;

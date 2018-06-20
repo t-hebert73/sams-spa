@@ -14,20 +14,20 @@
 </template>
 
 <script>
-    export default {
-        name: "generic-page",
+  export default {
+    name: 'generic-page',
 
-        props: {
-            pageData: {}
-        }
+    props: {
+      pageData: {}
     }
+  }
 </script>
 
 <style lang="scss" scoped>
 
     @import "../../../sass/responsive.scss";
 
-    .main-area{
+    .main-area {
 
         @media #{$ltDesktop} {
             margin-bottom: 200px;

@@ -77987,9 +77987,15 @@ Object.defineProperty(__webpack_exports__, "__esModule", { value: true });
 //
 //
 //
+//
+//
+//
 
 /* harmony default export */ __webpack_exports__["default"] = ({
-    name: "home-page"
+  name: 'home-page',
+  props: {
+    pageData: {}
+  }
 });
 
 /***/ }),
@@ -78000,22 +78006,27 @@ var render = function() {
   var _vm = this
   var _h = _vm.$createElement
   var _c = _vm._self._c || _h
-  return _vm._m(0)
+  return _c("div", { staticClass: "container" }, [
+    _c("div", { staticClass: "row justify-content-center main-area" }, [
+      _c("div", {
+        staticClass: "page-content mt-3",
+        domProps: { innerHTML: _vm._s(_vm.pageData.page.content) }
+      }),
+      _vm._v(" "),
+      _vm._m(0)
+    ])
+  ])
 }
 var staticRenderFns = [
   function() {
     var _vm = this
     var _h = _vm.$createElement
     var _c = _vm._self._c || _h
-    return _c("div", { staticClass: "container" }, [
-      _c("div", { staticClass: "row justify-content-center main-area" }, [
-        _c("div", { staticClass: "col-8 mt-5 mb-5" }, [
-          _c("img", {
-            staticClass: "alesco-logo",
-            attrs: { src: "/images/alesco-logo.png" }
-          })
-        ])
-      ])
+    return _c("div", { staticClass: "col-8 mt-5 mb-5" }, [
+      _c("img", {
+        staticClass: "alesco-logo",
+        attrs: { src: "/images/alesco-logo.png" }
+      })
     ])
   }
 ]
@@ -78141,12 +78152,12 @@ Object.defineProperty(__webpack_exports__, "__esModule", { value: true });
 //
 //
 //
-//
-//
-//
 
 /* harmony default export */ __webpack_exports__["default"] = ({
-    name: "about-page"
+  name: 'about-page',
+  props: {
+    pageData: {}
+  }
 });
 
 /***/ }),
@@ -78157,32 +78168,22 @@ var render = function() {
   var _vm = this
   var _h = _vm.$createElement
   var _c = _vm._self._c || _h
-  return _vm._m(0)
-}
-var staticRenderFns = [
-  function() {
-    var _vm = this
-    var _h = _vm.$createElement
-    var _c = _vm._self._c || _h
-    return _c("div", { staticClass: "container" }, [
-      _c("div", { staticClass: "row justify-content-center main-area" }, [
-        _c("div", { staticClass: "col-md-12" }, [
-          _c("div", { staticClass: "mt-5" }, [
-            _c("h1", { staticClass: "page-title" }, [_vm._v("About")]),
-            _vm._v(" "),
-            _c("div", { staticClass: "page-content left-bar mt-3" }, [
-              _c("p", [
-                _vm._v(
-                  "At Alesco, our mission to provide exceptional services to our guests while maintaining our beliefs for wellness, beauty and\n                        the environment. We are committed to the mission and beliefs of Aveda and are proud to honour and uphold their\n                        guidelines."
-                )
-              ])
-            ])
-          ])
+  return _c("div", { staticClass: "container" }, [
+    _c("div", { staticClass: "row justify-content-center main-area" }, [
+      _c("div", { staticClass: "col-md-12" }, [
+        _c("div", { staticClass: "mt-5" }, [
+          _c("h1", { staticClass: "page-title" }, [_vm._v("About")]),
+          _vm._v(" "),
+          _c("div", {
+            staticClass: "page-content left-bar mt-3",
+            domProps: { innerHTML: _vm._s(_vm.pageData.page.content) }
+          })
         ])
       ])
     ])
-  }
-]
+  ])
+}
+var staticRenderFns = []
 render._withStripped = true
 module.exports = { render: render, staticRenderFns: staticRenderFns }
 if (false) {
@@ -78306,11 +78307,11 @@ Object.defineProperty(__webpack_exports__, "__esModule", { value: true });
 //
 
 /* harmony default export */ __webpack_exports__["default"] = ({
-    name: "generic-page",
+  name: 'generic-page',
 
-    props: {
-        pageData: {}
-    }
+  props: {
+    pageData: {}
+  }
 });
 
 /***/ }),
@@ -78835,21 +78836,28 @@ Object.defineProperty(__webpack_exports__, "__esModule", { value: true });
 //
 //
 //
+//
+//
+//
 
 /* harmony default export */ __webpack_exports__["default"] = ({
-    name: "gallery-page",
+  name: 'gallery-page',
 
-    mounted: function mounted() {
+  props: {
+    pageData: {}
+  },
 
-        var lightbox = __webpack_require__(296);
+  mounted: function mounted() {
 
-        lightbox.option({
-            fadeDuration: 200,
-            imageFadeDuration: 200,
-            resizeDuration: 300,
-            fitImagesInViewport: true
-        });
-    }
+    var lightbox = __webpack_require__(296);
+
+    lightbox.option({
+      fadeDuration: 200,
+      imageFadeDuration: 200,
+      resizeDuration: 300,
+      fitImagesInViewport: true
+    });
+  }
 });
 
 /***/ }),
@@ -79394,7 +79402,10 @@ var render = function() {
         _c("div", { staticClass: "mt-5" }, [
           _c("h1", { staticClass: "page-title" }, [_vm._v("Gallery")]),
           _vm._v(" "),
-          _vm._m(0),
+          _c("div", {
+            staticClass: "page-content left-bar mt-3 mb-5",
+            domProps: { innerHTML: _vm._s(_vm.pageData.page.content) }
+          }),
           _vm._v(" "),
           _c(
             "div",
@@ -79592,20 +79603,7 @@ var render = function() {
     ])
   ])
 }
-var staticRenderFns = [
-  function() {
-    var _vm = this
-    var _h = _vm.$createElement
-    var _c = _vm._self._c || _h
-    return _c("div", { staticClass: "page-content left-bar mt-3 mb-5" }, [
-      _c("p", [
-        _vm._v(
-          "At Alesco, our mission to provide exceptional gallerys to our guests while maintaining our beliefs for wellness, beauty and\n                        the environment. We are committed to the mission and beliefs of Aveda and are proud to honour and uphold their\n                        guidelines."
-        )
-      ])
-    ])
-  }
-]
+var staticRenderFns = []
 render._withStripped = true
 module.exports = { render: render, staticRenderFns: staticRenderFns }
 if (false) {
@@ -79734,13 +79732,15 @@ Object.defineProperty(__webpack_exports__, "__esModule", { value: true });
 //
 //
 //
+//
+//
 
 /* harmony default export */ __webpack_exports__["default"] = ({
-    name: "contact-page",
+  name: 'contact-page',
 
-    props: {
-        pageData: {}
-    }
+  props: {
+    pageData: {}
+  }
 });
 
 /***/ }),
@@ -79751,35 +79751,40 @@ var render = function() {
   var _vm = this
   var _h = _vm.$createElement
   var _c = _vm._self._c || _h
-  return _vm._m(0)
+  return _c("div", { staticClass: "container" }, [
+    _c("div", { staticClass: "row justify-content-center main-area" }, [
+      _c("div", { staticClass: "col-md-12" }, [
+        _c("div", { staticClass: "mt-5" }, [
+          _c("h1", { staticClass: "page-title" }, [_vm._v("Contact")]),
+          _vm._v(" "),
+          _c("div", {
+            staticClass: "page-content left-bar mt-3 mb-5",
+            domProps: { innerHTML: _vm._s(_vm.pageData.page.content) }
+          }),
+          _vm._v(" "),
+          _vm._m(0)
+        ])
+      ])
+    ])
+  ])
 }
 var staticRenderFns = [
   function() {
     var _vm = this
     var _h = _vm.$createElement
     var _c = _vm._self._c || _h
-    return _c("div", { staticClass: "container" }, [
-      _c("div", { staticClass: "row justify-content-center main-area" }, [
-        _c("div", { staticClass: "col-md-12" }, [
-          _c("div", { staticClass: "mt-5" }, [
-            _c("h1", { staticClass: "page-title" }, [_vm._v("Contact")]),
-            _vm._v(" "),
-            _c("div", { staticClass: "page-content left-bar mt-3" }, [
-              _c("div", [_vm._v("Alesco Salon & Aesthetics")]),
-              _vm._v(" "),
-              _c("div", [_vm._v("133 Front Street N")]),
-              _vm._v(" "),
-              _c("div", [_vm._v("L2V 0A3")]),
-              _vm._v(" "),
-              _c("span", [_vm._v(" ")]),
-              _vm._v(" "),
-              _c("div", [_vm._v("905-227-6060")]),
-              _vm._v(" "),
-              _c("div", [_vm._v("alescosalon@bellnet.ca")])
-            ])
-          ])
-        ])
-      ])
+    return _c("div", { staticClass: "page-content left-bar mt-3" }, [
+      _c("div", [_vm._v("Alesco Salon & Aesthetics")]),
+      _vm._v(" "),
+      _c("div", [_vm._v("133 Front Street N")]),
+      _vm._v(" "),
+      _c("div", [_vm._v("L2V 0A3")]),
+      _vm._v(" "),
+      _c("span", [_vm._v(" ")]),
+      _vm._v(" "),
+      _c("div", [_vm._v("905-227-6060")]),
+      _vm._v(" "),
+      _c("div", [_vm._v("alescosalon@bellnet.ca")])
     ])
   }
 ]
