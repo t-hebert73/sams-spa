@@ -4,7 +4,7 @@
             <div class="col-md-12">
 
                 <div class="mt-5">
-                    <h1 class="page-title">Gallery</h1>
+                    <h1 class="page-title" v-if="pageData.page.content">{{ pageData.page.title }}</h1>
 
                     <div class="page-content left-bar mt-3 mb-5" v-html="pageData.page.content"></div>
 

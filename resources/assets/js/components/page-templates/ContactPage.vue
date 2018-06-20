@@ -3,7 +3,7 @@
         <div class="row justify-content-center main-area">
             <div class="col-md-12">
                 <div class="mt-5">
-                    <h1 class="page-title">Contact</h1>
+                    <h1 class="page-title">{{ pageData.page.title }}</h1>
 
                     <div class="page-content left-bar mt-3 mb-5" v-html="pageData.page.content"></div>
 

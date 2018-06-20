@@ -78172,7 +78172,9 @@ var render = function() {
     _c("div", { staticClass: "row justify-content-center main-area" }, [
       _c("div", { staticClass: "col-md-12" }, [
         _c("div", { staticClass: "mt-5" }, [
-          _c("h1", { staticClass: "page-title" }, [_vm._v("About")]),
+          _c("h1", { staticClass: "page-title" }, [
+            _vm._v(_vm._s(_vm.pageData.page.title))
+          ]),
           _vm._v(" "),
           _c("div", {
             staticClass: "page-content left-bar mt-3",
@@ -79400,7 +79402,11 @@ var render = function() {
     _c("div", { staticClass: "row justify-content-center main-area" }, [
       _c("div", { staticClass: "col-md-12" }, [
         _c("div", { staticClass: "mt-5" }, [
-          _c("h1", { staticClass: "page-title" }, [_vm._v("Gallery")]),
+          _vm.pageData.page.content
+            ? _c("h1", { staticClass: "page-title" }, [
+                _vm._v(_vm._s(_vm.pageData.page.title))
+              ])
+            : _vm._e(),
           _vm._v(" "),
           _c("div", {
             staticClass: "page-content left-bar mt-3 mb-5",
@@ -79755,7 +79761,9 @@ var render = function() {
     _c("div", { staticClass: "row justify-content-center main-area" }, [
       _c("div", { staticClass: "col-md-12" }, [
         _c("div", { staticClass: "mt-5" }, [
-          _c("h1", { staticClass: "page-title" }, [_vm._v("Contact")]),
+          _c("h1", { staticClass: "page-title" }, [
+            _vm._v(_vm._s(_vm.pageData.page.title))
+          ]),
           _vm._v(" "),
           _c("div", {
             staticClass: "page-content left-bar mt-3 mb-5",
@@ -80019,6 +80027,16 @@ Object.defineProperty(__webpack_exports__, "__esModule", { value: true });
 //
 //
 //
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
 
 /* harmony default export */ __webpack_exports__["default"] = ({
     name: "main-menu"
@@ -80051,37 +80069,87 @@ var render = function() {
               _c(
                 "b-navbar-nav",
                 [
-                  _c(
-                    "b-nav",
-                    [
-                      _c("b-nav-item", { attrs: { to: { path: "/" } } }, [
-                        _vm._v("Home")
-                      ]),
-                      _vm._v(" "),
-                      _c("b-nav-item", { attrs: { to: { path: "/about" } } }, [
-                        _vm._v("About")
-                      ]),
-                      _vm._v(" "),
-                      _c(
-                        "b-nav-item",
-                        { attrs: { to: { path: "/services" } } },
-                        [_vm._v("Services")]
-                      ),
-                      _vm._v(" "),
-                      _c(
-                        "b-nav-item",
-                        { attrs: { to: { path: "/gallery" } } },
-                        [_vm._v("Gallery")]
-                      ),
-                      _vm._v(" "),
-                      _c(
-                        "b-nav-item",
-                        { attrs: { to: { path: "/contact" } } },
-                        [_vm._v("Contact")]
-                      )
-                    ],
-                    1
-                  )
+                  _c("b-nav", [
+                    _c(
+                      "li",
+                      { staticClass: "nav-item" },
+                      [
+                        _c(
+                          "router-link",
+                          {
+                            staticClass: "nav-link",
+                            attrs: { to: { path: "/" } }
+                          },
+                          [_vm._v("Home")]
+                        )
+                      ],
+                      1
+                    ),
+                    _vm._v(" "),
+                    _c(
+                      "li",
+                      { staticClass: "nav-item" },
+                      [
+                        _c(
+                          "router-link",
+                          {
+                            staticClass: "nav-link",
+                            attrs: { to: { path: "/about" } }
+                          },
+                          [_vm._v("About")]
+                        )
+                      ],
+                      1
+                    ),
+                    _vm._v(" "),
+                    _c(
+                      "li",
+                      { staticClass: "nav-item" },
+                      [
+                        _c(
+                          "router-link",
+                          {
+                            staticClass: "nav-link",
+                            attrs: { to: { path: "/services" } }
+                          },
+                          [_vm._v("Services")]
+                        )
+                      ],
+                      1
+                    ),
+                    _vm._v(" "),
+                    _c(
+                      "li",
+                      { staticClass: "nav-item" },
+                      [
+                        _c(
+                          "router-link",
+                          {
+                            staticClass: "nav-link",
+                            attrs: { to: { path: "/gallery" } }
+                          },
+                          [_vm._v("Gallery")]
+                        )
+                      ],
+                      1
+                    ),
+                    _vm._v(" "),
+                    _c(
+                      "li",
+                      { staticClass: "nav-item" },
+                      [
+                        _c(
+                          "router-link",
+                          {
+                            staticClass: "nav-link",
+                            attrs: { to: { path: "/contact" } }
+                          },
+                          [_vm._v("Contact")]
+                        )
+                      ],
+                      1
+                    )
+                  ])
                 ],
                 1
               )

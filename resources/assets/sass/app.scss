@@ -74,6 +74,10 @@ html {
               padding-left: 1rem;
               padding-right: 1rem;
 
+              &.router-link-exact-active{
+                font-weight: bold;
+              }
+
               @media #{$mobile} {
                 text-align: center;
               }

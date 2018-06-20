@@ -372,6 +372,10 @@ html body #main_app header .nav .nav-item .nav-link {
   padding-right: 1rem;
 }
 
+html body #main_app header .nav .nav-item .nav-link.router-link-exact-active {
+  font-weight: bold;
+}
+
 @media (max-width: 767px) {
   html body #main_app header .nav .nav-item .nav-link {
     text-align: center;
