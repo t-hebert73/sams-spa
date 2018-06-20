@@ -2,6 +2,7 @@
     <div>
 
         <div class="container-fluid main-area medium">
+
             <div class="page-content left-bar mt-3" v-html="pageData.page.content"></div>
 
             <div class="employees mt-5" v-if="employees.length && !loadingEmployees">
@@ -78,19 +79,15 @@
     @import "../../../sass/responsive.scss";
 
     .main-area {
-        margin-bottom: 200px;
+        width: 75%;
+        margin: 0 auto 200px;
 
-        .employees{
-            width: 75%;
-            margin: auto;
+        @media #{$small} {
+            width: 100%;
+        }
 
-            @media #{$small} {
-                width: 100%;
-            }
-
-            @media #{$mobile} {
-                width: 100%;
-            }
+        @media #{$mobile} {
+            width: 100%;
         }
 
         .employee {
