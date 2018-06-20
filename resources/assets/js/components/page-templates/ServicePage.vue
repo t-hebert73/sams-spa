@@ -127,7 +127,7 @@
 
                         &.service-cost {
                             text-align: right;
-                            border-bottom: 1px dotted gray;
+                            //border-bottom: 1px dotted gray;
                         }
                     }
 
