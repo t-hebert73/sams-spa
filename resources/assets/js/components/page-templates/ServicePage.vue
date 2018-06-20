@@ -2,302 +2,106 @@
     <div>
 
         <div class="container-fluid main-area medium">
-            <div class="row-fluid">
-                <div class="col-12">
+            <div class="page-content left-bar mt-3" v-html="pageData.page.content"></div>
 
-                    <div class="page-content left-bar mt-3" v-html="pageData.page.content"></div>
+            <div class="employees mt-5" v-if="employees.length && !loadingEmployees">
 
-                    <div class="employees mt-5" v-if="employees.length">
+                <div class="employee" v-for="(employee, i) in employees">
 
-                        <div class="employee" v-for="(employee, i) in employees">
+                    <h2>{{ employee.person.name }}'s Services</h2>
 
-                            <h2>{{ employee.person.name }}'s Services</h2>
+                    <div class="categories" v-if="employee.categories.length">
 
-                            <div class="categories" v-if="employee.categories.length">
+                        <div v-masonry transition-duration="0.3s" item-selector=".item">
 
-                                <div v-masonry transition-duration="0.3s" item-selector=".item">
+                            <div v-masonry-tile class="item category"
+                                 v-for="(category, i) in employee.categories">
 
-                                    <div v-masonry-tile class="item category" v-for="(category, i) in employee.categories">
+                                <div class="category-name" v-if="category.services"> {{ category.name }}</div>
 
-                                        <div class="category-name"> {{ category.category }}</div>
+                                <div class="services" v-if="category.services">
 
-                                        <div class="services" v-if="category.services">
-
-                                            <div class="service" v-for="(service, i) in category.services">
+                                    <div class="service" v-for="(service, i) in category.services">
 
                                             <span class="service-name">
                                                 {{ service.name }}
                                             </span>
 
-                                                <span class="service-cost" v-if="service.cost">
+                                        <span class="service-cost" v-if="service.cost">
                                                 ${{ service.cost }}
                                             </span>
-
-                                            </div>
-
-                                        </div>
 
                                     </div>
 
                                 </div>
 
                             </div>
+
                         </div>
 
                     </div>
                 </div>
+
             </div>
         </div>
     </div>
 </template>
 
 <script>
-    export default {
-        name: "service-page",
+  export default {
+    name: 'service-page',
 
-        props: {
-            pageData: {}
-        },
+    props: {
+      pageData: {}
+    },
 
-        data() {
-            return {
-                employees: [
-                    {
-                        person: {
-                            name: 'Jeannie'
-                        },
+    data () {
+      return {
+        loadingEmployees: true,
+        employees: {}
+      }
+    },
 
-                        categories: [
-                            {
-                                category: 'Designer Cut and Style',
-                                services: [
-                                    {
-                                        name: 'Female Design',
-                                        cost: '50+'
-                                    },
-                                    {
-                                        name: 'Child Design (10 and under)',
-                                        cost: '34+'
-                                    }
-                                ]
-                            },
-                            {
-                                category: 'Designer Chemical',
-                                services: [
-                                    {
-                                        name: 'Colour',
-                                        cost: '70+'
-                                    },
-                                    {
-                                        name: '',
-                                        cost: '80+'
-                                    },
-                                    {
-                                        name: '',
-                                        cost: '90+'
-                                    },
-                                    {
-                                        name: 'Refresher',
-                                        cost: '17+'
-                                    }
-                                ]
-                            }
-                        ]
-
-                    },
-
-                    {
-                        person: {
-                            name: 'Kerri Lynn'
-                        },
-
-                        categories: [
-                            {
-                                category: 'Designer Cut and Style',
-                                services: [
-                                    {
-                                        name: 'Female Design',
-                                        cost: '50+'
-                                    },
-                                    {
-                                        name: 'Child Design (10 and under)',
-                                        cost: '34+'
-                                    }
-                                ]
-                            },
-                            {
-                                category: 'Designer Chemical',
-                                services: [
-                                    {
-                                        name: 'Colour',
-                                        cost: '70+'
-                                    },
-                                    {
-                                        name: '',
-                                        cost: '80+'
-                                    },
-                                    {
-                                        name: '',
-                                        cost: '90+'
-                                    },
-                                    {
-                                        name: 'Refresher',
-                                        cost: '17+'
-                                    }
-                                ]
-                            }
-                        ]
-
-                    },
-
-                    {
-                        person: {
-                            name: 'Veronica'
-                        },
-
-                        categories: [
-                            {
-                                category: 'Designer Cut and Style',
-                                services: [
-                                    {
-                                        name: 'Female Design',
-                                        cost: '50+'
-                                    },
-                                    {
-                                        name: 'Child Design (10 and under)',
-                                        cost: '34+'
-                                    }
-                                ]
-                            },
-                            {
-                                category: 'Designer Chemical',
-                                services: [
-                                    {
-                                        name: 'Colour',
-                                        cost: '70+'
-                                    },
-                                    {
-                                        name: '',
-                                        cost: '80+'
-                                    },
-                                    {
-                                        name: '',
-                                        cost: '90+'
-                                    },
-                                    {
-                                        name: 'Refresher',
-                                        cost: '17+'
-                                    }
-                                ]
-                            }
-                        ]
-
-                    },
-
-                    {
-                        person: {
-                            name: 'Sam'
-                        },
-
-                        categories: [
-                            {
-                                category: 'Skin Care',
-                                services: [
-                                    {
-                                        name: '30 Minutes',
-                                        cost: '35'
-                                    },
-                                    {
-                                        name: '60 Minutes',
-                                        cost: '65'
-                                    },
-                                    {
-                                        name: '90 Minutes',
-                                        cost: '95'
-                                    },
-                                    {
-                                        name: 'Add a plant peel to any facial for',
-                                        cost: '15'
-                                    }
-                                ]
-                            },
-                            {
-                                category: 'Nail Services',
-                                services: [
-                                    {
-                                        name: 'Shape and Polish',
-                                        cost: '15'
-                                    },
-                                    {
-                                        name: 'Manicure',
-                                        cost: '22'
-                                    },
-                                    {
-                                        name: 'Spa Manicure',
-                                        cost: '32'
-                                    },
-                                    {
-                                        name: 'Pedicure',
-                                        cost: '40'
-                                    },
-                                    {
-                                        name: 'Spa Pedicure',
-                                        cost: ''
-                                    },
-                                    {
-                                        name: 'Gel Manicure',
-                                        cost: '40'
-                                    },
-                                    {
-                                        name: 'Gel Pedicure',
-                                        cost: '60'
-                                    },
-                                    {
-                                        name: 'Gel Application',
-                                        cost: '20'
-                                    }
-                                ]
-                            },
-                            {
-                                category: 'Hair Removal',
-                                services: [
-                                    {
-                                        name: 'Eyebrow Design',
-                                        cost: '15'
-                                    },
-                                    {
-                                        name: 'Eyebrow Cleanup',
-                                        cost: '12'
-                                    },
-                                    {
-                                        name: 'Lip',
-                                        cost: '10'
-                                    },
-                                    {
-                                        name: 'Chin',
-                                        cost: '10'
-                                    }
-                                ]
-                            }
-                        ]
-
-                    }
-                ]
-            }
-        }
+    mounted () {
+      window.axios.get(this.API_ROUTE + 'available-services').then(response => {
+        this.employees = response.data.employees
+        this.loadingEmployees = false
+      }).catch(error => {
+        flash('Error loading pages. Reason: ' + error.response.data.message, 'error')
+      })
     }
+  }
 </script>
 
 <style lang="scss" scoped>
 
+    @import "../../../sass/responsive.scss";
+
     .main-area {
         margin-bottom: 200px;
 
+        .employees{
+            width: 75%;
+            margin: auto;
+
+            @media #{$small} {
+                width: 100%;
+            }
+
+            @media #{$mobile} {
+                width: 100%;
+            }
+        }
+
         .employee {
-            width: 25%;
+            width: 50%;
             display: inline-block;
             vertical-align: top;
-            padding-right: 10px;
+            padding: 0 15px;
+
+            @media #{$mobile} {
+                width: 100%;
+            }
 
             h2 {
                 font-size: 2.5rem;

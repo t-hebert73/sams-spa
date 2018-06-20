@@ -30,6 +30,9 @@
     }
 </script>
 
-<style scoped>
+<style lang="scss" scoped>
 
+    .main-area{
+        margin-bottom: 200px;
+    }
 </style>

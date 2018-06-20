@@ -77887,7 +77887,7 @@ if (false) {
 var disposed = false
 function injectStyle (ssrContext) {
   if (disposed) return
-  __webpack_require__(273)
+  __webpack_require__(397)
 }
 var normalizeComponent = __webpack_require__(2)
 /* script */
@@ -77932,46 +77932,8 @@ module.exports = Component.exports
 
 
 /***/ }),
-/* 273 */
-/***/ (function(module, exports, __webpack_require__) {
-
-// style-loader: Adds some css to the DOM by adding a <style> tag
-
-// load the styles
-var content = __webpack_require__(274);
-if(typeof content === 'string') content = [[module.i, content, '']];
-if(content.locals) module.exports = content.locals;
-// add the styles to the DOM
-var update = __webpack_require__(8)("0a18ed46", content, false, {});
-// Hot Module Replacement
-if(false) {
- // When the styles change, update the <style> tags
- if(!content.locals) {
-   module.hot.accept("!!../../../../../node_modules/css-loader/index.js!../../../../../node_modules/vue-loader/lib/style-compiler/index.js?{\"vue\":true,\"id\":\"data-v-0279790a\",\"scoped\":true,\"hasInlineConfig\":true}!../../../../../node_modules/vue-loader/lib/selector.js?type=styles&index=0!./HomePage.vue", function() {
-     var newContent = require("!!../../../../../node_modules/css-loader/index.js!../../../../../node_modules/vue-loader/lib/style-compiler/index.js?{\"vue\":true,\"id\":\"data-v-0279790a\",\"scoped\":true,\"hasInlineConfig\":true}!../../../../../node_modules/vue-loader/lib/selector.js?type=styles&index=0!./HomePage.vue");
-     if(typeof newContent === 'string') newContent = [[module.id, newContent, '']];
-     update(newContent);
-   });
- }
- // When the module is disposed, remove the <style> tags
- module.hot.dispose(function() { update(); });
-}
-
-/***/ }),
-/* 274 */
-/***/ (function(module, exports, __webpack_require__) {
-
-exports = module.exports = __webpack_require__(4)(false);
-// imports
-
-
-// module
-exports.push([module.i, "\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n", ""]);
-
-// exports
-
-
-/***/ }),
+/* 273 */,
+/* 274 */,
 /* 275 */
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
@@ -78199,7 +78161,7 @@ if (false) {
 var disposed = false
 function injectStyle (ssrContext) {
   if (disposed) return
-  __webpack_require__(283)
+  __webpack_require__(399)
 }
 var normalizeComponent = __webpack_require__(2)
 /* script */
@@ -78244,46 +78206,8 @@ module.exports = Component.exports
 
 
 /***/ }),
-/* 283 */
-/***/ (function(module, exports, __webpack_require__) {
-
-// style-loader: Adds some css to the DOM by adding a <style> tag
-
-// load the styles
-var content = __webpack_require__(284);
-if(typeof content === 'string') content = [[module.i, content, '']];
-if(content.locals) module.exports = content.locals;
-// add the styles to the DOM
-var update = __webpack_require__(8)("dd4c0c44", content, false, {});
-// Hot Module Replacement
-if(false) {
- // When the styles change, update the <style> tags
- if(!content.locals) {
-   module.hot.accept("!!../../../../../node_modules/css-loader/index.js!../../../../../node_modules/vue-loader/lib/style-compiler/index.js?{\"vue\":true,\"id\":\"data-v-6f1666ae\",\"scoped\":true,\"hasInlineConfig\":true}!../../../../../node_modules/vue-loader/lib/selector.js?type=styles&index=0!./GenericPage.vue", function() {
-     var newContent = require("!!../../../../../node_modules/css-loader/index.js!../../../../../node_modules/vue-loader/lib/style-compiler/index.js?{\"vue\":true,\"id\":\"data-v-6f1666ae\",\"scoped\":true,\"hasInlineConfig\":true}!../../../../../node_modules/vue-loader/lib/selector.js?type=styles&index=0!./GenericPage.vue");
-     if(typeof newContent === 'string') newContent = [[module.id, newContent, '']];
-     update(newContent);
-   });
- }
- // When the module is disposed, remove the <style> tags
- module.hot.dispose(function() { update(); });
-}
-
-/***/ }),
-/* 284 */
-/***/ (function(module, exports, __webpack_require__) {
-
-exports = module.exports = __webpack_require__(4)(false);
-// imports
-
-
-// module
-exports.push([module.i, "\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n", ""]);
-
-// exports
-
-
-/***/ }),
+/* 283 */,
+/* 284 */,
 /* 285 */
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
@@ -78434,7 +78358,7 @@ exports = module.exports = __webpack_require__(4)(false);
 
 
 // module
-exports.push([module.i, "\n.main-area[data-v-6e5bcb87] {\n  margin-bottom: 200px;\n}\n.main-area .employee[data-v-6e5bcb87] {\n    width: 25%;\n    display: inline-block;\n    vertical-align: top;\n    padding-right: 10px;\n}\n.main-area .employee h2[data-v-6e5bcb87] {\n      font-size: 2.5rem;\n}\n.main-area .employee .categories[data-v-6e5bcb87] {\n      width: 100%;\n}\n.main-area .employee .categories .category[data-v-6e5bcb87] {\n        padding-right: 15px;\n        width: 50%;\n}\n.main-area .employee .categories .category .category-name[data-v-6e5bcb87] {\n          font-size: 1rem;\n}\n.main-area .employee .categories .service[data-v-6e5bcb87] {\n        display: -webkit-box;\n        display: -ms-flexbox;\n        display: flex;\n        margin-bottom: 5px;\n}\n.main-area .employee .categories .service span[data-v-6e5bcb87] {\n          font-size: .7rem;\n          -webkit-box-flex: 1;\n              -ms-flex-positive: 1;\n                  flex-grow: 1;\n          line-height: 1.3rem;\n}\n.main-area .employee .categories .service span.service-cost[data-v-6e5bcb87] {\n            text-align: right;\n            border-bottom: 1px dotted gray;\n}\n", ""]);
+exports.push([module.i, "\n.main-area[data-v-6e5bcb87] {\n  margin-bottom: 200px;\n}\n.main-area .employees[data-v-6e5bcb87] {\n    width: 75%;\n    margin: auto;\n}\n@media (min-width: 768px) and (max-width: 991px) {\n.main-area .employees[data-v-6e5bcb87] {\n        width: 100%;\n}\n}\n@media (max-width: 767px) {\n.main-area .employees[data-v-6e5bcb87] {\n        width: 100%;\n}\n}\n.main-area .employee[data-v-6e5bcb87] {\n    width: 50%;\n    display: inline-block;\n    vertical-align: top;\n    padding: 0 15px;\n}\n@media (max-width: 767px) {\n.main-area .employee[data-v-6e5bcb87] {\n        width: 100%;\n}\n}\n.main-area .employee h2[data-v-6e5bcb87] {\n      font-size: 2.5rem;\n}\n.main-area .employee .categories[data-v-6e5bcb87] {\n      width: 100%;\n}\n.main-area .employee .categories .category[data-v-6e5bcb87] {\n        padding-right: 15px;\n        width: 50%;\n}\n.main-area .employee .categories .category .category-name[data-v-6e5bcb87] {\n          font-size: 1rem;\n}\n.main-area .employee .categories .service[data-v-6e5bcb87] {\n        display: -webkit-box;\n        display: -ms-flexbox;\n        display: flex;\n        margin-bottom: 5px;\n}\n.main-area .employee .categories .service span[data-v-6e5bcb87] {\n          font-size: .7rem;\n          -webkit-box-flex: 1;\n              -ms-flex-positive: 1;\n                  flex-grow: 1;\n          line-height: 1.3rem;\n}\n.main-area .employee .categories .service span.service-cost[data-v-6e5bcb87] {\n            text-align: right;\n            border-bottom: 1px dotted gray;\n}\n", ""]);
 
 // exports
 
@@ -78494,180 +78418,30 @@ Object.defineProperty(__webpack_exports__, "__esModule", { value: true });
 //
 //
 //
-//
-//
-//
-//
 
 /* harmony default export */ __webpack_exports__["default"] = ({
-    name: "service-page",
+  name: 'service-page',
 
-    props: {
-        pageData: {}
-    },
+  props: {
+    pageData: {}
+  },
 
-    data: function data() {
-        return {
-            employees: [{
-                person: {
-                    name: 'Jeannie'
-                },
+  data: function data() {
+    return {
+      loadingEmployees: true,
+      employees: {}
+    };
+  },
+  mounted: function mounted() {
+    var _this = this;
 
-                categories: [{
-                    category: 'Designer Cut and Style',
-                    services: [{
-                        name: 'Female Design',
-                        cost: '50+'
-                    }, {
-                        name: 'Child Design (10 and under)',
-                        cost: '34+'
-                    }]
-                }, {
-                    category: 'Designer Chemical',
-                    services: [{
-                        name: 'Colour',
-                        cost: '70+'
-                    }, {
-                        name: '',
-                        cost: '80+'
-                    }, {
-                        name: '',
-                        cost: '90+'
-                    }, {
-                        name: 'Refresher',
-                        cost: '17+'
-                    }]
-                }]
-
-            }, {
-                person: {
-                    name: 'Kerri Lynn'
-                },
-
-                categories: [{
-                    category: 'Designer Cut and Style',
-                    services: [{
-                        name: 'Female Design',
-                        cost: '50+'
-                    }, {
-                        name: 'Child Design (10 and under)',
-                        cost: '34+'
-                    }]
-                }, {
-                    category: 'Designer Chemical',
-                    services: [{
-                        name: 'Colour',
-                        cost: '70+'
-                    }, {
-                        name: '',
-                        cost: '80+'
-                    }, {
-                        name: '',
-                        cost: '90+'
-                    }, {
-                        name: 'Refresher',
-                        cost: '17+'
-                    }]
-                }]
-
-            }, {
-                person: {
-                    name: 'Veronica'
-                },
-
-                categories: [{
-                    category: 'Designer Cut and Style',
-                    services: [{
-                        name: 'Female Design',
-                        cost: '50+'
-                    }, {
-                        name: 'Child Design (10 and under)',
-                        cost: '34+'
-                    }]
-                }, {
-                    category: 'Designer Chemical',
-                    services: [{
-                        name: 'Colour',
-                        cost: '70+'
-                    }, {
-                        name: '',
-                        cost: '80+'
-                    }, {
-                        name: '',
-                        cost: '90+'
-                    }, {
-                        name: 'Refresher',
-                        cost: '17+'
-                    }]
-                }]
-
-            }, {
-                person: {
-                    name: 'Sam'
-                },
-
-                categories: [{
-                    category: 'Skin Care',
-                    services: [{
-                        name: '30 Minutes',
-                        cost: '35'
-                    }, {
-                        name: '60 Minutes',
-                        cost: '65'
-                    }, {
-                        name: '90 Minutes',
-                        cost: '95'
-                    }, {
-                        name: 'Add a plant peel to any facial for',
-                        cost: '15'
-                    }]
-                }, {
-                    category: 'Nail Services',
-                    services: [{
-                        name: 'Shape and Polish',
-                        cost: '15'
-                    }, {
-                        name: 'Manicure',
-                        cost: '22'
-                    }, {
-                        name: 'Spa Manicure',
-                        cost: '32'
-                    }, {
-                        name: 'Pedicure',
-                        cost: '40'
-                    }, {
-                        name: 'Spa Pedicure',
-                        cost: ''
-                    }, {
-                        name: 'Gel Manicure',
-                        cost: '40'
-                    }, {
-                        name: 'Gel Pedicure',
-                        cost: '60'
-                    }, {
-                        name: 'Gel Application',
-                        cost: '20'
-                    }]
-                }, {
-                    category: 'Hair Removal',
-                    services: [{
-                        name: 'Eyebrow Design',
-                        cost: '15'
-                    }, {
-                        name: 'Eyebrow Cleanup',
-                        cost: '12'
-                    }, {
-                        name: 'Lip',
-                        cost: '10'
-                    }, {
-                        name: 'Chin',
-                        cost: '10'
-                    }]
-                }]
-
-            }]
-        };
-    }
+    window.axios.get(this.API_ROUTE + 'available-services').then(function (response) {
+      _this.employees = response.data.employees;
+      _this.loadingEmployees = false;
+    }).catch(function (error) {
+      flash('Error loading pages. Reason: ' + error.response.data.message, 'error');
+    });
+  }
 });
 
 /***/ }),
@@ -78680,110 +78454,105 @@ var render = function() {
   var _c = _vm._self._c || _h
   return _c("div", [
     _c("div", { staticClass: "container-fluid main-area medium" }, [
-      _c("div", { staticClass: "row-fluid" }, [
-        _c("div", { staticClass: "col-12" }, [
-          _c("div", {
-            staticClass: "page-content left-bar mt-3",
-            domProps: { innerHTML: _vm._s(_vm.pageData.page.content) }
-          }),
-          _vm._v(" "),
-          _vm.employees.length
-            ? _c(
-                "div",
-                { staticClass: "employees mt-5" },
-                _vm._l(_vm.employees, function(employee, i) {
-                  return _c("div", { staticClass: "employee" }, [
-                    _c("h2", [
-                      _vm._v(_vm._s(employee.person.name) + "'s Services")
-                    ]),
-                    _vm._v(" "),
-                    employee.categories.length
-                      ? _c("div", { staticClass: "categories" }, [
-                          _c(
+      _c("div", {
+        staticClass: "page-content left-bar mt-3",
+        domProps: { innerHTML: _vm._s(_vm.pageData.page.content) }
+      }),
+      _vm._v(" "),
+      _vm.employees.length && !_vm.loadingEmployees
+        ? _c(
+            "div",
+            { staticClass: "employees mt-5" },
+            _vm._l(_vm.employees, function(employee, i) {
+              return _c("div", { staticClass: "employee" }, [
+                _c("h2", [
+                  _vm._v(_vm._s(employee.person.name) + "'s Services")
+                ]),
+                _vm._v(" "),
+                employee.categories.length
+                  ? _c("div", { staticClass: "categories" }, [
+                      _c(
+                        "div",
+                        {
+                          directives: [
+                            { name: "masonry", rawName: "v-masonry" }
+                          ],
+                          attrs: {
+                            "transition-duration": "0.3s",
+                            "item-selector": ".item"
+                          }
+                        },
+                        _vm._l(employee.categories, function(category, i) {
+                          return _c(
                             "div",
                             {
                               directives: [
-                                { name: "masonry", rawName: "v-masonry" }
-                              ],
-                              attrs: {
-                                "transition-duration": "0.3s",
-                                "item-selector": ".item"
-                              }
-                            },
-                            _vm._l(employee.categories, function(category, i) {
-                              return _c(
-                                "div",
                                 {
-                                  directives: [
-                                    {
-                                      name: "masonry-tile",
-                                      rawName: "v-masonry-tile"
-                                    }
-                                  ],
-                                  staticClass: "item category"
-                                },
-                                [
-                                  _c("div", { staticClass: "category-name" }, [
-                                    _vm._v(" " + _vm._s(category.category))
-                                  ]),
-                                  _vm._v(" "),
-                                  category.services
-                                    ? _c(
+                                  name: "masonry-tile",
+                                  rawName: "v-masonry-tile"
+                                }
+                              ],
+                              staticClass: "item category"
+                            },
+                            [
+                              category.services
+                                ? _c("div", { staticClass: "category-name" }, [
+                                    _vm._v(" " + _vm._s(category.name))
+                                  ])
+                                : _vm._e(),
+                              _vm._v(" "),
+                              category.services
+                                ? _c(
+                                    "div",
+                                    { staticClass: "services" },
+                                    _vm._l(category.services, function(
+                                      service,
+                                      i
+                                    ) {
+                                      return _c(
                                         "div",
-                                        { staticClass: "services" },
-                                        _vm._l(category.services, function(
-                                          service,
-                                          i
-                                        ) {
-                                          return _c(
-                                            "div",
-                                            { staticClass: "service" },
+                                        { staticClass: "service" },
+                                        [
+                                          _c(
+                                            "span",
+                                            { staticClass: "service-name" },
                                             [
-                                              _c(
+                                              _vm._v(
+                                                "\n                                            " +
+                                                  _vm._s(service.name) +
+                                                  "\n                                        "
+                                              )
+                                            ]
+                                          ),
+                                          _vm._v(" "),
+                                          service.cost
+                                            ? _c(
                                                 "span",
-                                                { staticClass: "service-name" },
+                                                { staticClass: "service-cost" },
                                                 [
                                                   _vm._v(
-                                                    "\n                                            " +
-                                                      _vm._s(service.name) +
+                                                    "\n                                            $" +
+                                                      _vm._s(service.cost) +
                                                       "\n                                        "
                                                   )
                                                 ]
-                                              ),
-                                              _vm._v(" "),
-                                              service.cost
-                                                ? _c(
-                                                    "span",
-                                                    {
-                                                      staticClass:
-                                                        "service-cost"
-                                                    },
-                                                    [
-                                                      _vm._v(
-                                                        "\n                                            $" +
-                                                          _vm._s(service.cost) +
-                                                          "\n                                        "
-                                                      )
-                                                    ]
-                                                  )
-                                                : _vm._e()
-                                            ]
-                                          )
-                                        })
+                                              )
+                                            : _vm._e()
+                                        ]
                                       )
-                                    : _vm._e()
-                                ]
-                              )
-                            })
+                                    })
+                                  )
+                                : _vm._e()
+                            ]
                           )
-                        ])
-                      : _vm._e()
-                  ])
-                })
-              )
-            : _vm._e()
-        ])
-      ])
+                        })
+                      )
+                    ])
+                  : _vm._e()
+              ])
+            })
+          )
+        : _vm._e()
     ])
   ])
 }
@@ -78883,7 +78652,7 @@ exports = module.exports = __webpack_require__(4)(false);
 
 
 // module
-exports.push([module.i, "\n.gallery-container[data-v-5eac8f24] {\n  margin-bottom: 250px;\n  position: relative;\n  z-index: 2;\n}\n.gallery-container .cover[data-v-5eac8f24] {\n    height: 750px;\n    background-size: cover;\n    background-repeat: no-repeat;\n    background-position: center center;\n}\n", ""]);
+exports.push([module.i, "\n.gallery-container[data-v-5eac8f24] {\n  margin-bottom: 330px;\n  position: relative;\n  z-index: 2;\n}\n@media (min-width: 768px) and (max-width: 991px) {\n.gallery-container[data-v-5eac8f24] {\n      margin-bottom: 200px;\n}\n}\n@media (max-width: 767px) {\n.gallery-container[data-v-5eac8f24] {\n      margin-bottom: 120px;\n}\n}\n.gallery-container .cover[data-v-5eac8f24] {\n    height: 650px;\n    background-size: cover;\n    background-repeat: no-repeat;\n    background-position: center center;\n}\n@media (min-width: 992px) and (max-width: 1199px) {\n.gallery-container .cover[data-v-5eac8f24] {\n        height: 550px;\n}\n}\n@media (min-width: 768px) and (max-width: 991px) {\n.gallery-container .cover[data-v-5eac8f24] {\n        height: 500px;\n}\n}\n@media (max-width: 767px) {\n.gallery-container .cover[data-v-5eac8f24] {\n        height: 250px;\n}\n}\n", ""]);
 
 // exports
 
@@ -79776,7 +79545,7 @@ if (false) {
 var disposed = false
 function injectStyle (ssrContext) {
   if (disposed) return
-  __webpack_require__(299)
+  __webpack_require__(401)
 }
 var normalizeComponent = __webpack_require__(2)
 /* script */
@@ -79821,46 +79590,8 @@ module.exports = Component.exports
 
 
 /***/ }),
-/* 299 */
-/***/ (function(module, exports, __webpack_require__) {
-
-// style-loader: Adds some css to the DOM by adding a <style> tag
-
-// load the styles
-var content = __webpack_require__(300);
-if(typeof content === 'string') content = [[module.i, content, '']];
-if(content.locals) module.exports = content.locals;
-// add the styles to the DOM
-var update = __webpack_require__(8)("4b13eadc", content, false, {});
-// Hot Module Replacement
-if(false) {
- // When the styles change, update the <style> tags
- if(!content.locals) {
-   module.hot.accept("!!../../../../../node_modules/css-loader/index.js!../../../../../node_modules/vue-loader/lib/style-compiler/index.js?{\"vue\":true,\"id\":\"data-v-3a86e41c\",\"scoped\":true,\"hasInlineConfig\":true}!../../../../../node_modules/vue-loader/lib/selector.js?type=styles&index=0!./ContactPage.vue", function() {
-     var newContent = require("!!../../../../../node_modules/css-loader/index.js!../../../../../node_modules/vue-loader/lib/style-compiler/index.js?{\"vue\":true,\"id\":\"data-v-3a86e41c\",\"scoped\":true,\"hasInlineConfig\":true}!../../../../../node_modules/vue-loader/lib/selector.js?type=styles&index=0!./ContactPage.vue");
-     if(typeof newContent === 'string') newContent = [[module.id, newContent, '']];
-     update(newContent);
-   });
- }
- // When the module is disposed, remove the <style> tags
- module.hot.dispose(function() { update(); });
-}
-
-/***/ }),
-/* 300 */
-/***/ (function(module, exports, __webpack_require__) {
-
-exports = module.exports = __webpack_require__(4)(false);
-// imports
-
-
-// module
-exports.push([module.i, "\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n", ""]);
-
-// exports
-
-
-/***/ }),
+/* 299 */,
+/* 300 */,
 /* 301 */
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
@@ -80156,6 +79887,18 @@ Object.defineProperty(__webpack_exports__, "__esModule", { value: true });
 //
 //
 //
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
 
 /* harmony default export */ __webpack_exports__["default"] = ({
     name: "main-menu"
@@ -80171,28 +79914,60 @@ var render = function() {
   var _c = _vm._self._c || _h
   return _c(
     "div",
-    { staticClass: "mt-5 mb-5" },
+    { staticClass: "main-menu-container" },
     [
       _c(
-        "b-nav",
+        "b-navbar",
+        { attrs: { toggleable: "md" } },
         [
-          _c("b-nav-item", { attrs: { to: { path: "/" } } }, [_vm._v("Home")]),
-          _vm._v(" "),
-          _c("b-nav-item", { attrs: { to: { path: "/about" } } }, [
-            _vm._v("About")
+          _c("b-navbar-toggle", { attrs: { target: "nav_collapse" } }, [
+            _vm._v("Menu ")
           ]),
           _vm._v(" "),
-          _c("b-nav-item", { attrs: { to: { path: "/services" } } }, [
-            _vm._v("Services")
-          ]),
-          _vm._v(" "),
-          _c("b-nav-item", { attrs: { to: { path: "/gallery" } } }, [
-            _vm._v("Gallery")
-          ]),
-          _vm._v(" "),
-          _c("b-nav-item", { attrs: { to: { path: "/contact" } } }, [
-            _vm._v("Contact")
-          ])
+          _c(
+            "b-collapse",
+            { attrs: { "is-nav": "", id: "nav_collapse" } },
+            [
+              _c(
+                "b-navbar-nav",
+                [
+                  _c(
+                    "b-nav",
+                    [
+                      _c("b-nav-item", { attrs: { to: { path: "/" } } }, [
+                        _vm._v("Home")
+                      ]),
+                      _vm._v(" "),
+                      _c("b-nav-item", { attrs: { to: { path: "/about" } } }, [
+                        _vm._v("About")
+                      ]),
+                      _vm._v(" "),
+                      _c(
+                        "b-nav-item",
+                        { attrs: { to: { path: "/services" } } },
+                        [_vm._v("Services")]
+                      ),
+                      _vm._v(" "),
+                      _c(
+                        "b-nav-item",
+                        { attrs: { to: { path: "/gallery" } } },
+                        [_vm._v("Gallery")]
+                      ),
+                      _vm._v(" "),
+                      _c(
+                        "b-nav-item",
+                        { attrs: { to: { path: "/contact" } } },
+                        [_vm._v("Contact")]
+                      )
+                    ],
+                    1
+                  )
+                ],
+                1
+              )
+            ],
+            1
+          )
         ],
         1
       )
@@ -80296,7 +80071,7 @@ exports = module.exports = __webpack_require__(4)(false);
 
 
 // module
-exports.push([module.i, "\nfooter[data-v-f9161d1e] {\n  margin-bottom: 25px;\n}\n.tmp-login[data-v-f9161d1e] {\n  background-color: transparent;\n  position: fixed;\n  bottom: 0;\n  left: 0;\n  min-height: 35px;\n}\n.tmp-login[data-v-f9161d1e]:hover {\n    background-color: red;\n}\n.tmp-login:hover span[data-v-f9161d1e] {\n      color: white;\n}\n.tmp-login span[data-v-f9161d1e] {\n    padding: 5px 30px;\n    color: transparent;\n    display: block;\n}\n", ""]);
+exports.push([module.i, "\nfooter[data-v-f9161d1e] {\n  margin-bottom: 25px;\n}\n.tmp-login[data-v-f9161d1e] {\n  background-color: transparent;\n  position: fixed;\n  bottom: 0;\n  left: 0;\n  min-height: 35px;\n}\n.tmp-login[data-v-f9161d1e]:hover {\n    background-color: red;\n}\n.tmp-login:hover span[data-v-f9161d1e] {\n      color: white;\n}\n.tmp-login span[data-v-f9161d1e] {\n    padding: 5px 30px;\n    color: transparent;\n    display: block;\n}\n@media (max-width: 767px) {\n.footer-text[data-v-f9161d1e] {\n    margin-top: 20px;\n}\n}\n", ""]);
 
 // exports
 
@@ -80327,9 +80102,10 @@ Object.defineProperty(__webpack_exports__, "__esModule", { value: true });
 //
 
 
+
 /* harmony default export */ __webpack_exports__["default"] = ({
-    name: "main-footer",
-    components: { AuthCombo: __WEBPACK_IMPORTED_MODULE_0__widgets_auth_AuthCombo___default.a }
+  name: 'main-footer',
+  components: { AuthCombo: __WEBPACK_IMPORTED_MODULE_0__widgets_auth_AuthCombo___default.a }
 });
 
 /***/ }),
@@ -81390,7 +81166,7 @@ var staticRenderFns = [
     var _h = _vm.$createElement
     var _c = _vm._self._c || _h
     return _c("div", { staticClass: "container" }, [
-      _c("div", { staticClass: "row justify-content-center" }, [
+      _c("div", { staticClass: "row justify-content-center footer-text" }, [
         _vm._v(
           "\n            ©2018 Alesco Salon. All Rights Reserved\n        "
         )
@@ -88497,6 +88273,132 @@ if (false) {
 /***/ (function(module, exports) {
 
 // removed by extract-text-webpack-plugin
+
+/***/ }),
+/* 391 */,
+/* 392 */,
+/* 393 */,
+/* 394 */,
+/* 395 */,
+/* 396 */,
+/* 397 */
+/***/ (function(module, exports, __webpack_require__) {
+
+// style-loader: Adds some css to the DOM by adding a <style> tag
+
+// load the styles
+var content = __webpack_require__(398);
+if(typeof content === 'string') content = [[module.i, content, '']];
+if(content.locals) module.exports = content.locals;
+// add the styles to the DOM
+var update = __webpack_require__(8)("fd266e40", content, false, {});
+// Hot Module Replacement
+if(false) {
+ // When the styles change, update the <style> tags
+ if(!content.locals) {
+   module.hot.accept("!!../../../../../node_modules/css-loader/index.js!../../../../../node_modules/vue-loader/lib/style-compiler/index.js?{\"vue\":true,\"id\":\"data-v-0279790a\",\"scoped\":true,\"hasInlineConfig\":true}!../../../../../node_modules/sass-loader/lib/loader.js!../../../../../node_modules/vue-loader/lib/selector.js?type=styles&index=0!./HomePage.vue", function() {
+     var newContent = require("!!../../../../../node_modules/css-loader/index.js!../../../../../node_modules/vue-loader/lib/style-compiler/index.js?{\"vue\":true,\"id\":\"data-v-0279790a\",\"scoped\":true,\"hasInlineConfig\":true}!../../../../../node_modules/sass-loader/lib/loader.js!../../../../../node_modules/vue-loader/lib/selector.js?type=styles&index=0!./HomePage.vue");
+     if(typeof newContent === 'string') newContent = [[module.id, newContent, '']];
+     update(newContent);
+   });
+ }
+ // When the module is disposed, remove the <style> tags
+ module.hot.dispose(function() { update(); });
+}
+
+/***/ }),
+/* 398 */
+/***/ (function(module, exports, __webpack_require__) {
+
+exports = module.exports = __webpack_require__(4)(false);
+// imports
+
+
+// module
+exports.push([module.i, "", ""]);
+
+// exports
+
+
+/***/ }),
+/* 399 */
+/***/ (function(module, exports, __webpack_require__) {
+
+// style-loader: Adds some css to the DOM by adding a <style> tag
+
+// load the styles
+var content = __webpack_require__(400);
+if(typeof content === 'string') content = [[module.i, content, '']];
+if(content.locals) module.exports = content.locals;
+// add the styles to the DOM
+var update = __webpack_require__(8)("2d2f0110", content, false, {});
+// Hot Module Replacement
+if(false) {
+ // When the styles change, update the <style> tags
+ if(!content.locals) {
+   module.hot.accept("!!../../../../../node_modules/css-loader/index.js!../../../../../node_modules/vue-loader/lib/style-compiler/index.js?{\"vue\":true,\"id\":\"data-v-6f1666ae\",\"scoped\":true,\"hasInlineConfig\":true}!../../../../../node_modules/sass-loader/lib/loader.js!../../../../../node_modules/vue-loader/lib/selector.js?type=styles&index=0!./GenericPage.vue", function() {
+     var newContent = require("!!../../../../../node_modules/css-loader/index.js!../../../../../node_modules/vue-loader/lib/style-compiler/index.js?{\"vue\":true,\"id\":\"data-v-6f1666ae\",\"scoped\":true,\"hasInlineConfig\":true}!../../../../../node_modules/sass-loader/lib/loader.js!../../../../../node_modules/vue-loader/lib/selector.js?type=styles&index=0!./GenericPage.vue");
+     if(typeof newContent === 'string') newContent = [[module.id, newContent, '']];
+     update(newContent);
+   });
+ }
+ // When the module is disposed, remove the <style> tags
+ module.hot.dispose(function() { update(); });
+}
+
+/***/ }),
+/* 400 */
+/***/ (function(module, exports, __webpack_require__) {
+
+exports = module.exports = __webpack_require__(4)(false);
+// imports
+
+
+// module
+exports.push([module.i, "\n.main-area[data-v-6f1666ae] {\n  margin-bottom: 200px;\n}\n", ""]);
+
+// exports
+
+
+/***/ }),
+/* 401 */
+/***/ (function(module, exports, __webpack_require__) {
+
+// style-loader: Adds some css to the DOM by adding a <style> tag
+
+// load the styles
+var content = __webpack_require__(402);
+if(typeof content === 'string') content = [[module.i, content, '']];
+if(content.locals) module.exports = content.locals;
+// add the styles to the DOM
+var update = __webpack_require__(8)("20cb8776", content, false, {});
+// Hot Module Replacement
+if(false) {
+ // When the styles change, update the <style> tags
+ if(!content.locals) {
+   module.hot.accept("!!../../../../../node_modules/css-loader/index.js!../../../../../node_modules/vue-loader/lib/style-compiler/index.js?{\"vue\":true,\"id\":\"data-v-3a86e41c\",\"scoped\":true,\"hasInlineConfig\":true}!../../../../../node_modules/sass-loader/lib/loader.js!../../../../../node_modules/vue-loader/lib/selector.js?type=styles&index=0!./ContactPage.vue", function() {
+     var newContent = require("!!../../../../../node_modules/css-loader/index.js!../../../../../node_modules/vue-loader/lib/style-compiler/index.js?{\"vue\":true,\"id\":\"data-v-3a86e41c\",\"scoped\":true,\"hasInlineConfig\":true}!../../../../../node_modules/sass-loader/lib/loader.js!../../../../../node_modules/vue-loader/lib/selector.js?type=styles&index=0!./ContactPage.vue");
+     if(typeof newContent === 'string') newContent = [[module.id, newContent, '']];
+     update(newContent);
+   });
+ }
+ // When the module is disposed, remove the <style> tags
+ module.hot.dispose(function() { update(); });
+}
+
+/***/ }),
+/* 402 */
+/***/ (function(module, exports, __webpack_require__) {
+
+exports = module.exports = __webpack_require__(4)(false);
+// imports
+
+
+// module
+exports.push([module.i, "\n.main-area[data-v-3a86e41c] {\n  margin-bottom: 200px;\n}\n", ""]);
+
+// exports
+
 
 /***/ })
 /******/ ]);

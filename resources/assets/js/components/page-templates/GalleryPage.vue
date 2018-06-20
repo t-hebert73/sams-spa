@@ -112,16 +112,39 @@
 </script>
 
 <style lang="scss" scoped>
+
+    @import "../../../sass/responsive.scss";
+
     .gallery-container{
-        margin-bottom: 250px;
+        margin-bottom: 330px;
         position: relative;
         z-index: 2;
 
+        @media #{$small} {
+            margin-bottom: 200px;
+        }
+
+        @media #{$mobile} {
+            margin-bottom: 120px;
+        }
+
         .cover{
-            height: 750px;
+            height: 650px;
             background-size: cover;
             background-repeat: no-repeat;
             background-position: center center;
+
+            @media #{$normal} {
+                height: 550px;
+            }
+
+            @media #{$small} {
+                height: 500px;
+            }
+
+            @media #{$mobile} {
+                height: 250px;
+            }
         }
     }
 </style>

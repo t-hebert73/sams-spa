@@ -2,7 +2,8 @@
 @import url("https://fonts.googleapis.com/css?family=Raleway:300,400,600");
 // Variables
 @import "variables";
-
+// Responsive
+@import "responsive";
 @import "admin";
 @import "~lightbox2/src/css/lightbox.css";
 
@@ -39,16 +40,43 @@ html {
           height: 100px;
         }
 
+        .main-menu-container{
+          margin-top: 2rem;
+          margin-bottom: 2rem;
+
+          @media #{$mobile} {
+            margin-top: 1rem;
+            margin-bottom: 1rem;
+          }
+        }
+
+        .navbar-toggler {
+          background-color: black;
+          color: white;
+          margin: 0 auto 10px;
+          padding: 10px 20px;
+        }
+
         .nav {
 
           .nav-item {
             margin-right: 10px;
             margin-left: 10px;
 
+            @media #{$mobile} {
+              width: 100%;
+            }
+
             .nav-link {
               font-size: 1.2rem;
               text-transform: uppercase;
               color: black;
+              padding-left: 1rem;
+              padding-right: 1rem;
+
+              @media #{$mobile} {
+                text-align: center;
+              }
 
               &:hover {
                 background-color: rgba(0, 0, 0, 0.1);
@@ -60,6 +88,10 @@ html {
 
       .main-area {
         min-height: 688px;
+
+        @media #{$mobile} {
+          min-height: 300px;
+        }
 
         &.medium {
           min-height: 420px;
@@ -86,12 +118,30 @@ html {
 
         .bottom-swirl {
           background-image: url('/images/swirls.png');
+          background-repeat: no-repeat;
           background-size: 100%;
           width: 100%;
           height: 500px;
           position: absolute;
           bottom: -100px;
           right: -35px;
+
+          @media #{$normal} {
+            bottom: -130px;
+            right: 0;
+          }
+
+          @media #{$small} {
+            bottom: -240px;
+            right: -5px;
+          }
+
+          @media #{$mobile} {
+            height: 120px;
+            bottom: 60px;
+            right: 0;
+          }
+
         }
 
       }

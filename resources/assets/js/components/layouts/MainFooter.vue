@@ -1,7 +1,7 @@
 <template>
     <footer>
         <div class="container">
-            <div class="row justify-content-center">
+            <div class="row justify-content-center footer-text">
                 &copy;2018 Alesco Salon. All Rights Reserved
             </div>
         </div>
@@ -15,16 +15,19 @@
 </template>
 
 <script>
-    import AuthCombo from '../widgets/auth/AuthCombo'
-    export default {
-        name: "main-footer",
-      components: {AuthCombo}
-    }
+  import AuthCombo from '../widgets/auth/AuthCombo'
+
+  export default {
+    name: 'main-footer',
+    components: {AuthCombo}
+  }
 </script>
 
 <style lang="scss" scoped>
 
-    footer{
+    @import "../../../sass/_responsive.scss";
+
+    footer {
         margin-bottom: 25px;
     }
 
@@ -35,18 +38,24 @@
         left: 0;
         min-height: 35px;
 
-    &:hover {
-         background-color: red;
+        &:hover {
+            background-color: red;
 
-    span {
-        color: white;
-    }
+            span {
+                color: white;
+            }
+        }
+
+        span {
+            padding: 5px 30px;
+            color: transparent;
+            display: block;
+        }
     }
 
-    span {
-        padding: 5px 30px;
-        color: transparent;
-        display: block;
-    }
+    .footer-text{
+        @media #{$mobile} {
+            margin-top: 20px;
+        }
     }
 </style>
