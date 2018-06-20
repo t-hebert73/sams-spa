@@ -87,14 +87,22 @@ html {
       }
 
       .main-area {
-        min-height: 688px;
+        min-height: 676px;
 
         @media #{$mobile} {
           min-height: 300px;
         }
 
+        @media #{$gtWide} {
+          min-height: 1030px;
+        }
+
         &.medium {
           min-height: 420px;
+
+          @media #{$gtWide} {
+            min-height: 810px;
+          }
         }
 
         .page-title {

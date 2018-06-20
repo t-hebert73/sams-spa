@@ -25,7 +25,13 @@
 
 <style lang="scss" scoped>
 
+    @import "../../../sass/responsive.scss";
+
     .main-area{
-        margin-bottom: 200px;
+
+        @media #{$ltDesktop} {
+            margin-bottom: 200px;
+        }
+
     }
 </style>

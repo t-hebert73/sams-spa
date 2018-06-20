@@ -88356,7 +88356,7 @@ exports = module.exports = __webpack_require__(4)(false);
 
 
 // module
-exports.push([module.i, "\n.main-area[data-v-6f1666ae] {\n  margin-bottom: 200px;\n}\n", ""]);
+exports.push([module.i, "\n@media (max-width: 991px) {\n.main-area[data-v-6f1666ae] {\n    margin-bottom: 200px;\n}\n}\n", ""]);
 
 // exports
 
@@ -88396,7 +88396,7 @@ exports = module.exports = __webpack_require__(4)(false);
 
 
 // module
-exports.push([module.i, "\n.main-area[data-v-3a86e41c] {\n  margin-bottom: 200px;\n}\n", ""]);
+exports.push([module.i, "\n@media (max-width: 991px) {\n.main-area[data-v-3a86e41c] {\n    margin-bottom: 200px;\n}\n}\n", ""]);
 
 // exports
 
