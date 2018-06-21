@@ -10,7 +10,7 @@
                                     <h1>{{ employee.name }}'s Services</h1>
 
                                     <div class="card-text">
-                                        <p>Edit Services for this employee.</p>
+                                        <p>Edit Services for this service group.</p>
                                     </div>
                                 </div>
                             </div>

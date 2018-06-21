@@ -16,15 +16,15 @@
                     </router-link>
                 </li>
                 <li class="nav-item">
-                    <router-link :to="{ name: 'employees.index'}" class="nav-link" v-b-tooltip.html.right title="View & Manage Employees">
-                        <i class="fa fa-users"></i>
-                        <span class="hidden-xs-down link-text">Employees</span>
+                    <router-link :to="{ name: 'employees.index'}" class="nav-link" v-b-tooltip.html.right title="View & Manage Service Groups">
+                        <i class="fa fa-list-ul"></i>
+                        <span class="hidden-xs-down link-text">Service Groups</span>
                     </router-link>
                 </li>
 
                 <li class="nav-item">
                     <router-link :to="{ name: 'service-categories.index'}" class="nav-link" v-b-tooltip.html.right title="View & Manage Service Categories">
-                        <i class="fa fa-server"></i>
+                        <i class="fa fa-list"></i>
                         <span class="hidden-xs-down link-text">Service Categories</span>
                     </router-link>
                 </li>

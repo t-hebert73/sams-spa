@@ -7,17 +7,15 @@
                         <div class="card mb-3">
                             <div class="card-body">
                                 <div class="card-title">
-                                    <h1>Employee Management</h1>
+                                    <h1>Service Group Management</h1>
 
                                     <div class="card-text">
-                                        <p>Below are all the employees in the system. Add more or modify/remove the existing
+                                        <p>Below are all the service groups in the system. Add more or modify/remove the existing
                                             ones.</p>
-
-                                        <p>After creating employees check out the menu editor to add the employee to a menu.</p>
 
                                         <div class="actions">
                                             <a href="#" @click.prevent="createEmployee()" class="btn btn-primary mr-2">Create
-                                            Employee</a>
+                                            Service Group</a>
 
                                             <!-- <router-link class="btn btn-secondary" :to="{name: 'menu-editor.index' }">Menu Editor</router-link>-->
                                         </div>

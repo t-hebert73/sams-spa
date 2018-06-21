@@ -7,7 +7,7 @@
                         <div class="card mb-3">
                             <div class="card-body">
                                 <div class="card-title">
-                                    <h1 class="float-left">Edit Employee</h1>
+                                    <h1 class="float-left">Edit A Service Group</h1>
                                     <router-link :to="{ name: 'employees.index'}" class="btn btn-primary float-right">Back</router-link>
                                 </div>
 

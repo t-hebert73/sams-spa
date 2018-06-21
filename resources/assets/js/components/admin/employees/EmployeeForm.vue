@@ -2,7 +2,7 @@
     <div class="row c-employee-form">
         <div class="col-xs-12 col-sm-12 col-md-12">
             <fieldset>
-                <legend>Employee Information</legend>
+                <legend>Service Group Information</legend>
 
                 <b-form-group>
                     <label for="employee_name">Name: </label>

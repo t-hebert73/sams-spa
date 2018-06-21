@@ -10,7 +10,7 @@
                                     <h1>Services</h1>
 
                                     <div class="card-text">
-                                        <p>Choose an employee to add/edit services.</p>
+                                        <p>Choose a service group to add/edit services.</p>
                                     </div>
                                 </div>
                             </div>

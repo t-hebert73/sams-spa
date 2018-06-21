@@ -77756,14 +77756,14 @@ var render = function() {
                   staticClass: "nav-link",
                   attrs: {
                     to: { name: "employees.index" },
-                    title: "View & Manage Employees"
+                    title: "View & Manage Service Groups"
                   }
                 },
                 [
-                  _c("i", { staticClass: "fa fa-users" }),
+                  _c("i", { staticClass: "fa fa-list-ul" }),
                   _vm._v(" "),
                   _c("span", { staticClass: "hidden-xs-down link-text" }, [
-                    _vm._v("Employees")
+                    _vm._v("Service Groups")
                   ])
                 ]
               )
@@ -77792,7 +77792,7 @@ var render = function() {
                   }
                 },
                 [
-                  _c("i", { staticClass: "fa fa-server" }),
+                  _c("i", { staticClass: "fa fa-list" }),
                   _vm._v(" "),
                   _c("span", { staticClass: "hidden-xs-down link-text" }, [
                     _vm._v("Service Categories")
@@ -79705,7 +79705,7 @@ exports = module.exports = __webpack_require__(4)(false);
 
 
 // module
-exports.push([module.i, "\n@media (max-width: 991px) {\n.main-area[data-v-3a86e41c] {\n    margin-bottom: 200px;\n}\n}\n", ""]);
+exports.push([module.i, "\n@media (max-width: 991px) {\n.main-area[data-v-3a86e41c] {\n    margin-bottom: 200px;\n}\n}\n.main-area .social-media .fa[data-v-3a86e41c] {\n  font-size: 2rem;\n  padding-right: 5px;\n  color: black;\n}\n.main-area .social-media .fa[data-v-3a86e41c]:hover {\n    opacity: 0.8;\n}\n", ""]);
 
 // exports
 
@@ -79716,6 +79716,19 @@ exports.push([module.i, "\n@media (max-width: 991px) {\n.main-area[data-v-3a86e4
 
 "use strict";
 Object.defineProperty(__webpack_exports__, "__esModule", { value: true });
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
 //
 //
 //
@@ -79782,11 +79795,48 @@ var staticRenderFns = [
     var _h = _vm.$createElement
     var _c = _vm._self._c || _h
     return _c("div", { staticClass: "page-content left-bar mt-3" }, [
-      _c("div", [_vm._v("Alesco Salon & Aesthetics")]),
+      _c("div", { staticClass: "address-info" }, [
+        _c("div", [_vm._v("Alesco Salon & Aesthetics")]),
+        _vm._v(" "),
+        _c("div", [_vm._v("133 Front Street N")]),
+        _vm._v(" "),
+        _c("div", [_vm._v("L2V 0A3")])
+      ]),
       _vm._v(" "),
-      _c("div", [_vm._v("133 Front Street N")]),
-      _vm._v(" "),
-      _c("div", [_vm._v("L2V 0A3")]),
+      _c("div", { staticClass: "social-media" }, [
+        _c(
+          "a",
+          {
+            attrs: {
+              href: "https://www.facebook.com/alescosalonandaesthetics/",
+              target: "_blank"
+            }
+          },
+          [
+            _c("i", {
+              staticClass: "fa fa-facebook-official",
+              attrs: { "aria-hidden": "true" }
+            })
+          ]
+        ),
+        _vm._v(" "),
+        _c(
+          "a",
+          {
+            attrs: {
+              href:
+                "https://www.instagram.com/explore/locations/890235954441523/alesco-salon-aesthetics/?hl=en",
+              target: "_blank"
+            }
+          },
+          [
+            _c("i", {
+              staticClass: "fa fa-instagram",
+              attrs: { "aria-hidden": "true" }
+            })
+          ]
+        )
+      ]),
       _vm._v(" "),
       _c("span", [_vm._v(" ")]),
       _vm._v(" "),
@@ -84305,8 +84355,6 @@ Object.defineProperty(__webpack_exports__, "__esModule", { value: true });
 //
 //
 //
-//
-//
 
 /* harmony default export */ __webpack_exports__["default"] = ({
   data: function data() {
@@ -84455,18 +84503,12 @@ var render = function() {
               _c("div", { staticClass: "card mb-3" }, [
                 _c("div", { staticClass: "card-body" }, [
                   _c("div", { staticClass: "card-title" }, [
-                    _c("h1", [_vm._v("Employee Management")]),
+                    _c("h1", [_vm._v("Service Group Management")]),
                     _vm._v(" "),
                     _c("div", { staticClass: "card-text" }, [
                       _c("p", [
                         _vm._v(
-                          "Below are all the employees in the system. Add more or modify/remove the existing\n                                        ones."
-                        )
-                      ]),
-                      _vm._v(" "),
-                      _c("p", [
-                        _vm._v(
-                          "After creating employees check out the menu editor to add the employee to a menu."
+                          "Below are all the service groups in the system. Add more or modify/remove the existing\n                                        ones."
                         )
                       ]),
                       _vm._v(" "),
@@ -84485,7 +84527,7 @@ var render = function() {
                           },
                           [
                             _vm._v(
-                              "Create\n                                        Employee"
+                              "Create\n                                        Service Group"
                             )
                           ]
                         )
@@ -84840,7 +84882,7 @@ var render = function() {
       _c(
         "fieldset",
         [
-          _c("legend", [_vm._v("Employee Information")]),
+          _c("legend", [_vm._v("Service Group Information")]),
           _vm._v(" "),
           _c(
             "b-form-group",
@@ -84945,7 +84987,7 @@ var render = function() {
                     { staticClass: "card-title" },
                     [
                       _c("h1", { staticClass: "float-left" }, [
-                        _vm._v("Create A Employee")
+                        _vm._v("Create A Service Group")
                       ]),
                       _vm._v(" "),
                       _c(
@@ -85721,7 +85763,7 @@ var render = function() {
                     { staticClass: "card-title" },
                     [
                       _c("h1", { staticClass: "float-left" }, [
-                        _vm._v("Edit Employee")
+                        _vm._v("Edit A Service Group")
                       ]),
                       _vm._v(" "),
                       _c(
@@ -85957,7 +85999,7 @@ var render = function() {
                     _vm._v(" "),
                     _c("div", { staticClass: "card-text" }, [
                       _c("p", [
-                        _vm._v("Choose an employee to add/edit services.")
+                        _vm._v("Choose a service group to add/edit services.")
                       ])
                     ])
                   ])
@@ -86420,7 +86462,7 @@ var render = function() {
                     ]),
                     _vm._v(" "),
                     _c("div", { staticClass: "card-text" }, [
-                      _c("p", [_vm._v("Edit Services for this employee.")])
+                      _c("p", [_vm._v("Edit Services for this service group.")])
                     ])
                   ])
                 ])
