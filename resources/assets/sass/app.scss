@@ -119,6 +119,8 @@ html {
       }
 
       .page-content {
+        z-index: 2;
+        position: relative;
 
         &.left-bar {
           border-left: 3px solid black;

@@ -131,6 +131,12 @@ const routes = [
     component: require('./components/admin/Dashboard.vue')
   },
   {
+    path: '/admin/inquiries/:id',
+    name: 'inquiries.show',
+    component: require('./components/admin/inquiries/InquiryShow.vue'),
+    props: true
+  },
+  {
     path: '/admin/pages',
     name: 'pages.index',
     component: require('./components/admin/pages/PageList.vue'),

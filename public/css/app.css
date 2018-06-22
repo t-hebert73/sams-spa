@@ -420,6 +420,11 @@ html body #main_app .main-area .alesco-logo {
   width: 100%;
 }
 
+html body #main_app .page-content {
+  z-index: 2;
+  position: relative;
+}
+
 html body #main_app .page-content.left-bar {
   border-left: 3px solid black;
   padding-left: 1.3rem;

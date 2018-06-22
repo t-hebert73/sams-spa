@@ -19,6 +19,11 @@ Route::get('available-services', 'Api\ServiceController@getAvailableServices');
 
 Route::get('routing', 'Api\RoutingController@getPage');
 
+Route::get('inquiries', 'Api\InquiryController@index');
+Route::get('inquiries/{id}', 'Api\InquiryController@retrieve');
+
+Route::post('form-submissions/contact', 'Api\FormSubmissionController@submitForm');
+
 Route::middleware(['client_credentials'])->group(function () {
     Route::get('employees', 'Api\Admin\EmployeeController@index');
     Route::post('employees', 'Api\Admin\EmployeeController@store');

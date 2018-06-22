@@ -1,134 +1,53 @@
 <template>
     <admin-component>
         <main role="main" class="col-md-9 ml-sm-auto col-lg-10 pt-3 px-4">
+            <div class="container-fluid min-body-height mt-3">
+                <div class="row">
+                    <div class="col-md-12">
+                        <div class="card mb-3">
+                            <div class="card-body">
+                                <div class="card-title">
+                                    <h1>Recent Inquiries</h1>
+                                </div>
+                            </div>
+                        </div>
 
-            <h2>Recent Inquiries</h2>
-            <div class="table-responsive">
-                <table class="table table-striped table-sm">
-                    <thead>
-                    <tr>
-                        <th>#</th>
-                        <th>Header</th>
-                        <th>Header</th>
-                        <th>Header</th>
-                        <th>Header</th>
-                    </tr>
-                    </thead>
-                    <tbody>
-                    <tr>
-                        <td>1,001</td>
-                        <td>Lorem</td>
-                        <td>ipsum</td>
-                        <td>dolor</td>
-                        <td>sit</td>
-                    </tr>
-                    <tr>
-                        <td>1,002</td>
-                        <td>amet</td>
-                        <td>consectetur</td>
-                        <td>adipiscing</td>
-                        <td>elit</td>
-                    </tr>
-                    <tr>
-                        <td>1,003</td>
-                        <td>Integer</td>
-                        <td>nec</td>
-                        <td>odio</td>
-                        <td>Praesent</td>
-                    </tr>
-                    <tr>
-                        <td>1,003</td>
-                        <td>libero</td>
-                        <td>Sed</td>
-                        <td>cursus</td>
-                        <td>ante</td>
-                    </tr>
-                    <tr>
-                        <td>1,004</td>
-                        <td>dapibus</td>
-                        <td>diam</td>
-                        <td>Sed</td>
-                        <td>nisi</td>
-                    </tr>
-                    <tr>
-                        <td>1,005</td>
-                        <td>Nulla</td>
-                        <td>quis</td>
-                        <td>sem</td>
-                        <td>at</td>
-                    </tr>
-                    <tr>
-                        <td>1,006</td>
-                        <td>nibh</td>
-                        <td>elementum</td>
-                        <td>imperdiet</td>
-                        <td>Duis</td>
-                    </tr>
-                    <tr>
-                        <td>1,007</td>
-                        <td>sagittis</td>
-                        <td>ipsum</td>
-                        <td>Praesent</td>
-                        <td>mauris</td>
-                    </tr>
-                    <tr>
-                        <td>1,008</td>
-                        <td>Fusce</td>
-                        <td>nec</td>
-                        <td>tellus</td>
-                        <td>sed</td>
-                    </tr>
-                    <tr>
-                        <td>1,009</td>
-                        <td>augue</td>
-                        <td>semper</td>
-                        <td>porta</td>
-                        <td>Mauris</td>
-                    </tr>
-                    <tr>
-                        <td>1,010</td>
-                        <td>massa</td>
-                        <td>Vestibulum</td>
-                        <td>lacinia</td>
-                        <td>arcu</td>
-                    </tr>
-                    <tr>
-                        <td>1,011</td>
-                        <td>eget</td>
-                        <td>nulla</td>
-                        <td>Class</td>
-                        <td>aptent</td>
-                    </tr>
-                    <tr>
-                        <td>1,012</td>
-                        <td>taciti</td>
-                        <td>sociosqu</td>
-                        <td>ad</td>
-                        <td>litora</td>
-                    </tr>
-                    <tr>
-                        <td>1,013</td>
-                        <td>torquent</td>
-                        <td>per</td>
-                        <td>conubia</td>
-                        <td>nostra</td>
-                    </tr>
-                    <tr>
-                        <td>1,014</td>
-                        <td>per</td>
-                        <td>inceptos</td>
-                        <td>himenaeos</td>
-                        <td>Curabitur</td>
-                    </tr>
-                    <tr>
-                        <td>1,015</td>
-                        <td>sodales</td>
-                        <td>ligula</td>
-                        <td>in</td>
-                        <td>libero</td>
-                    </tr>
-                    </tbody>
-                </table>
+                        <div class="row">
+                            <div class="col-md-12">
+                                <div class="pages">
+                                    <div class="table-responsive">
+                                        <table class="table table-bordered table-striped table-centered">
+                                            <thead>
+                                            <tr>
+                                                <th scope="col" style="width: 50px;">#</th>
+                                                <th scope="col">Name</th>
+                                                <th scope="col">Email</th>
+                                                <th scope="col">Message</th>
+                                                <th scope="col">Source</th>
+                                            </tr>
+                                            </thead>
+                                            <tbody>
+                                            <tr class="hover-pointer" v-for="(inquiry, i) in inquiries" @click="showInquiry($event, inquiry.id)"  :id="i + '_inquiry'">
+                                                <b-popover :target="i + '_inquiry'"
+                                                           :placement="'top-left'"
+                                                           title="More Information"
+                                                           triggers="hover"
+                                                           :content="`Click to view more information about the inquiry.`">
+                                                </b-popover>
+                                                <td> {{ inquiry.id }}</td>
+                                                <td> {{ inquiry.name }}</td>
+                                                <td> {{ inquiry.email }}</td>
+                                                <td> {{ truncateString(inquiry.message) }}</td>
+                                                <td> {{ inquiry.source }}</td>
+                                            </tr>
+                                            </tbody>
+                                        </table>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
             </div>
         </main>
 
@@ -140,7 +59,59 @@
 
   export default {
     name: 'dashboard',
-    components: {AdminHeader}
+    components: {AdminHeader},
+
+    data () {
+      return {
+        inquiries: {}
+      }
+    },
+
+    mounted() {
+      window.axios.get(this.API_ROUTE + 'inquiries').then(response => {
+        this.inquiries = response.data.inquiries
+        this.loading = false
+      }).catch(error => {
+        flash('Error loading pages. Reason: ' + error.response.data.message, 'error')
+      })
+    },
+
+    methods: {
+
+      /**
+       *
+       * @param string
+       * @returns {string}
+       */
+      truncateString(string) {
+        var length = 100;
+
+        let formattedString = string
+
+        if(string.length > length) {
+          formattedString = string.substring(0,length) + '...'
+        }
+
+        return formattedString
+      },
+
+      /**
+       * Show a specified inquiry.
+       *
+       * @param id
+       */
+      showInquiry (event, id) {
+        // only if you didn't click a link within
+        if (!$(event.target).is('a')) {
+          this.$router.push({
+            name: 'inquiries.show',
+            params: {
+              id: id
+            }
+          })
+        }
+      },
+    }
   }
 </script>
 
