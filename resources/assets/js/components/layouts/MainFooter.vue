@@ -8,9 +8,9 @@
 
         <div class="bottom-swirl"></div>
 
-        <router-link :to="{ name: 'pages.login'}" class="tmp-login hover-pointer">
+<!--        <router-link :to="{ name: 'pages.login'}" class="tmp-login hover-pointer">
             <span>Sign in</span>
-        </router-link>
+        </router-link>-->
     </footer>
 </template>
 
