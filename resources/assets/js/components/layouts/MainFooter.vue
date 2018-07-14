@@ -2,7 +2,7 @@
     <footer>
         <div class="container">
             <div class="row justify-content-center footer-text">
-                &copy;2018 Alesco Salon. All Rights Reserved
+                &copy;2018 Alesco Salon & Aesthetics. All Rights Reserved
             </div>
         </div>
 

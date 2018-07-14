@@ -173,7 +173,7 @@
                     </main>
 
                     <footer>
-                        <p>©2018 Alesco Salon. All Rights Reserved</p>
+                        <p>©2018 Alesco Salon & Aesthetics. All Rights Reserved</p>
                     </footer>
                 </div>
             </main-app>

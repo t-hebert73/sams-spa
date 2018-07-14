@@ -81703,7 +81703,7 @@ var staticRenderFns = [
       _c("div", { staticClass: "container" }, [
         _c("div", { staticClass: "row justify-content-center footer-text" }, [
           _vm._v(
-            "\n                ©2018 Alesco Salon. All Rights Reserved\n            "
+            "\n                ©2018 Alesco Salon & Aesthetics. All Rights Reserved\n            "
           )
         ])
       ]),
