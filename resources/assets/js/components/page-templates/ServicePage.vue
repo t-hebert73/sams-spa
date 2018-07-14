@@ -80,7 +80,7 @@
 
     .main-area {
         width: 75%;
-        margin: 0 auto 200px;
+        margin: 0 auto 315px;
 
         @media #{$small} {
             width: 100%;

@@ -1,10 +1,10 @@
 <?php
-    /**
-     * Created by PhpStorm.
-     * User: trevor
-     * Date: 06/05/18
-     * Time: 10:31 PM
-     */
+/**
+ * Created by PhpStorm.
+ * User: trevor
+ * Date: 06/05/18
+ * Time: 10:31 PM
+ */
 
 
 namespace App\Http\Controllers\Api;
@@ -28,7 +28,8 @@ class RoutingController extends Controller
     /**
      * RoutingController constructor.
      */
-    public function __construct() {
+    public function __construct()
+    {
 
     }
 
@@ -38,7 +39,7 @@ class RoutingController extends Controller
      */
     private function findEnabledPage($permaLink)
     {
-        return Page::where('perma_link', $permaLink)->where('is_enabled', 1)->firstOrFail();
+        return Page::where('perma_link', $permaLink)->where('is_enabled', 1)->first();
     }
 
     /**
@@ -117,7 +118,7 @@ class RoutingController extends Controller
      * Return an enabled page matching a passed perma link
      *
      * @param Request $request
-     * @return \Illuminate\Http\JsonResponse
+     * @return mixed
      */
     public function getPage(Request $request)
     {
@@ -135,6 +136,15 @@ class RoutingController extends Controller
 
         $response['pageData'] = $this->pageData;
 
-        return response()->json($response);
+        return $response;
+    }
+
+    /**
+     * @param Request $request
+     * @return \Illuminate\Http\JsonResponse
+     */
+    public function getPageWithResponse(Request $request)
+    {
+        return response()->json($this->getPage($request));
     }
 }

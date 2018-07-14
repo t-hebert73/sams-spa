@@ -17,7 +17,7 @@ use Illuminate\Http\Request;
 
 Route::get('available-services', 'Api\ServiceController@getAvailableServices');
 
-Route::get('routing', 'Api\RoutingController@getPage');
+Route::get('routing', 'Api\RoutingController@getPageWithResponse');
 
 Route::get('inquiries', 'Api\InquiryController@index');
 Route::get('inquiries/{id}', 'Api\InquiryController@retrieve');
