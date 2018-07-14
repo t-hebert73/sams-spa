@@ -69,19 +69,19 @@
                     <header>
                         <nav>
                             <li class="nav-item">
-                                <a href="/" class="nav-link">Home</a>
+                                <a href="/" class="nav-link" title="Home">Home</a>
                             </li>
                             <li class="nav-item">
-                                <a href="/about" class="nav-link">About</a>
+                                <a href="/about" class="nav-link" title="About">About</a>
                             </li>
                             <li class="nav-item">
-                                <a href="/services" class="nav-link">Services</a>
+                                <a href="/services" class="nav-link" title="Services">Services</a>
                             </li>
                             <li class="nav-item">
-                                <a href="/gallery" class="nav-link">Gallery</a>
+                                <a href="/gallery" class="nav-link" title="Gallery">Gallery</a>
                             </li>
                             <li class="nav-item">
-                                <a href="/contact" class="nav-link">Contact</a>
+                                <a href="/contact" class="nav-link" title="Contact">Contact</a>
                             </li>
                         </nav>
                     </header>
