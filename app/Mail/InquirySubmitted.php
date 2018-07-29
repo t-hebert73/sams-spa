@@ -13,15 +13,18 @@ class InquirySubmitted extends Mailable
     use Queueable, SerializesModels;
 
     public $inquiry;
+    public $requestUrl;
     public $subject = 'Contact Form Submission';
 
     /**
-     * VolunteerRequested constructor.
+     * InquirySubmitted constructor.
      * @param Inquiry $inquiry
+     * @param string $requestUrl
      */
-    public function __construct(Inquiry $inquiry)
+    public function __construct(Inquiry $inquiry, string $requestUrl)
     {
         $this->inquiry = $inquiry;
+        $this->requestUrl = $requestUrl;
     }
 
     /**

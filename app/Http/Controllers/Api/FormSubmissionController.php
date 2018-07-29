@@ -35,7 +35,10 @@ class FormSubmissionController extends Controller
 
         $inquiry->save();
 
-        Mail::to(env('CONTACT_MAIL_TO'))->send(new InquirySubmitted($inquiry));
+        // this is bad but im tired
+        $requestUrl = 'https://' . $request->getHttpHost() . '/contact';
+
+        Mail::to(env('CONTACT_MAIL_TO'))->send(new InquirySubmitted($inquiry, $requestUrl));
 
         $response['message'] = 'Thank you for contacting Alesco Salon & Aesthetics!';
 

@@ -104,6 +104,10 @@
                                                     <td class="descriptor">Submitted:</td>
                                                     <td>{{ $inquiry->created_at }}</td>
                                                 </tr>
+                                                <tr>
+                                                    <td class="descriptor">Sent from:</td>
+                                                    <td><a target="_blank" href="{{ $requestUrl }}">{{ $requestUrl }}</a></td>
+                                                </tr>
                                             </tbody>
                                         </table>
                                     </th>
