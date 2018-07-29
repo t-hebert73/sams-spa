@@ -40,7 +40,7 @@
                                     </li>
                                 </div>
 
-                                <b-form @submit.prevent="submitForm">
+                                <b-form @submit.prevent="submitForm" v-if="!loading">
                                     <b-form-group id="user_name_group"
                                                   label="Name:"
                                                   label-for="user_name">
@@ -99,7 +99,7 @@
 
     data () {
       return {
-        loading: true,
+        loading: false,
         user: {
           name: '',
           email: '',
@@ -121,6 +121,7 @@
         this.loading = true
 
         this.user.source = this.guessDeviceSource()
+
 
         window.axios.post(this.API_ROUTE + 'form-submissions/contact', this.user).then(response => {
 

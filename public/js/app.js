@@ -79823,7 +79823,7 @@ Object.defineProperty(__webpack_exports__, "__esModule", { value: true });
 
   data: function data() {
     return {
-      loading: true,
+      loading: false,
       user: {
         name: '',
         email: '',
@@ -79979,107 +79979,109 @@ var render = function() {
                         )
                       : _vm._e(),
                     _vm._v(" "),
-                    _c(
-                      "b-form",
-                      {
-                        on: {
-                          submit: function($event) {
-                            $event.preventDefault()
-                            return _vm.submitForm($event)
-                          }
-                        }
-                      },
-                      [
-                        _c(
-                          "b-form-group",
+                    !_vm.loading
+                      ? _c(
+                          "b-form",
                           {
-                            attrs: {
-                              id: "user_name_group",
-                              label: "Name:",
-                              "label-for": "user_name"
+                            on: {
+                              submit: function($event) {
+                                $event.preventDefault()
+                                return _vm.submitForm($event)
+                              }
                             }
                           },
                           [
-                            _c("b-form-input", {
-                              attrs: {
-                                id: "user_name",
-                                type: "text",
-                                required: "",
-                                placeholder: ""
+                            _c(
+                              "b-form-group",
+                              {
+                                attrs: {
+                                  id: "user_name_group",
+                                  label: "Name:",
+                                  "label-for": "user_name"
+                                }
                               },
-                              model: {
-                                value: _vm.user.name,
-                                callback: function($$v) {
-                                  _vm.$set(_vm.user, "name", $$v)
-                                },
-                                expression: "user.name"
-                              }
-                            })
-                          ],
-                          1
-                        ),
-                        _vm._v(" "),
-                        _c(
-                          "b-form-group",
-                          {
-                            attrs: {
-                              id: "user_email_group",
-                              label: "Email:",
-                              "label-for": "user_email"
-                            }
-                          },
-                          [
-                            _c("b-form-input", {
-                              attrs: {
-                                id: "user_email",
-                                type: "email",
-                                required: "",
-                                placeholder: ""
+                              [
+                                _c("b-form-input", {
+                                  attrs: {
+                                    id: "user_name",
+                                    type: "text",
+                                    required: "",
+                                    placeholder: ""
+                                  },
+                                  model: {
+                                    value: _vm.user.name,
+                                    callback: function($$v) {
+                                      _vm.$set(_vm.user, "name", $$v)
+                                    },
+                                    expression: "user.name"
+                                  }
+                                })
+                              ],
+                              1
+                            ),
+                            _vm._v(" "),
+                            _c(
+                              "b-form-group",
+                              {
+                                attrs: {
+                                  id: "user_email_group",
+                                  label: "Email:",
+                                  "label-for": "user_email"
+                                }
                               },
-                              model: {
-                                value: _vm.user.email,
-                                callback: function($$v) {
-                                  _vm.$set(_vm.user, "email", $$v)
-                                },
-                                expression: "user.email"
-                              }
-                            })
+                              [
+                                _c("b-form-input", {
+                                  attrs: {
+                                    id: "user_email",
+                                    type: "email",
+                                    required: "",
+                                    placeholder: ""
+                                  },
+                                  model: {
+                                    value: _vm.user.email,
+                                    callback: function($$v) {
+                                      _vm.$set(_vm.user, "email", $$v)
+                                    },
+                                    expression: "user.email"
+                                  }
+                                })
+                              ],
+                              1
+                            ),
+                            _vm._v(" "),
+                            _c(
+                              "b-form-group",
+                              {
+                                attrs: {
+                                  id: "user_message_group",
+                                  label: "Message:",
+                                  "label-for": "user_message"
+                                }
+                              },
+                              [
+                                _c("b-form-textarea", {
+                                  attrs: { id: "user_message", rows: "5" },
+                                  model: {
+                                    value: _vm.user.message,
+                                    callback: function($$v) {
+                                      _vm.$set(_vm.user, "message", $$v)
+                                    },
+                                    expression: "user.message"
+                                  }
+                                })
+                              ],
+                              1
+                            ),
+                            _vm._v(" "),
+                            _c(
+                              "b-button",
+                              { attrs: { type: "submit", variant: "primary" } },
+                              [_vm._v("Send")]
+                            )
                           ],
                           1
-                        ),
-                        _vm._v(" "),
-                        _c(
-                          "b-form-group",
-                          {
-                            attrs: {
-                              id: "user_message_group",
-                              label: "Message:",
-                              "label-for": "user_message"
-                            }
-                          },
-                          [
-                            _c("b-form-textarea", {
-                              attrs: { id: "user_message", rows: "5" },
-                              model: {
-                                value: _vm.user.message,
-                                callback: function($$v) {
-                                  _vm.$set(_vm.user, "message", $$v)
-                                },
-                                expression: "user.message"
-                              }
-                            })
-                          ],
-                          1
-                        ),
-                        _vm._v(" "),
-                        _c(
-                          "b-button",
-                          { attrs: { type: "submit", variant: "primary" } },
-                          [_vm._v("Send")]
                         )
-                      ],
-                      1
-                    )
+                      : _vm._e()
                   ],
                   1
                 ),
