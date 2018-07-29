@@ -6,10 +6,10 @@
  * Time: 10:28 AM
  */
 
-namespace App\Http\Controllers;
+namespace AlescoSalon\Http\Controllers;
 
 
-use App\Http\Controllers\Api\RoutingController;
+use AlescoSalon\Http\Controllers\Api\RoutingController;
 use Illuminate\Http\Request;
 
 class AppController extends Controller

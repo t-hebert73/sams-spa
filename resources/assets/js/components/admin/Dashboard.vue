@@ -16,7 +16,7 @@
                             <div class="col-md-12">
                                 <div class="pages">
                                     <div class="table-responsive">
-                                        <table class="table table-bordered table-striped table-centered">
+                                        <table class="table table-bordered table-hover table-striped table-centered">
                                             <thead>
                                             <tr>
                                                 <th scope="col" style="width: 50px;">#</th>

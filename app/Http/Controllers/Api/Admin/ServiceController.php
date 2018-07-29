@@ -6,13 +6,13 @@
  * Time: 11:46 PM
  */
 
-namespace App\Http\Controllers\Api\Admin;
+namespace AlescoSalon\Http\Controllers\Api\Admin;
 
 
-use App\Http\Controllers\Controller;
-use App\Models\Employee;
-use App\Models\Service;
-use App\Models\ServiceCategory;
+use AlescoSalon\Http\Controllers\Controller;
+use AlescoSalon\Models\Employee;
+use AlescoSalon\Models\Service;
+use AlescoSalon\Models\ServiceCategory;
 use Illuminate\Http\Request;
 
 class ServiceController extends Controller

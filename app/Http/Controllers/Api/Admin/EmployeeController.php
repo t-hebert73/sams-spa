@@ -6,11 +6,11 @@
  * Time: 12:29 AM
  */
 
-namespace App\Http\Controllers\Api\Admin;
+namespace AlescoSalon\Http\Controllers\Api\Admin;
 
 
-use App\Http\Controllers\Controller;
-use App\Models\Employee;
+use AlescoSalon\Http\Controllers\Controller;
+use AlescoSalon\Models\Employee;
 
 class EmployeeController extends Controller
 {

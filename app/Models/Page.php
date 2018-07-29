@@ -6,7 +6,7 @@
  * Time: 11:51 PM
  */
 
-namespace App\Models;
+namespace AlescoSalon\Models;
 
 use Illuminate\Database\Eloquent\Model;
 

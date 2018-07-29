@@ -6,19 +6,25 @@
  * Time: 9:29 PM
  */
 
-namespace App\Http\Controllers\Api;
+namespace AlescoSalon\Http\Controllers\Api;
 
 
-use App\Http\Controllers\Controller;
-use App\Models\Inquiry;
+use AlescoSalon\Http\Controllers\Controller;
+use AlescoSalon\Mail\InquirySubmitted;
+use AlescoSalon\Models\Inquiry;
 use Illuminate\Http\Request;
+use Illuminate\Support\Facades\Mail;
 
 class FormSubmissionController extends Controller
 {
 
+    /**
+     * @param Request $request
+     * @return \Illuminate\Http\JsonResponse
+     */
     public function submitForm(Request $request) {
 
-        $formData = $this->validate(request(), [
+        $formData = $this->validate($request, [
             'name' => 'required',
             'email' => 'required',
             'message' => 'required',
@@ -29,7 +35,9 @@ class FormSubmissionController extends Controller
 
         $inquiry->save();
 
-        $response['message'] = 'Thank you for contacting Alesco Salon!';
+        Mail::to(env('CONTACT_MAIL_TO'))->send(new InquirySubmitted($inquiry));
+
+        $response['message'] = 'Thank you for contacting Alesco Salon & Aesthetics!';
 
         return response()->json($response);
     }

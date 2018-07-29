@@ -27,7 +27,7 @@
                         <div class="row">
                             <div class="col-md-12">
                                 <div class="employees">
-                                    <table class="table table-striped table-bordered table-branded mb-0">
+                                    <table class="table table-striped table-hover table-bordered table-branded mb-0">
                                         <thead class="thead">
                                         <tr>
                                             <th>ID</th>

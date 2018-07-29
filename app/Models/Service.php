@@ -6,7 +6,7 @@
  * Time: 11:31 PM
  */
 
-namespace App\Models;
+namespace AlescoSalon\Models;
 
 
 use Illuminate\Database\Eloquent\Model;
@@ -26,14 +26,14 @@ class Service extends Model
      * @return \Illuminate\Database\Eloquent\Relations\BelongsTo
      */
     public function serviceCategory() {
-        return $this->belongsTo('App\Models\ServiceCategory');
+        return $this->belongsTo('AlescoSalon\Models\ServiceCategory');
     }
 
     /**
      * @return \Illuminate\Database\Eloquent\Relations\BelongsTo
      */
     public function employee() {
-        return $this->belongsTo('App\Models\Employee');
+        return $this->belongsTo('AlescoSalon\Models\Employee');
     }
 
 }

@@ -7,16 +7,16 @@
  */
 
 
-namespace App\Http\Controllers\Api;
+namespace AlescoSalon\Http\Controllers\Api;
 
-use App\Http\Controllers\Controller;
-use App\Models\Page;
+use AlescoSalon\Http\Controllers\Controller;
+use AlescoSalon\Models\Page;
 use Illuminate\Http\Request;
 
 /**
  * Class RoutingController
  *
- * @package App\Http\Controllers\Api
+ * @package AlescoSalon\Http\Controllers\Api
  *
  * @property \stdClass pageData
  */

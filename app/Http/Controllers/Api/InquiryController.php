@@ -6,11 +6,11 @@
  * Time: 10:00 PM
  */
 
-namespace App\Http\Controllers\Api;
+namespace AlescoSalon\Http\Controllers\Api;
 
 
-use App\Http\Controllers\Controller;
-use App\Models\Inquiry;
+use AlescoSalon\Http\Controllers\Controller;
+use AlescoSalon\Models\Inquiry;
 
 class InquiryController extends Controller
 {
@@ -21,7 +21,7 @@ class InquiryController extends Controller
     public function index()
     {
 
-        $inquiries = Inquiry::all();
+        $inquiries = Inquiry::orderBy('created_at', 'desc')->get();
 
         $response['inquiries'] = $inquiries;
 

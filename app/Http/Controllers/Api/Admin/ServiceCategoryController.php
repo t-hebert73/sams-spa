@@ -6,11 +6,11 @@
  * Time: 10:29 PM
  */
 
-namespace App\Http\Controllers\Api\Admin;
+namespace AlescoSalon\Http\Controllers\Api\Admin;
 
 
-use App\Http\Controllers\Controller;
-use App\Models\ServiceCategory;
+use AlescoSalon\Http\Controllers\Controller;
+use AlescoSalon\Models\ServiceCategory;
 
 class ServiceCategoryController extends Controller
 {

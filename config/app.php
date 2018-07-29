@@ -171,11 +171,16 @@ return [
         /*
          * Application Service Providers...
          */
-        App\Providers\AppServiceProvider::class,
-        App\Providers\AuthServiceProvider::class,
-        // App\Providers\BroadcastServiceProvider::class,
-        App\Providers\EventServiceProvider::class,
-        App\Providers\RouteServiceProvider::class,
+        AlescoSalon\Providers\AppServiceProvider::class,
+        AlescoSalon\Providers\AuthServiceProvider::class,
+        // AlescoSalon\Providers\BroadcastServiceProvider::class,
+        AlescoSalon\Providers\EventServiceProvider::class,
+        AlescoSalon\Providers\RouteServiceProvider::class,
+
+        /**
+         * Laravel Mail CSS Inliner
+         */
+        Fedeisas\LaravelMailCssInliner\LaravelMailCssInlinerServiceProvider::class,
 
     ],
 

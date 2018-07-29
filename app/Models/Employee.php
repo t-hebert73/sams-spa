@@ -6,7 +6,7 @@
  * Time: 11:00 PM
  */
 
-namespace App\Models;
+namespace AlescoSalon\Models;
 
 
 use Illuminate\Database\Eloquent\Model;
@@ -24,14 +24,14 @@ class Employee extends Model
      * @return \Illuminate\Database\Eloquent\Relations\BelongsToMany
      */
     public function serviceCategories() {
-        return $this->belongsToMany('App\Models\ServiceCategory');
+        return $this->belongsToMany('AlescoSalon\Models\ServiceCategory');
     }
 
     /**
      * @return \Illuminate\Database\Eloquent\Relations\HasMany
      */
     public function services() {
-        return $this->hasMany('App\Models\Service');
+        return $this->hasMany('AlescoSalon\Models\Service');
     }
 
 }

@@ -1,11 +1,11 @@
 <?php
 
-namespace App\Http\Controllers\Auth;
+namespace AlescoSalon\Http\Controllers\Auth;
 
 use Illuminate\Auth\Events\Registered;
 use Illuminate\Http\Request;
-use App\Models\User;
-use App\Http\Controllers\Controller;
+use AlescoSalon\Models\User;
+use AlescoSalon\Http\Controllers\Controller;
 use Illuminate\Support\Facades\Validator;
 use Illuminate\Foundation\Auth\RegistersUsers;
 
@@ -78,7 +78,7 @@ class RegisterController extends Controller
      * Create a new user instance after a valid registration.
      *
      * @param  array  $data
-     * @return \App\User
+     * @return \AlescoSalon\User
      */
     protected function create(array $data)
     {

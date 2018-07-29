@@ -6,17 +6,17 @@
  * Time: 11:50 PM
  */
 
-namespace App\Http\Controllers\Api\Admin;
+namespace AlescoSalon\Http\Controllers\Api\Admin;
 
-use App\Http\Controllers\Controller;
-use App\Models\Page;
+use AlescoSalon\Http\Controllers\Controller;
+use AlescoSalon\Models\Page;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Input;
 
 /**
  * Class PageController
  *
- * @package App\Http\Controllers\Api\Admin
+ * @package AlescoSalon\Http\Controllers\Api\Admin
  *
  * @property MenuItemRepository menuItems
  * @property PageRepository pages

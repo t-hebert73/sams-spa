@@ -21038,7 +21038,8 @@ module.exports = Component.exports
 /***/ (function(module, exports, __webpack_require__) {
 
 __webpack_require__(84);
-module.exports = __webpack_require__(395);
+__webpack_require__(395);
+module.exports = __webpack_require__(396);
 
 
 /***/ }),
@@ -82133,7 +82134,7 @@ var render = function() {
                         "table",
                         {
                           staticClass:
-                            "table table-bordered table-striped table-centered"
+                            "table table-bordered table-hover table-striped table-centered"
                         },
                         [
                           _c("thead", [
@@ -82977,7 +82978,7 @@ var render = function() {
                       "table",
                       {
                         staticClass:
-                          "table table-striped table-bordered table-branded mb-0"
+                          "table table-striped table-hover table-bordered table-branded mb-0"
                       },
                       [
                         _c("thead", { staticClass: "thead" }, [
@@ -85135,7 +85136,7 @@ var render = function() {
                       "table",
                       {
                         staticClass:
-                          "table table-striped table-bordered table-branded mb-0"
+                          "table table-striped table-hover table-bordered table-branded mb-0"
                       },
                       [
                         _c("thead", { staticClass: "thead" }, [
@@ -87606,7 +87607,7 @@ var render = function() {
                       "table",
                       {
                         staticClass:
-                          "table table-striped table-bordered table-branded mb-0"
+                          "table table-striped table-hover table-bordered table-branded mb-0"
                       },
                       [
                         _c("thead", { staticClass: "thead" }, [
@@ -89091,6 +89092,12 @@ if (false) {
 
 /***/ }),
 /* 395 */
+/***/ (function(module, exports) {
+
+// removed by extract-text-webpack-plugin
+
+/***/ }),
+/* 396 */
 /***/ (function(module, exports) {
 
 // removed by extract-text-webpack-plugin

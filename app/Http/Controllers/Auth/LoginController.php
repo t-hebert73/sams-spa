@@ -1,8 +1,8 @@
 <?php
 
-namespace App\Http\Controllers\Auth;
+namespace AlescoSalon\Http\Controllers\Auth;
 
-use App\Http\Controllers\Controller;
+use AlescoSalon\Http\Controllers\Controller;
 use Illuminate\Foundation\Auth\AuthenticatesUsers;
 use Illuminate\Http\Request;
 
