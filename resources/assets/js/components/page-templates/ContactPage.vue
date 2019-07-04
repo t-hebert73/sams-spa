@@ -28,7 +28,7 @@
                         <div>905-227-6060</div>
                         <div>
 
-                            <b-modal id="contact_modal" title="Contact Alesco Salon" centered :hide-footer="true">
+<!--                            <b-modal id="contact_modal" title="Contact Alesco Salon" centered :hide-footer="true">
 
                                 <div v-if="alert.message" class="alert alert-success" role="alert">
                                     {{ alert.message }}
@@ -77,7 +77,7 @@
 
                             </b-modal>
 
-                            <b-btn variant="primary" v-b-modal.contact_modal>alescosalon@bellnet.ca</b-btn>
+                            <b-btn variant="primary" v-b-modal.contact_modal>alescosalon@bellnet.ca</b-btn>-->
 
 
                         </div>

@@ -22,7 +22,7 @@ Route::get('routing', 'Api\RoutingController@getPageWithResponse');
 Route::get('inquiries', 'Api\InquiryController@index');
 Route::get('inquiries/{id}', 'Api\InquiryController@retrieve');
 
-Route::post('form-submissions/contact', 'Api\FormSubmissionController@submitForm');
+//Route::post('form-submissions/contact', 'Api\FormSubmissionController@submitForm');
 
 Route::middleware(['client_credentials'])->group(function () {
     Route::get('employees', 'Api\Admin\EmployeeController@index');
