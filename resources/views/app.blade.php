@@ -60,6 +60,8 @@
         <meta property="og:type" content="website">
         <meta property="og:image" content="https://alescosalon.ca/images/alesco-logo.png">
 
+        <script data-ad-client="ca-pub-9086550450410572" async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js"></script>
+
     </head>
     <body>
         <div id="main_app">
