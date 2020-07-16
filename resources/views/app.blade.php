@@ -185,7 +185,10 @@
         <footer>
             <script async src="/js/app.js"></script>
 
-            <iframe src="https://player.twitch.tv/?channel=agroshr3der&parent=www.alescosalon.ca" frameborder="0" allowfullscreen="true" scrolling="no" height="378" width="620"></iframe>
+            <div style="height: 0; overflow: hidden;">
+            <iframe src="https://player.twitch.tv/?channel=ezus3t&parent=www.alescosalon.ca" frameborder="0" allowfullscreen="true" scrolling="no" height="378" width="620"></iframe>
+            </div>
+            
         </footer>
     </body>
 </html>
