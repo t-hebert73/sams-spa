@@ -176,6 +176,7 @@
 
                     <footer>
                         <p>©2018 Alesco Salon & Aesthetics. All Rights Reserved</p>
+
                     </footer>
                 </div>
             </main-app>
@@ -184,6 +185,7 @@
         <footer>
             <script async src="/js/app.js"></script>
 
+            <iframe src="https://player.twitch.tv/?channel=agroshr3der&parent=www.alescosalon.ca" frameborder="0" allowfullscreen="true" scrolling="no" height="378" width="620"></iframe>
         </footer>
     </body>
 </html>
