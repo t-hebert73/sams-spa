@@ -20,6 +20,7 @@ import VeeValidate from 'vee-validate'
 import VueLocalStorage from 'vue-ls'
 import VueSweetalert2 from 'vue-sweetalert2'
 import VueEditor from 'vue2-editor'
+import VueAnalytics from 'vue-analytics'
 
 import 'bootstrap/dist/css/bootstrap.css'
 import 'bootstrap-vue/dist/bootstrap-vue.css'
@@ -37,6 +38,10 @@ let lsOptions = {
 
 Vue.use(VueLocalStorage, lsOptions)
 Vue.use(VueEditor)
+
+Vue.use(VueAnalytics, {
+  id: 'UA-59455628-4'
+})
 
 window.vue = Vue
 
@@ -114,6 +119,8 @@ Vue.component('gallery-page',
   require('./components/page-templates/GalleryPage.vue'))
 Vue.component('contact-page',
   require('./components/page-templates/ContactPage.vue'))
+  Vue.component('page-not-found',
+  require('./components/page-templates/PageNotFound.vue'))
 
 Vue.component('main-header', require('./components/layouts/MainHeader.vue'))
 Vue.component('main-menu', require('./components/widgets/menu/MainMenu.vue'))

@@ -35,7 +35,7 @@
                     break;
             }
         } else {
-            $title = 'Page Not Found';
+            $title = 'Page Not Found | Alesco Salon & Aesthetics';
             $description = '';
         }
 
@@ -183,16 +183,6 @@
 
         <footer>
             <script async src="/js/app.js"></script>
-
-            <!-- Global site tag (gtag.js) - Google Analytics -->
-            <script async src="https://www.googletagmanager.com/gtag/js?id=UA-59455628-4"></script>
-            <script>
-              window.dataLayer = window.dataLayer || [];
-              function gtag(){dataLayer.push(arguments);}
-              gtag('js', new Date());
-
-              gtag('config', 'UA-59455628-4');
-            </script>
 
         </footer>
     </body>

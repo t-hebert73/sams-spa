@@ -16,6 +16,7 @@
                     page: {},
                     objects: {}
                 },
+                pageMetaTitle: null
             }
         },
 
@@ -42,12 +43,12 @@
         },
 
         methods: {
-            getPage(apiRoute) {
+            getPage(url) {
 
                 let self = this
                 self.pageComponent = ''
 
-                apiRoute = (apiRoute) ? self.API_ROUTE + 'routing?pageUrl=' + apiRoute : self.API_ROUTE + 'routing?pageUrl=' + self.pagePermaLink
+                let apiRoute = (url) ? self.API_ROUTE + 'routing?pageUrl=' + url : self.API_ROUTE + 'routing?pageUrl=' + self.pagePermaLink
 
                 // Remove Additional params
                 let qmCount = (apiRoute.match(/\?/g) || []).length;
@@ -55,15 +56,17 @@
                     apiRoute = apiRoute.substring(0, apiRoute.lastIndexOf('?'))
                 }
 
+                let title = 'Alesco Salon & Aesthetics'
                 window.axios.get(apiRoute).then(response => {
                     this.pageData.objects = response.data.pageData.objects
                     this.pageData.parentPage = response.data.pageData.parentPage
                     self.assignPageComponent(response.data.pageData.page)
+                    self.trackPageView(url)
 
                 }).catch(error => {
                     flash('Error loading page. Reason: ' + error.response.data.message, 'error')
+                    self.trackPageView(url)
                 })
-
 
 /*                if (route == '/') {
                     this.pageTemplateComponent = 'home-page'
@@ -78,6 +81,16 @@
                 }*/
             },
 
+            trackPageView(pageUrl) {
+
+                let gaPage = {
+                    page: pageUrl,
+                    title: this.pageMetaTitle,
+                    location: window.location.href
+                }
+                this.$ga.page(gaPage)
+            },
+
             /**
              * Determine a passed pages relevant page component
              *
@@ -86,26 +99,34 @@
             assignPageComponent(page) {
                 if (page) {
                     this.pageData.page = page
+                    this.pageMetaTitle = 'Alesco Salon & Aesthetics'
                     switch (page.type) {
                         case 'Home':
                             this.pageTemplateComponent = 'home-page'
+                            this.pageMetaTitle = 'Alesco Salon & Aesthetics'
                             break
                         case 'About':
                             this.pageTemplateComponent = 'about-page'
+                            this.pageMetaTitle = 'About | Alesco Salon & Aesthetics'
                             break
                         case 'Services':
                             this.pageTemplateComponent = 'service-page'
+                            this.pageMetaTitle = 'Services | Alesco Salon & Aesthetics'
                             break
                         case 'Contact':
                             this.pageTemplateComponent = 'contact-page'
+                            this.pageMetaTitle = 'Contact | Alesco Salon & Aesthetics'
                             break
                         case 'Sitemap':
                             this.pageTemplateComponent = 'sitemap-page'
+                            this.pageMetaTitle = 'Sitemap | Alesco Salon & Aesthetics'
                             break
                         case 'Gallery':
                             this.pageTemplateComponent = 'gallery-page'
+                            this.pageMetaTitle = 'Gallery | Alesco Salon & Aesthetics'
                             break
                         default:
+                            this.pageMetaTitle = this.pageData.page.title + ' | Alesco Salon & Aesthetics'
                             this.pageTemplateComponent = 'generic-page'
                     }
                 } else {

@@ -16,6 +16,10 @@
     name: 'home-page',
     props: {
       pageData: {}
+    },
+
+    mounted () {
+
     }
   }
 </script>
